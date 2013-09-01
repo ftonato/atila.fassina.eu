@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Breakpoints are broken</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <!-- Syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/icon.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <header id="top">
+      <section id="titleLogo">
+        <img src="/image/logo-color.png" alt="Átila Fassina - Front-end Developer" />
+      </section>
+      <hgroup id="titleWrap">
+        <a href="/">
+          <h1 id="titleName"></h1>
+          <h2 id="titleSub">Front-end Developer</h2>
+        </a>
+      </hgroup>
+      <ul id="mainSocial">
+        <li>
+          <a target="_blank" href="http://twitter.com/atilafassina" class="icon-twitter"></a>
+        </li>
+        <li>
+          <a target="_blank" href="http://github.com/atilafassina" class="icon-github"></a>
+        </li>
+        <li>
+          <a target="_blank" href="http://linkedin.com/in/atilafassina" class="icon-linkedin"></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://plus.google.com/116553148762323910210/" class="icon-google-plus-2"></a>
+        </li>
+        <li>
+          <a target="_blank" href="http://facebook.com/atilafassina" class="icon-facebook"></a>
+        </li>
+      </ul>
+      <nav id="mainMenu">
+        <a href="">Projects</a>
+        <a href="">Works</a>
+      </nav>
+    </header>
+    <article class="post">
+	<p class="postDate">11 Aug 2013</p>
+	<h3>Breakpoints are broken</h3>
+	<img class="postImg" src="/image/posts/breakpoints-broken.jpg" />
+	<p>When I first heard about crafting responsive web sites it was all about devices. Everyone involved on developing a website or a web app should argue until they find the correct breakpoints related to the primary devices they wanted to support, therefore we would have a media query for each and every kind of device and then hope for the best if manufacturer came up with another different size of screen.</p>
+
+<h4 id='craft_a_website_on_that_premise_just_feels_wrong_doesnt_it'>Craft a website on that premise just feels wrong, doesn’t it?!</h4>
+
+<p>Although we have viewports to prevent small screens with giant resolutions to mess up our beautifully crafted experience, media queries used to do some pretty bad damage on desktop and laptop browsers when zoomed <span>ctrl+ || cmd+</span>, media queries set in pixels couldn’t understand the view shrinking and all those ours of effort were going falling down as a house of cards (so dramatic!). But we found our way throught that: media queries in <code>em</code>, fully supported by all browsers (IE8+), when users zoom directly in the browser, font-size is affected, therefore <code>em</code> default value also changes and media queries can respond!</p>
+
+<blockquote>
+<p>One can learn CSS in one day, but would take a lifetime to master!</p>
+</blockquote>
+
+<p>And it could not be more true! Simplicity of CSS is what makes it so difficult, we can do pretty much everything on the stylesheet and it still works. But that leads to unscalable and hard to manage code. Back then, responsive web design was about requesting different styles for each device-view and all to the same HTML, we could roughly translate that to having 2 or 3 websites in one.</p>
+
+<h4 id='atomic_design_saving_the_workflow'>Atomic Design, saving the workflow!</h4>
+
+<p>While I was trying to manage all that conflicting concepts <span>a lot of styles into a site and scalable, clean CSS</span>, I read and watched Brad Frost talking about Atomic Web Design. And, OMG! That made sense! It was all I was needing and thinking about but wasn’t able to formalize into a rationale.</p>
+
+<h4 id='if_you_are_interested_about_atomic_web_design_you_should_head_to_brad_frosts_blog_and_watch_his_presentation_ill_just_summarize_it_here'>If you are interested about Atomic Web Design, you should head to Brad Frost’s blog and watch his presentation, I’ll just summarize it here.</h4>
+
+<p>Atomic Web Design thinks a web application as an organism, as an organism we can break it down into smaller functional pieces, until we get that indivisible piece that we can call ATOM in our metaphor. Working with that smaller component we can make independent styles for each small component, making it easy to re-use it all over the application and preventing from starting a cascade mess when we implement the media queries for different viewports.</p>
+
+<h4 id='it_started_to_make_sense_but_wasnt_perfect_yet'>It started to make sense, but wasn’t perfect yet…</h4>
+
+<p>Going on with that line of thought, recently I read an article (which was the final bit of motivation I needed to put it together and write this little piece of thought) by Ben Callahan. And, again, as Atomic Design blew my mind in thinking that was exactly what was missing in my workflow and I couldn’t figure it out, this new idea did it again. I was confused without it and now things kind of ‘clicked’ together and started making even more sense and looking easier to be done than before.</p>
+
+<blockquote>
+<p>There is no breakpoint.</p>
+</blockquote>
+
+<p>Of course there’s not!!!! How could I expect a footer or a header to break as many times as a navigation?! I couldn’t because I shoudn’t. As Martin Luther King would say if he was a developer: “All components are equal!”, which means that they deserve freedom on deciding WHEN they’ll need another style and HOW. And then I’ll quote <a href='http://bradfrostweb.com/blog/post/atomic-web-design/'>Brad Frost quoting Stephen Hay</a>:</p>
+
+<blockquote>
+<p>We’re not designing pages, we’re designing systems of components.</p>
+</blockquote>
+
+<p>So, here’s the plan: we design each component the way it should be. And, as the viewport changes, and you feel like they need another style, you do that! Simple as that. That way, we can have all our navigation styles in one part of the stylesheet, instead of having the small screen styles up at the top, and other viewport styles after all of that. That way, when coming back to your code, you won’t feel like Gandalf in Moria (watch the Fellowship of The Ring <span>NOW!</span> if you couldn’t understand that quote)</p>
+
+<p>So, really, am I too dumb on realizing that just now? Seriously! Because, it just seems too obvious now. If you’re having any kind of trouble managing your Responsive Web Desing approach, you should try that.</p>
+
+<h5 id='references'>References</h5>
+<ul class='references'>
+	<li>
+		<a href='http://vimeo.com/67476280' target='_blank'>Atomic Design – beyond tellerrand 2013 – Brad Frost</a>
+	</li>
+	<li>
+		<a href='http://bradfrostweb.com/blog/post/atomic-web-design/' target='_blank'>Atomic Design – Brad Frost</a>
+	</li>
+	<li>
+		<a href='http://seesparkbox.com/foundry/there_is_no_breakpoint' target='_blank'>There is no breakpoint – Ben Callahan</a>
+	</li>
+</ul>
+</article>
+
+    <!-- build:js(app) /js/scripts.js -->
+    <script src="/js/main.js"></script>
+  <!-- endbuild -->
+  </body>
+</html>
