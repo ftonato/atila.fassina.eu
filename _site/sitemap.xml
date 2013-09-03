@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://atilafassina.com/</loc>
+    <lastmod>2013-09-03T15:26:29-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://atilafassina.com/rwd/2013/08/11/breakpoints-are-broken.html</loc>
+    <lastmod>2013-08-11T18:45:52-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+   </url>
+   
+  <url>
+    <loc>http://atilafassina.com/rwd/css/2013/07/30/the-future-is-here-flexbox.html</loc>
+    <lastmod>2013-07-30T13:00:52-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+   </url>
+   
+</urlset>

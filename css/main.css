@@ -23,7 +23,8 @@ body {
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  color: #222222; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
@@ -32,6 +33,7 @@ ul {
   list-style: none; }
 
 a {
+  color: #090909;
   text-decoration: none; }
 
 ::selection {
@@ -136,6 +138,7 @@ a {
       #about p {
         display: block;
         width: 60%;
+        max-width: 45em;
         font-size: 1rem;
         margin: 0 auto; } }
   #about p a {
@@ -161,8 +164,16 @@ ul.posts {
     @media all and (min-width: 55em) {
       ul.posts li {
         padding: 2em 20%; }
+        ul.posts li img {
+          max-width: 45em;
+          height: auto;
+          margin: 0 auto;
+          display: block; }
         ul.posts li p {
-          font-size: 1rem; } }
+          font-size: 1rem;
+          max-width: 45em;
+          margin: 0 auto;
+          display: block; } }
 
 .postDate {
   color: #aaa;
@@ -206,6 +217,7 @@ h3 {
   @media all and (min-width: 55em) {
     .post {
       width: 60%;
+      max-width: 45em;
       margin: 0 auto; } }
   .post h4 {
     margin: 2em 0;
@@ -237,7 +249,7 @@ h3 {
 
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #eeeeee;
   margin: 1em 0;
   padding: 0 .4em; }
 
@@ -246,7 +258,7 @@ h3 {
 
 code {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #eeeeee;
   padding: 0 .2em; }
 
 .post pre code {
@@ -260,3 +272,8 @@ code {
 
 .post pre.terminal code {
   background-color: #333; }
+
+.disqussWrap {
+  width: 80%;
+  max-width: 40em;
+  margin: 2em auto; }

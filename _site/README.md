@@ -1,14 +1,13 @@
-#atilafassina.github.io
+#atilafassina.com
 
->Welcome to my personal website/lab/blog
+>This is my personal website || test lab || blog. I'll be writing about Web Development.
 
-Here I'll be writing about web development, experimenting stuff I'm studying and showing my projects and works.
-Feel free to contribute in anyway you'd like.
+I'll be using this website to test new things and play around, so needless to say: if you find something unusual or broken, do not hesitate in filing an issue or pulling a request, I'll be extremely happy if you do!
+
 
 ##To-do list
 
-- sitemap
 - schema.org
-- google analytics
+- update GA
 - custom 404
 - Projects and Works page
