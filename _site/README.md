@@ -10,7 +10,5 @@ Feel free to contribute in anyway you'd like.
 - sitemap
 - schema.org
 - google analytics
-- favicon
-- CNAME
 - custom 404
 - Projects and Works page

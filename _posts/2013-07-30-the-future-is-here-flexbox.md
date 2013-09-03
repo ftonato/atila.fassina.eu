@@ -4,7 +4,6 @@ title:  "The Future is here: Flexbox!"
 date:   2013-07-30 16:00:52
 image: /image/posts/flexbox-redpill.png
 categories: rwd css
-alias:[atilafassina.com/2013/07/the-future-is-here-flexbox]
 ---
 What if I told you it’s possible to change the order of the elements and distribute the all of them accordingly to the available space? What if I told you you can centralize all elements inside a parent with only TWO CSS properties? If you don’t know what I’m talking about, it is going to be like taking Morpheus’ red pill!
 
