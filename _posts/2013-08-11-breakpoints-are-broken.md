@@ -3,6 +3,7 @@ layout: post
 title:  "Breakpoints are broken"
 date:   2013-08-11 21:45:52
 image: /image/posts/breakpoints-broken.jpg
+alias:[atilafassina.com/2013/08/breakpoints-are-broken]
 categories: rwd
 ---
 

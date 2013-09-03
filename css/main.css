@@ -136,6 +136,7 @@ a {
       #about p {
         display: block;
         width: 60%;
+        max-width: 60em;
         font-size: 1rem;
         margin: 0 auto; } }
   #about p a {
@@ -145,7 +146,9 @@ a {
     border-bottom-style: solid; }
 
 .posts {
-  background-color: #fff; }
+  background-color: #fff;
+  max-width: 60em;
+  margin: 0 auto; }
 
 ul.posts {
   list-style-type: none; }
