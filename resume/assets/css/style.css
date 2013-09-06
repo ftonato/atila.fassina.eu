@@ -1,0 +1,408 @@
+html, body {
+  height: 100%;
+  background-color: #e6e6e6; }
+
+#socialBig {
+  display: none; }
+
+/*
+#idiom-btn {
+	position:fixed;
+		top:4rem;
+		right:0;
+	display:block;
+	background-color:$darkGray;
+	color:$lightGray;
+	padding:.25rem;
+	z-index:10;
+}
+*/
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #00c800;
+  border-bottom: solid 0.1rem #323232;
+  z-index: 2;
+  cursor: pointer; }
+  #top:active {
+    background-color: #009500; }
+
+.topLink {
+  font-style: normal;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ebebeb; }
+
+#btnMenu {
+  float: left;
+  margin-left: 1rem;
+  width: 20%; }
+
+#website {
+  float: right; }
+
+#summary {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  left: -90%;
+  box-shadow: 0.2rem 5rem 0.3rem rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  background-color: #323232;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out; }
+
+.summaryActive {
+  left: 0 !important; }
+
+.btnClose {
+  float: right;
+  width: 25px;
+  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0 0 0 50%;
+  background: #e6e6e6;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #323232;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding-top: 1rem; }
+
+#pic {
+  display: block;
+  border-radius: 0.8rem 0 0.8rem 0;
+  border: solid 0.02rem #00c800;
+  width: 25%;
+  height: 15%;
+  margin: 4rem auto 0 auto;
+  background: #e6e6e6 url(http://atilafassina.com/img/face.jpg) no-repeat;
+  background-size: cover; }
+
+#topicList {
+  width: 80%;
+  margin: 10% auto; }
+
+.topicItem {
+  width: 100%;
+  height: 2rem;
+  margin-top: 2.5%;
+  text-align: center;
+  color: #e6e6e6;
+  font-weight: bold;
+  color: 1.2rem;
+  cursor: pointer; }
+  .topicItem:first-child {
+    margin-top: 0; }
+  .topicItem:hover {
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.1); }
+  .topicItem:active {
+    font-size: .95rem; }
+
+.topicItemSelected {
+  color: #9a9a9a; }
+
+.socialNet {
+  display: block;
+  width: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  margin: .5rem;
+  cursor: pointer; }
+
+.socialNet a {
+  text-decoration: none; }
+
+#skills,
+#work,
+#endeavours {
+  display: none; }
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  color: #323232;
+  font-size: .8rem;
+  line-height: 1.2rem;
+  padding-bottom: 2rem; }
+
+.contentTop {
+  position: relative;
+  width: 100%; }
+
+.title {
+  padding: 25% 0 .75rem 0;
+  text-align: center;
+  color: #006200;
+  font-weight: bold;
+  font-size: 1.2rem; }
+
+#nameTitle {
+  text-align: right;
+  margin-top: 1rem; }
+
+#nameTitle b {
+  font-size: .9rem;
+  color: #323232; }
+
+#logo {
+  height: 3rem;
+  width: 6rem;
+  position: absolute;
+  top: 2.5rem;
+  left: -2rem;
+  background: url(http://atilafassina.com/img/logo.svg) no-repeat;
+  background-size: contain;
+  display: inline-block; }
+
+.subTitle {
+  color: #191919;
+  text-align: center;
+  line-height: 1.2rem;
+  margin: 1.5rem 0; }
+
+.contentTxt {
+  display: inline-block;
+  margin-bottom: 1.5rem; }
+  .contentTxt:last-child {
+    margin-bottom: 0; }
+
+.roundbtn-list {
+  width: 100%;
+  overflow: visible;
+  text-align: center; }
+
+.roundbtnItem {
+  border-radius: 50% 0 50% 50%;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-color: #989898;
+  margin-right: 10%;
+  line-height: 5rem;
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .roundbtnItem:active {
+    -webkit-transform: translate(0, -0.5rem);
+    -moz-transform: translate(0, -0.5rem);
+    -o-transform: translate(0, -0.5rem);
+    -ms-transform: translate(0, -0.5rem);
+    transform: translate(0, -0.5rem); }
+
+.site-url {
+  color: #656565;
+  text-decoration: none;
+  font-weight: bold; }
+  .site-url:hover {
+    color: #4c4c4c; }
+  .site-url:active {
+    color: #00c800; }
+
+#creative:hover {
+  background-color: #4664dc; }
+
+#coding:hover {
+  background-color: #1eb450; }
+
+#skill-list {
+  width: 95%;
+  margin: 10% auto;
+  overflow: hidden;
+  text-align: center; }
+
+#skill-list li {
+  display: inline-block;
+  margin: 0 2% 5% 0;
+  padding: .4rem;
+  font-size: 1rem;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.list-endeavour {
+  display: block; }
+
+.endeavour-item {
+  margin-bottom: 1.5rem; }
+
+#italy, #english {
+  float: left;
+  position: relative; }
+
+.stripes {
+  float: left;
+  height: 100%;
+  width: 33%;
+  opacity: .4; }
+
+.stripe1 {
+  background-color: red; }
+
+.stripe2 {
+  background-color: white; }
+
+.stripe3 {
+  background-color: lime; }
+
+#english {
+  background-color: #4664dc; }
+
+.item-title {
+  position: absolute;
+  left: 20%;
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 3rem; }
+
+.endeavour-txt {
+  font-size: .75rem; }
+
+#bottom {
+  width: 100%;
+  height: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #cdcdcd;
+  border-top: solid 0.1rem #323232;
+  z-index: 2;
+  font-size: .75rem;
+  overflow: hidden; }
+
+.contact-info-bottom {
+  float: left;
+  padding-left: 1em;
+  color: #006200;
+  line-height: 1.5rem;
+  text-decoration: none; }
+
+@media screen and (min-width: 48em) {
+  body {
+    background-color: #cdcdcd; }
+
+  #btnMenu {
+    display: none; }
+
+  #summary {
+    height: 40%;
+    width: 20%;
+    top: 20%;
+    left: 10%;
+    border-radius: 20% 20% 0 20%;
+    box-shadow: -0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4); }
+
+  #pic {
+    height: 25%;
+    margin: 1rem auto 0 auto;
+    border-radius: 50% 50% 50% 50%; }
+
+  .btnClose {
+    display: none; }
+
+  #social {
+    display: none; }
+
+  #website {
+    float: left;
+    margin-left: 1rem; }
+
+  #socialBig {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: 0; }
+
+  #socialBig .socialNet {
+    color: #323232;
+    text-align: right;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    #socialBig .socialNet:hover {
+      color: #9a9a9a; }
+
+  #logo {
+    display: none; }
+
+  #nameTitle, .title {
+    text-align: center;
+    padding: 0; }
+
+  .content {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 40%;
+    height: 80%;
+    background: #e6e6e6;
+    border: solid 0.1rem #323232;
+    padding: 2rem 4rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .endeavour-item {
+    margin-bottom: 5rem; }
+
+  #bottom {
+    width: 30%;
+    border: none; } }
+@media screen and (max-height: 35em) {
+  #social {
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+    text-align: center; }
+
+  .socialNet {
+    display: inline-block; } }
+@media screen and (max-height: 25em) {
+  #pic {
+    margin-top: 2rem;
+    min-height: 6.5rem; }
+
+  #topicList {
+    width: 60%;
+    float: left;
+    margin-top: 5%; }
+
+  .topicItem {
+    margin-top: 2%;
+    height: 1.75rem; }
+
+  #social {
+    position: static;
+    float: right;
+    width: auto;
+    margin-top: 5%; }
+
+  .socialNet {
+    display: block; } }
+@media screen and (max-height: 18.2em) {
+  #pic {
+    display: none; }
+
+  #topic-list {
+    margin-top: 10%; } }

@@ -1,0 +1,477 @@
+//
+// VARIABLES
+//
+$green:rgb(0,200,0);
+$lightGray:rgb(230,230,230);
+$darkGray:rgb(50,50,50);
+$shadowColor:rgba(0,0,0,0.4);
+$lightShadow:rgba(255,255,255,0.1);
+
+//media queries
+
+$super-short-height:18.2em;
+$short-wide:25em;
+$short:35em;
+$desktop-min:48em;
+
+//
+// MIXINS
+//
+
+@mixin transition ($transitionWhat: all, $transitionTime: .5s, $transitionHow: linear) {
+	-webkit-transition:$transitionWhat $transitionTime $transitionHow;
+	-moz-transition:$transitionWhat $transitionTime $transitionHow;
+	-o-transition:$transitionWhat $transitionTime $transitionHow;
+	-ms-transition:$transitionWhat $transitionTime $transitionHow;
+	transition:$transitionWhat $transitionTime $transitionHow;
+}
+
+@mixin bRadius ($topLeft:.8rem, $topRight:0, $bottomRight:.8rem, $bottomLeft:0) {border-radius:$topLeft $topRight $bottomRight $bottomLeft;}
+
+html,body {height:100%;background-color:$lightGray;}
+#socialBig {display:none;}
+
+/*
+#idiom-btn {
+	position:fixed;
+		top:4rem;
+		right:0;
+	display:block;
+	background-color:$darkGray;
+	color:$lightGray;
+	padding:.25rem;
+	z-index:10;
+}
+*/
+
+//
+//header
+//
+#top {
+	//position:absolute;
+	//	top:0;
+	//	left:0;
+	width:100%;
+	height:2rem;
+	line-height:2rem;
+	background-color:$green;
+	border-bottom:solid .1rem $darkGray;
+	z-index:2;
+	cursor:pointer;
+	&:active {
+		background-color:darken($green,10%);
+	}
+}
+.topLink {
+	font-style:normal;
+	margin-right:1rem;
+	font-weight:bold;
+	font-size:1.2rem;
+	color:rgb(235,235,235);
+}
+
+#btnMenu {
+	float:left;
+	margin-left:1rem;
+	width:20%;
+}
+#website {float:right;}
+
+//
+// MENU
+//
+#summary {
+	height:100%;
+	width:80%;
+	position:fixed;
+		left:-90%;
+	box-shadow:0.2rem 5rem 0.3rem $shadowColor;
+	z-index:1;
+	background-color:$darkGray;
+	@include transition(all,1.5s,ease-in-out);
+}
+
+.summaryActive{left:0 !important;}
+
+.btnClose {
+	float:right;
+	width:25px;
+	height:25px;
+	width:2.5rem;
+	height:2.5rem;
+	@include bRadius (0,0,0,50%);
+	background:$lightGray;
+	line-height:2.5rem;
+	text-align:center;
+	color:$darkGray;
+	cursor:pointer;
+	font-size:1.2rem;
+	padding-top:1rem;
+}
+#pic {
+	display:block;
+	@include bRadius;
+	border:solid 0.02rem $green;
+	width:25%;
+	height:15%;
+	margin:4rem auto 0 auto;
+	background:$lightGray url(../img/avtr.jpg) no-repeat;
+	background-size:cover;
+}
+#topicList {
+	width:80%;
+	margin:10% auto;
+}
+.topicItem {
+	width:100%;
+	height:2rem;
+	margin-top:2.5%;
+	text-align:center;
+	color:$lightGray;
+	font-weight:bold;
+	color:1.2rem;
+	cursor:pointer;
+	&:first-child {
+		margin-top:0;
+	}
+	&:hover {
+		text-shadow:.1rem .1rem .2rem $lightShadow;
+	}
+	&:active {
+		font-size:.95rem;
+	}
+}
+.topicItemSelected {
+	color:darken($lightGray,30%);
+}
+.socialNet {
+	display:block;
+	width:1.5rem;
+	font-size:1.2rem;
+	text-align:center;
+	color:rgb(255,255,255);
+	margin:.5rem;
+	cursor:pointer;
+}
+.socialNet a {text-decoration:none}
+//
+// CONTENT
+//
+
+#skills,
+#work,
+#endeavours {display:none;}
+
+.content {
+	width:80%;
+	margin:0 auto;
+	color:$darkGray;
+	font-size:.8rem;
+	line-height:1.2rem;
+	padding-bottom:2rem;
+	overflow-y:auto
+}
+.contentTop {
+	position:relative;
+	width:100%;
+}
+.title {
+	padding:25% 0 .75rem 0;
+	text-align:center;
+	color:darken($green,20%);
+	font-weight:bold;
+	font-size:1.2rem;
+}
+#nameTitle {text-align:right;margin-top:1rem;}
+#nameTitle b {
+	font-size:.9rem;
+	color:$darkGray;
+}
+#logo {
+	height:3rem;
+	width:6rem;
+	position:absolute;
+	top:2.5rem;
+	left:-2rem;
+	background:url(http://atilafassina.com/img/logo.svg) no-repeat;
+	background-size:contain;
+	display:inline-block
+}
+.subTitle {
+	color:darken($darkGray,10%);
+	text-align:center;
+	line-height:1.2rem;
+	margin:1.5rem 0;
+}
+.contentTxt {
+	display:inline-block;
+	margin-bottom:1.5rem;
+	&:last-child {margin-bottom:0}
+}
+.roundbtn-list {
+	width:100%;
+	overflow:visible;
+	text-align:center;
+}
+.roundbtnItem {
+	@include bRadius(50%,0,50%,50%);
+	width:5rem;
+	height:5rem;
+	display:inline-block;
+	background-color:lighten($darkGray,40%);
+	margin-right:10%;
+	line-height:5rem;
+	font-size:1.5rem;
+	color:$lightGray;
+	text-align:center;
+	overflow:hidden;
+	cursor:pointer;
+	@include transition;
+	&:active {
+		-webkit-transform:translate(0, -.5rem);
+		-moz-transform:translate(0, -.5rem);
+		-o-transform:translate(0, -.5rem);
+		-ms-transform:translate(0, -.5rem);
+		transform:translate(0, -.5rem);}
+}
+.site-url {
+	color:lighten($darkGray,20%);
+	text-decoration:none;
+	font-weight:bold;
+
+	&:hover {color:lighten($darkGray,10%);}
+	&:active {color:$green;}
+}
+
+//
+// SKILLS
+//
+#creative:hover {background-color:rgb(70,100,220);}
+#coding:hover {background-color:rgb(30,180,80)}
+
+.skillSheet {}
+
+#skill-list {
+	width:95%;
+	margin:10% auto;
+	overflow:hidden;
+	text-align:center;
+	//display:none;
+}
+#skill-list li {
+	//float:left;
+	//width:30%;
+	display:inline-block;
+	margin:0 2% 5% 0;
+	padding:.4rem;
+	font-size:1rem;
+	text-align:center;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+//
+// Work
+//
+.workList {
+	width:100%;
+	text-align:center;
+	margin-top:3em;
+}
+
+.workexperience {
+	display:inline-block;
+	width:95%;
+	text-align:left;
+	margin-bottom:2em;
+}
+.workTitle {
+	display:inline-block;
+	font-weight:bold;
+}
+.workCompany {
+	display:inline-block;
+	font-size:1.1em;
+}
+.workCompany:before {
+	content:" @ ";
+}
+.jobTime {
+	font-size:.9em;
+	font-style:italic;
+	padding-left:1em;
+}
+.jobExcerpt {
+	padding:.5em 1.5em;
+	text-align:justify;
+}
+//
+// ENDEAVOURS
+//
+.list-endeavour {
+	display:block;
+}
+.endeavour-item {margin-bottom:1.5rem;}
+
+#italy,#english {float:left;position:relative;}
+.stripes {
+	float:left;
+	height:100%;
+	width:33%;
+	opacity:.4;
+}
+.stripe1 {background-color:rgb(255,0,0);}
+.stripe2 {background-color:rgb(255,255,255);}
+.stripe3 {background-color:rgb(0,255,0);}
+
+#english {background-color:rgb(70,100,220);}
+.item-title {
+	position:absolute;
+		left:20%;
+	text-align:center;
+	color:$lightGray;
+	font-size:3rem
+}
+.endeavour-txt{font-size:.75rem;}
+//
+//	BOTTOM
+//
+#bottom {
+	width:100%;
+	height:1.5rem;
+	position:fixed;
+		bottom:0;
+	background-color:darken($lightGray,10%);
+	border-top:solid .1rem $darkGray;
+	z-index:2;
+	font-size:.75rem;
+	overflow:hidden;
+}
+.contact-info-bottom {
+	float:left;
+	padding-left:1em;
+	color:darken($green,20%);
+	line-height:1.5rem;
+	text-decoration:none;
+}
+
+@media screen and (min-width:$desktop-min) {
+	#top {}
+	body {background-color:darken($lightGray,10%);}
+//
+//MENU
+	#btnMenu {display:none;}
+	#summary {
+	height:auto;
+	width:20%;
+		top:20%;
+		left:10%;
+	@include bRadius(20%,20%,0,20%);
+	box-shadow:-.2rem .2rem 0.3rem $shadowColor;
+}
+#pic {
+	height:4em;
+	margin:1rem auto 0 auto;
+	@include bRadius(50%,50%,50%,50%);
+}
+
+.btnClose {display:none;}
+#social {display:none;}
+#website {
+	float:left;
+	margin-left:1rem;
+}
+#socialBig {
+	display:block;
+	position:absolute;
+		top:20%;
+		right:0;
+}
+#socialBig .socialNet{
+	color:$darkGray;
+	text-align:right;
+	@include transition (all,.5s,linear);
+	&:hover {
+		color:darken($lightGray,30%);
+	}
+}
+
+//
+//CONTENT
+#logo {display:none;}
+
+#nameTitle,.title {text-align:center;padding:0;}
+
+.content {
+	position:absolute;
+	top:10%;
+	right:15%;
+	width:40%;
+	height:80%;
+	background:$lightGray;
+	border:solid .1rem $darkGray;
+	padding:2rem 4rem;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+//PREVIOUS ENDEAVOURS
+.endeavour-item {margin-bottom:5rem;}
+
+//
+// 	FOOTER
+//
+#bottom {
+	width:30%;
+	right:3em;
+	border:none;
+}
+}
+
+
+@media screen and (max-height:$short) {
+	#social {
+		position:absolute;
+			bottom:6rem;
+		width:100%;
+		text-align:center;
+	}
+	.socialNet {
+		display:inline-block;
+	}
+}
+
+@media screen and (max-height:$short-wide) {
+	#pic {
+		margin-top:2rem;
+		min-height:6.5rem;
+	}
+	#topicList {
+		width:60%;
+		float:left;
+		margin-top:5%;
+	}
+	.topicItem {
+		margin-top:2%;
+		height:1.75rem;
+	}
+	#social {
+		position:static;
+		float:right;
+		width:auto;
+		margin-top:5%;
+	}
+	.socialNet {
+		display:block;
+	}
+
+}
+
+@media screen and (max-height:$super-short-height) {
+	#pic {display:none}
+	#topic-list{margin-top:10%;}
+
+}
