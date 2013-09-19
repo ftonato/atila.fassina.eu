@@ -3,7 +3,7 @@ layout: post
 title:  "SASS Nesting for Responsive Web Design"
 date:   2013-09-15 14:45:52
 image: /image/posts/breakpoints-broken.jpg
-categories: rwd
+categories: rwd sass
 ---
 I've already written about my idea of and ideal workflow for RWD, so here's how it's been working for me the past couple of weeks and what I'm expecting for the future of responsive styles.
 
@@ -12,3 +12,22 @@ We still don't have a way of specifying specific media queries for each element 
 So, since we can't do that yet (and probably won't be doing so soon), SASS fell beuatifully into my workflow, saving me a lot of time, effort and organizing my code. How, you may ask (and that's the point of this article..hehe).
 
 ####SASS Nesting####
+
+Putting all styles to each selector together is the whole point of using it. SASS Nesting makes your code more scalable and readable, therefore: maintanble, see for yourself:
+
+<!--- sass nesting code sample -->
+{% highlight sass %}
+
+{% endhighlight %}
+
+Once you find the selector ``#foo`` in the stylsheet, you can tweak as much as you want knowing for sure that it isn't anywhere else. That's great if you're working with a lot of people, in a lot of projects, or arriving in some new one...
+
+When SASS compiles it, the CSS looks like this:
+
+<!-- css compiled sample -->
+{% highlight css %}
+{% endhighlight %}
+
+Yeah, it's not as pretty as the SASS, and you may end up repeating similar media queries if you get big stylesheets with a lot of elements. But, I believe it compensates the repetition of code and rules with organization and clarity.
+
+As I can see it, coding is more about avoiding errors than it is about performance or preferences, and that way is the one I felt more likely to be "error proof" for me. You can disagree, and if you do, let me know, we can discuss it.
