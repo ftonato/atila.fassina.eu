@@ -51,8 +51,7 @@ a {
   background-color: #eeeeee; }
 
 #titleWrap {
-  float: right;
-  width: 45%;
+  width: 100%;
   background-color: #000;
   color: #fff;
   padding-top: 7rem;
@@ -63,27 +62,36 @@ a {
     font-size: 2rem; }
   #titleWrap h2 {
     font-size: 1.2rem; }
+  @media all and (min-width: 35em) {
+    #titleWrap {
+      float: right;
+      width: 45%; } }
   @media all and (min-width: 55em) {
     #titleWrap {
       text-align: left;
       padding-left: 1em; } }
 
 #titleLogo {
-  float: left;
-  width: 55%;
-  background-color: #fff;
-  border-right: solid 0.5em #009632;
-  border-bottom-right-radius: 10px; }
+  width: 100%;
+  background-color: #fff; }
   #titleLogo img {
+    width: 90%;
     margin: .5em auto; }
+  @media all and (min-width: 35em) {
+    #titleLogo {
+      float: left;
+      width: 55%;
+      border-right: solid 0.5em #009632;
+      border-bottom-right-radius: 10px; }
+      #titleLogo img {
+        width: 20em; } }
   @media all and (min-width: 55em) {
     #titleLogo {
       border-color: #eeeeee;
       border-radius: 0; } }
 
 #mainSocial {
-  float: right;
-  width: 45%;
+  width: 100%;
   text-align: center; }
   #mainSocial li {
     display: inline-block;
@@ -98,6 +106,10 @@ a {
       transition: all 250ms linear; }
       #mainSocial li a:hover, #mainSocial li a:active {
         color: #ff6400; }
+  @media all and (min-width: 35em) {
+    #mainSocial {
+      float: right;
+      width: 45%; } }
   @media all and (min-width: 55em) {
     #mainSocial {
       float: none;

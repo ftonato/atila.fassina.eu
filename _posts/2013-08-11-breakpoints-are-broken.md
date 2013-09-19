@@ -6,11 +6,11 @@ image: /image/posts/breakpoints-broken.jpg
 categories: rwd
 ---
 
-When I first heard about crafting responsive web sites it was all about devices. Everyone involved on developing a website or a web app should argue until they find the correct breakpoints related to the primary devices they wanted to support, therefore we would have a media query for each and every kind of device and then hope for the best if manufacturer came up with another different size of screen.
+When I first heard about crafting responsive web sites it was all about devices. Everyone involved on developing a website or a web app should argue until they find the correct breakpoints related to the primary devices they wanted to support, therefore we would have a media query for each and every kind of device and then hope for the best if manufacturers came up with another different size of screen.
 
 ####Craft a website on that premise just feels wrong, doesn’t it?!####
 
-Although we have viewports to prevent small screens with giant resolutions to mess up our beautifully crafted experience, media queries used to do some pretty bad damage on desktop and laptop browsers when zoomed [ctrl+ || cmd+], media queries set in pixels couldn’t understand the view shrinking and all those ours of effort were going falling down as a house of cards (so dramatic!). But we found our way throught that: media queries in ``em``, fully supported by all browsers (IE8+), when users zoom directly in the browser, font-size is affected, therefore ``em`` default value also changes and media queries can respond!
+Although we have viewports to prevent small screens with giant resolutions to mess up our beautifully crafted experience, media queries used to do some pretty bad damage on desktop and laptop browsers when zoomed [ctrl+ || cmd+], media queries set in pixels couldn’t understand the view shrinking and all those hours of effort were falling down as a house of cards (so dramatic!). But we found our way throught that: media queries in ``em``, fully supported by all browsers (IE8+), when users zoom directly in the browser, font-size is affected, therefore ``em`` default value also changes and media queries can respond!
 
 >One can learn CSS in one day, but would take a lifetime to master!
 
