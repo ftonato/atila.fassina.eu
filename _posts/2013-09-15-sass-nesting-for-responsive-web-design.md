@@ -76,3 +76,5 @@ p:after {
 Yeah, it's not as pretty as the SASS, and you may end up repeating similar media queries if you get big stylesheets with a lot of elements. But, I believe it compensates the repetition of code and rules with organization and clarity.
 
 As I can see it, coding is more about avoiding errors than it is about performance or preferences, and that way is the one I felt more likely to be "error proof" for me. You can disagree, and if you do, let me know, we can discuss it.
+
+You can check it out working at [this pen](http://cdpn.io/AIeaj)
