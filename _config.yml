@@ -8,12 +8,14 @@ url: http://localhost:4000
 
 name: Átila Fassina
 description: My personal blog/site/lab!
+domain: atilafassina.com
+gaccount: UA-36837962-1
 
 author:
-  name: atilafassina
+  name: Átila Fassina
+  title: Front-end Developer
   email: hey@atilafassina.com
-  github: atilafassina
-  twitter: atilafassina
+  username: atilafassina
 
 future:      true
 paginate: 5

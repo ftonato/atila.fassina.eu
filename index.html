@@ -4,30 +4,29 @@ title: Átila Fassina - Front-end Developer
 ---
 <main id="home">
   <section id="about">
-  	<p>
-  		Hey, I'm an Italian/Brazilian frontender, based in Porto Alegre (BR). I'm very passionate about User Experience and Responsive Web Design. Here you'll find some of my ideas about cutting edge technology or some tips for newcommers (as I tend to see myself also). 
-  	</p>
-  	<p>
-  		Currently, I'm working at <a href="http://www.imobusca.com.br" rel="nofollow" target="_blank">Imobusca</a> as Front-end Developer && SEO Analyst. I also work as a freelancer, and like to participate on nice projects.
-  	</p>
-  	<p>
-  		You can check my <a href="http://atilafassina.com/resume" target="_blank">resumé</a> in advance if you're thinking about hiring me. Or just go straight to contacting me at <a href="mailto:hey@atilafassina.com">hey@atilafassina.com</a>
-  	</p>
+    <p>
+      Hey, I'm an Italian/Brazilian frontender, based in Porto Alegre (BR). I'm very passionate about User Experience and Responsive Web Design. Here you'll find some of my ideas about cutting edge technology or some tips for newcommers (as I tend to see myself also).
+    </p>
+    <p>
+      Currently, I'm working at <a href="http://www.imobusca.com.br" rel="nofollow" target="_blank">Imobusca</a> as Front-end Developer && SEO Analyst. I also work as a freelancer, and like to participate on nice projects.
+    </p>
+    <p>
+      You can check my <a href="http://atilafassina.com/resume" target="_blank">resumé</a> in advance if you're thinking about hiring me. Or just go straight to contacting me at <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    </p>
   </section>
   <ul class="posts">
     {% for post in site.posts %}
       <li>
-      	<a href="{{ post.url }}">
-      		<span class="postDate">{{ post.date | date_to_string }}</span>
-			<img class="postImg" src="{{ post.image }}" />
-				
-			</div>
-      		<h3>{{ post.title }}</h3>
-      	</a>
-      	{{ post.excerpt }}
-      	<a class="readmore" href="{{ post.url }}">
-      		full post
-      	</a>
+        <a href="{{ post.url }}">
+          <span class="postDate">{{ post.date | date_to_string }}</span>
+      <img class="postImg" src="{{ post.image }}" />
+      </div>
+          <h3>{{ post.title }}</h3>
+        </a>
+        {{ post.excerpt }}
+        <a class="readmore" href="{{ post.url }}">
+          full post
+        </a>
       </li>
     {% endfor %}
   </ul>
