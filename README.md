@@ -7,7 +7,5 @@ I'll be using this website to test new things and play around, so needless to sa
 
 ##To-do list
 
-- schema.org
 - update GA
 - custom 404
-- Projects and Works page

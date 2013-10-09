@@ -308,13 +308,18 @@ h3 {
     margin-bottom:1em;
   }
 
-  blockquote p {
-    padding:1em;
-    display:block;
-    border-top:solid 2px $important;
-    border-bottom:solid 2px $important;
-    color:$important;
-    font-size:1.3em;
+  blockquote {
+    p {
+      padding:1em;
+      display:block;
+      border-top:solid 2px $important;
+      border-bottom:solid 2px $important;
+      color:$important;
+      font-size:1.3em;
+    }
+    em {
+      font-size:.6em;
+    }
   }
 
   a {
@@ -365,6 +370,17 @@ code {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+hr {
+  margin:2em auto;
+  border:none;
+  &::before {
+    display:block;
+    content:"— × —";
+    text-align:center;
+    color:#CCC;
+  }
 }
 // disquss
 

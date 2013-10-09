@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*****************************************************************************/
 /*
 /* Variables
@@ -245,6 +246,8 @@ h3 {
     border-bottom: solid 2px #009632;
     color: #009632;
     font-size: 1.3em; }
+  .post blockquote em {
+    font-size: .6em; }
   .post a {
     color: #090909;
     border-bottom: dashed 1px #ff6400; }
@@ -283,6 +286,15 @@ code {
 
 .post pre.terminal code {
   background-color: #333; }
+
+hr {
+  margin: 2em auto;
+  border: none; }
+  hr::before {
+    display: block;
+    content: "— × —";
+    text-align: center;
+    color: #CCC; }
 
 .disqussWrap {
   width: 80%;
