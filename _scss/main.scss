@@ -15,6 +15,22 @@ $txt:#222;
 
 /*****************************************************************************/
 /*
+/* Silent classes
+/*
+/*****************************************************************************/
+
+%paginationLink {
+  width:2em;
+  height:2em;
+  background-color:$highlight;
+  text-align:center;
+  a {
+    color:#FFF;
+  }
+}
+
+/*****************************************************************************/
+/*
 /* Common
 /*
 /*****************************************************************************/
@@ -28,13 +44,11 @@ $txt:#222;
   box-sizing:border-box;
 }
 
-html, body, main { height: 100%; }
-
 body {
   font-size: 100%;
   font-family:"Noto Sans", sans-serif;
   line-height:1.5;
-  background-color:$bkg;
+  background-color:#FFF;
   color:$txt;
 }
 
@@ -53,8 +67,6 @@ a {
   background-color:$highlight;
   color:rgb(225,225,225);
 }
-
-
 
 /*****************************************************************************/
 /*
@@ -180,11 +192,11 @@ a {
 /*
 /*****************************************************************************/
 #about {
-  background-color:darken($bkg,10%);
+  //background-color:darken($bkg,10%);
+  background-color:#FFF;
   box-shadow:-3em -3px 0 1px $highlight;
   & p {
     color:#333;
-    font-size:.8em;
     padding:1em .5em;
     @media all and (min-width:55em) {
       display:block;
@@ -274,11 +286,33 @@ h3 {
 
 /*****************************************************************************/
 /*
-/* Site
+/* Pagination
 /*
 /*****************************************************************************/
 
-
+.pagination {
+  display:flex;
+  justify-content:center;
+  align-content:space-around;
+}
+.previous {
+  @extend %paginationLink;
+  -ms-transform:skew(30deg);
+  -webkit-transform:skew(30deg);
+  -moz-transform:skew(30deg);
+  transform:skew(30deg);
+}
+.next {
+  @extend %paginationLink;
+  -ms-transform:skew(-30deg);
+  -webkit-transform:skew(-30deg);
+  -moz-transform:skew(-30deg);
+  transform:skew(-30deg);
+}
+.current-page {
+  font-weight:bold;
+  color:$highlight;
+}
 
 /*****************************************************************************/
 /*
@@ -303,7 +337,6 @@ h3 {
   }
 
   p {
-    font-size:.9em;
     color:$txt;
     margin-bottom:1em;
   }
@@ -312,8 +345,9 @@ h3 {
     p {
       padding:1em;
       display:block;
-      border-top:solid 2px $important;
-      border-bottom:solid 2px $important;
+      border-left:solid 2px $important;
+      border-top-left-radius:.5em;
+      border-bottom-left-radius:.5em;
       color:$important;
       font-size:1.3em;
     }
@@ -342,7 +376,7 @@ h3 {
 }
 .post pre {
   border: 1px solid #ddd;
-  background-color: $bkg;
+  background-color: #222;
   margin:1em 0;
   padding: 0 .4em;
 }
@@ -352,13 +386,18 @@ h3 {
 }
 
 code {
-  border: 1px solid #ddd;
-  background-color: $bkg;
-  padding: 0 .2em;
+  border: 1px solid #BBB;
+  background-color: #DDD;
+  padding:.2em;
+  color:#222;
+  text-transform:lowercase;
+  border-radius:.25em;
 }
 
 .post pre code {
+  color:#DDD;
   border: none;
+  background-color:transparent;
 }
 
 /* terminal */

@@ -28,4 +28,4 @@ markdown: maruku
   # png_url:    /images/latex
 
 # Use Pygments to highlight code blocks
-pygments: false
+pygments: true

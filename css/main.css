@@ -6,6 +6,19 @@
 /*****************************************************************************/
 /*****************************************************************************/
 /*
+/* Silent classes
+/*
+/*****************************************************************************/
+.previous, .next {
+  width: 2em;
+  height: 2em;
+  background-color: #ff6400;
+  text-align: center; }
+  .previous a, .next a {
+    color: #FFF; }
+
+/*****************************************************************************/
+/*
 /* Common
 /*
 /*****************************************************************************/
@@ -17,14 +30,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-html, body, main {
-  height: 100%; }
-
 body {
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
-  background-color: #eeeeee;
+  background-color: #FFF;
   color: #222222; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -141,11 +151,10 @@ a {
 /*
 /*****************************************************************************/
 #about {
-  background-color: #d4d4d4;
+  background-color: #FFF;
   box-shadow: -3em -3px 0 1px #ff6400; }
   #about p {
     color: #333;
-    font-size: .8em;
     padding: 1em .5em; }
     @media all and (min-width: 55em) {
       #about p {
@@ -215,9 +224,30 @@ h3 {
 
 /*****************************************************************************/
 /*
-/* Site
+/* Pagination
 /*
 /*****************************************************************************/
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-content: space-around; }
+
+.previous {
+  -ms-transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  -moz-transform: skew(30deg);
+  transform: skew(30deg); }
+
+.next {
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  transform: skew(-30deg); }
+
+.current-page {
+  font-weight: bold;
+  color: #ff6400; }
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -236,14 +266,14 @@ h3 {
     margin: 2em 0;
     color: #222222; }
   .post p {
-    font-size: .9em;
     color: #222222;
     margin-bottom: 1em; }
   .post blockquote p {
     padding: 1em;
     display: block;
-    border-top: solid 2px #009632;
-    border-bottom: solid 2px #009632;
+    border-left: solid 2px #009632;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
     color: #009632;
     font-size: 1.3em; }
   .post blockquote em {
@@ -263,7 +293,7 @@ h3 {
 
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eeeeee;
+  background-color: #222;
   margin: 1em 0;
   padding: 0 .4em; }
 
@@ -271,12 +301,17 @@ h3 {
   margin-left: 1.35em; }
 
 code {
-  border: 1px solid #ddd;
-  background-color: #eeeeee;
-  padding: 0 .2em; }
+  border: 1px solid #BBB;
+  background-color: #DDD;
+  padding: .2em;
+  color: #222;
+  text-transform: lowercase;
+  border-radius: .25em; }
 
 .post pre code {
-  border: none; }
+  color: #DDD;
+  border: none;
+  background-color: transparent; }
 
 /* terminal */
 .post pre.terminal {
