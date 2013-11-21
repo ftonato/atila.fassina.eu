@@ -37,61 +37,16 @@
     width:90%;
     margin:.5em auto;
   }
-  @media all and (min-width:35em) {
+  @media all and (min-width:37em) {
     float:left;
     width:55%;
-    border-right:solid .5em $important;
-    border-bottom-right-radius:10px;
     & img {
-      width:20em;
+      width:90%;
+      max-width:20em;
     }
   }
-
-  @media all and (min-width:55em) {
-    border-color:$bkg;
-    border-radius:0;
-  }
 }
-#mainSocial {
-  width:100%;
-  text-align:center;
-    & li {
-      display:inline-block;
-      font-size:1.2em;
-      margin:.5em .5em;
 
-      &:first-child {
-        margin-top:0;
-      }
-
-        & a {
-          color:$txt;
-          -ms-transition:all 250ms linear;
-          -webkit-transition:all 250ms linear;
-          transition:all 250ms linear;
-          &:hover,
-          &:active {
-            color:$highlight;
-          }
-        }
-    }
-
-    @media all and (min-width:35em) {
-      float:right;
-      width:45%;
-    }
-    @media all and (min-width:55em) {
-      float:none;
-      position:absolute;
-      left:0;
-      top:1em;
-      width:auto;
-
-      & li {
-        display:block;
-      }
-    }
-}
 #mainMenu {
   background-color:$bkg;
   clear:both;
