@@ -1,0 +1,60 @@
+//===========
+// Variables
+//==========
+
+$important: #009632;
+$importantRGB:rgb(0,150,50);
+
+$highlight:#FF6400;
+$highlightRGB:rgb(255,100,0);
+
+$bkg:#eee;
+$txt:#222;
+
+//===============
+// Placeholders
+//==============
+%paginationLink {
+  width:2em;
+  height:2em;
+  background-color:$highlight;
+  text-align:center;
+  a {
+    color:#FFF;
+  }
+}
+
+// ========================
+// Going wild. No reset! =)
+// ========================
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family:"Noto Sans", sans-serif;
+  line-height:1.5;
+  background-color:#FFF;
+  color:$txt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+ul {list-style:none;}
+
+a {
+  color:darken($txt,10%);
+  text-decoration:none
+}
+
+::selection {
+  background-color:$highlight;
+  color:rgb(225,225,225);
+}

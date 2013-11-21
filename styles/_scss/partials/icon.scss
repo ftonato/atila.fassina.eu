@@ -8,27 +8,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'icomoon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
 [class*="icon-"] {
-*/
-.icon-evil, .icon-google-plus, .icon-lanyrd, .icon-twitter, .icon-facebook, .icon-google-plus-2, .icon-feed, .icon-github, .icon-skype, .icon-linkedin, .icon-chrome, .icon-html5, .icon-html5-2, .icon-css3, .icon-firefox, .icon-IE, .icon-opera, .icon-safari {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;

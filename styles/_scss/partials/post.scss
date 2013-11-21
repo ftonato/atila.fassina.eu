@@ -1,0 +1,102 @@
+.post {
+  padding:2em 1em;
+  background-color:#fff;
+
+  @media all and (min-width:55em) {
+    width:60%;
+    max-width:45em;
+    margin:0 auto;
+  }
+
+  h4 {
+    margin:2em 0;
+    color:$txt;
+  }
+
+  p {
+    color:$txt;
+    margin-bottom:1em;
+  }
+
+  blockquote {
+    p {
+      padding:1em;
+      display:block;
+      border-left:solid 2px $important;
+      border-top-left-radius:.5em;
+      border-bottom-left-radius:.5em;
+      color:$important;
+      font-size:1.3em;
+    }
+    em {
+      font-size:.6em;
+    }
+  }
+
+  a {
+    color:darken($txt, 10%);
+    border-bottom:dashed 1px $highlight;
+  }
+
+    a:hover,
+    a:active {
+      border-bottom-style:solid;
+    }
+
+  ul {
+    list-style:square;
+  }
+}
+.postImg {
+  width:100%;
+  margin:0 auto 2em;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}
+
+code {
+  border: 1px solid #BBB;
+  background-color: #DDD;
+  padding:.2em;
+  color:#222;
+  text-transform:lowercase;
+  border-radius:.25em;
+}
+
+.post pre code {
+  color:#DDD;
+  border: none;
+  background-color:transparent;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+
+hr {
+  margin:2em auto;
+  border:none;
+  &::before {
+    display:block;
+    content:"— × —";
+    text-align:center;
+    color:#CCC;
+  }
+}
+
+// disquss
+//--------
+.disqussWrap {
+  width:80%;
+  max-width:40em;
+  margin:2em auto;
+}
