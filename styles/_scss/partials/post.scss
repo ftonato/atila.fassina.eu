@@ -1,14 +1,13 @@
 .post {
   padding:2em 1em;
   background-color:#fff;
-
   @media all and (min-width:55em) {
     width:60%;
     max-width:45em;
     margin:0 auto;
   }
 
-  h4 {
+  h4,h2 {
     margin:2em 0;
     color:$txt;
   }

@@ -432,7 +432,7 @@ h3 {
       width: 60%;
       max-width: 45em;
       margin: 0 auto; } }
-  .post h4 {
+  .post h4, .post h2 {
     margin: 2em 0;
     color: #222222; }
   .post p {
