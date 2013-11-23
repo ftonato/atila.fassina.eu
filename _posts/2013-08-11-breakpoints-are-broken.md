@@ -2,7 +2,7 @@
 layout: post
 title:  "Breakpoints are broken"
 date:   2013-08-11 21:45:52
-image: /image/posts/breakpoints-broken.jpg
+image:  /assets/image/posts/breakpoints-broken.jpg
 categories: rwd
 ---
 

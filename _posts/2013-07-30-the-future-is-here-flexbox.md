@@ -2,7 +2,7 @@
 layout: post
 title:  "The Future is here: Flexbox!"
 date:   2013-07-30 16:00:52
-image: /image/posts/flexbox-redpill.png
+image:  /assets/image/posts/flexbox-redpill.png
 categories: rwd css
 ---
 What if I told you it’s possible to change the order of the elements and distribute the all of them accordingly to the available space? What if I told you you can centralize all elements inside a parent with only TWO CSS properties? If you don’t know what I’m talking about, it is going to be like taking Morpheus’ red pill!
@@ -29,7 +29,7 @@ e {
     display:flex;
 }
 {% endhighlight %}
-a display ``FLEX`` behaves like a ``BLOCK`` and an ``INSIDE-FLEX`` behaves like an ``INLINE-BLOCK`` 
+a display ``FLEX`` behaves like a ``BLOCK`` and an ``INSIDE-FLEX`` behaves like an ``INLINE-BLOCK``
 
 - flex-direction: how are your items going to align themselves? In a ``ROW`` [left to right], in a ``COLUMN``[top to bottom] or backwards? ( ``ROW-REVERSE`` [right to left] or ``COLUMN-REVERSE`` [bottom to top]);
 

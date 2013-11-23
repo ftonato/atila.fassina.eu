@@ -2,7 +2,7 @@
 layout: post
 title:  "Web Design && stuff"
 date:   2013-10-09 21:45:52
-image: /image/posts/web-design-and-stuff.jpg
+image:  /assets/image/posts/web-design-and-stuff.jpg
 categories: web
 ---
 The web is confused. I've seen discussions and articles from great people trying to get a [job title naming convension](http://css-tricks.com/job-titles-in-the-web-industry/), or specifying what would be the [role of a Front-end Developer](http://bradfrostweb.com/blog/post/development-is-design/). And I'm really glad great people like [Brad Frost](https://twitter.com/brad_frost) and [Chris Coyer](https://twitter.com/chriscoyier) have done that.

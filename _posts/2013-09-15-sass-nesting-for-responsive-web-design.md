@@ -2,7 +2,7 @@
 layout: post
 title:  "SASS Nesting for Responsive Web Design"
 date:   2013-09-15 14:45:52
-image: /image/posts/sass-nesting.jpg
+image:  /assets/image/posts/sass-nesting.jpg
 categories: rwd sass
 ---
 I've already written about my idea of and ideal workflow for RWD, so here's how it's been working for me the past couple of weeks and what I'm expecting for the future of responsive styles.

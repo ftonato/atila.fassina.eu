@@ -2,7 +2,7 @@
 layout: post
 title:  "BrowserFit"
 date:   2013-11-21 21:45:52
-image: /image/posts/browserfit.png
+image:  /assets/image/posts/browserfit.png
 categories: rwd workflow
 ---
 Responsive Web Design[RWD] has been one of the hottest topics on web development, not surprisingly more companies have tunned their workflow to enhance the power of their applications with RWD best practices. To make your layout responsive is more than adapt it to different viewport sizes, there's a concern with user experince that has to reach the foundations of development, otherwise the product may lose its usage.

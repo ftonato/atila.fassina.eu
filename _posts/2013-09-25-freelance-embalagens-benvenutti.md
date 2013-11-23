@@ -2,7 +2,7 @@
 layout: post
 title:  "Freelance - Embalagens Benvenutti"
 date:   2013-09-25 19:00:00
-image: /image/works/embalagens-benvenutti.png
+image:  /assets/image/works/embalagens-benvenutti.png
 categories: works freelance
 ---
 This is project for a local package retailer, it was my first freelance (as a matter of fact, it was my first project ever) and its intention wasn't to be responsive (at least not according to the client expectations) and it is supposed to be a first contact with most of the clients. This website was put online for the first time in June, 2012.

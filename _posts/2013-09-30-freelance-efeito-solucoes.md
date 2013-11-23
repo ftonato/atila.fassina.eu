@@ -2,7 +2,7 @@
 layout: post
 title:  "Freelance - Efeito Soluções"
 date:   2013-09-30 19:00:00
-image: /image/works/efeito-solucoes.png
+image:  /assets/image/works/efeito-solucoes.png
 categories: works freelance
 ---
 This project was made together with Visual Desginer (and wonderful wife, BTW) [Natalia Lassance](http://behance.net/natalialassance) and is currently online at [www.efeitosolucoes.com.br](http://www.efeitosolucoes.com.br). Natalia and I were already in delivering-stage of another project, so it wasn't our first as a team. What made this one very special was the agreement we had on leveling up our workflow sync. After having some setbacks on the previous project that led us to a lot of do-overs and debating hours, we were aiming to boost up our productivity.
