@@ -2,49 +2,48 @@
 // Variables
 //==========
 
-$important: #009632;
-$importantRGB:rgb(0,150,50);
+$brandGreen:rgb(0,150,50);
+$brandGreen--dark:darken($brandGreen, 10%);
 
-$highlight:#FF6400;
-$highlightRGB:rgb(255,100,0);
+$fontColor--dark:  rgb(50,50,50);
+$fontColor--light: rgb(250,250,250);
 
-$bkg:rgb(245,245,245);
-$txt:#222;
+$bkg--light: rgb(245,245,245);
+$bkg--dark:  rgb(25,25,25);
+
+$important: rgb(0,150,50);
+
+$highlight: rgb(255,100,0);
+$highlight--dark: darken($highlight, 10%);
+
+$bkg: $bkg--light;
+$txt: $fontColor--dark;
+
+
+//=============
+// Breakpoints
+//=============
+
+$bp-35: '(min-width:35em)';
+$bp-37: '(min-width:37em)';
+$bp-55: '(min-width:55em)';
 
 //===============
-// Placeholders
-//==============
-%paginationLink {
-  width:2em;
-  height:2em;
-  background-color:$highlight;
-  text-align:center;
-  a {
-    color:#FFF;
-  }
-}
-
-// ========================
-// Going wild. No reset! =)
-// ========================
+// Useful resets
+//===============
 * {
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
-
 body {
   font-size: 100%;
   font-family:"Noto Sans", sans-serif;
   line-height:1.5;
-  background-color:#FFF;
+  background-color:$bkg--light;
   color:$txt;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
 }
 
 ul {list-style:none;}
@@ -57,4 +56,62 @@ a {
 ::selection {
   background-color:$highlight;
   color:rgb(225,225,225);
+}
+
+//===============
+// Mixin
+//==============
+@mixin transition($prop: all, $time: 250ms, $time-function: linear, $delay:0) {
+    -ms-transition: $prop $time $time-function $delay;
+    -moz-transition: $prop $time $time-function $delay;
+    transition: $prop $time $time-function $delay;
+}
+
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    transform: $transform;
+}
+
+@mixin animation($name, $duration) {
+    -ms-animation:$name $duration;
+    -webkit-animation:$name $duration;
+    -moz-animation:$name $duration;
+    animation:$name $duration;
+}
+
+@mixin keyframes ($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+    @-ms-keyframes $animation-name {
+        @content;
+    }
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content:"";
+        clear:both;
+    }
+}
+
+//===============
+// Placeholders
+//==============
+%paginationLink {
+  padding: .2em .5em;
+  background-color: $bkg--dark;
+  text-align: center;
+  a {
+    display:inline-block;
+    color: $fontColor--light;
+  }
 }

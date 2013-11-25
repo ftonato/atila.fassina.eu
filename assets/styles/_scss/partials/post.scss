@@ -1,17 +1,32 @@
-.post {
-  padding:2em 1em;
-  background-color:#fff;
-  @media all and (min-width:55em) {
-    width:60%;
-    max-width:45em;
-    margin:0 auto;
-  }
+.fullPost-top {
+  margin-top:2em;
+}
 
-  h4,h2 {
+.fullPost-date {
+  text-align:center;
+  font:.8em/1 Monaco, "Courier New", monospace;
+}
+.fullPost-title {
+  text-align: center;
+  color:$highlight;
+  font-size:1.2em;
+}
+.fullPost-img {
+  width: 100%;
+}
+
+.fullPost {
+  padding: 2em 1em;
+  // @media (min-width:55em) {
+  //   width:60%;
+  //   max-width:45em;
+  //   margin:0 auto;
+  // }
+  h4, //fallback first posts
+  h2 {
     margin:2em 0;
     color:$txt;
   }
-
   p {
     color:$txt;
     margin-bottom:1em;
@@ -45,10 +60,6 @@
   ul {
     list-style:square;
   }
-}
-.postImg {
-  width:100%;
-  margin:0 auto 2em;
 }
 
 .post ul, .post ol {

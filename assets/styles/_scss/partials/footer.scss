@@ -1,0 +1,13 @@
+.bottom {
+    background-color: $bkg--dark;
+    color: $fontColor--light;
+    overflow:hidden;
+}
+.license {
+    float:right;
+    font:.7em/1.2 Monaco, "Courier New", monospace;
+    padding:.2em .5em;
+    &::before {
+        content:"Content licenses:"
+    }
+}

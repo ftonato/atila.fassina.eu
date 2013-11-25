@@ -3,7 +3,7 @@
   {% if paginator.previous_page %}
     <p class="previous">
       {% if paginator.previous_page == 1 %}
-        <a href="/"><</a>
+        <a href="/">Newer</a>
       {% else %}
         <a href="{{ paginator.previous_page_path }}">Previous</a>
       {% endif %}
@@ -36,7 +36,7 @@
 
   {% if paginator.next_page %}
     <p class="next">
-      <a href="{{ paginator.next_page_path }}">></a>
+      <a href="{{ paginator.next_page_path }}">Older</a>
     </p>
   {% else %}
     <!--<p class="next disabled">
