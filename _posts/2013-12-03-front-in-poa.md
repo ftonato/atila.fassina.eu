@@ -10,7 +10,7 @@ This post will be written in Portuguese as it's my impressions regard speaking a
 <hr />
 <!-- more -->
 ##O evento
-[Front-in POA](http://frontinpoa.com.br/) foi sensacionalmente bem organizado por [Jean Carlo Emer](http://jcemer.com), [Felipe Moura](http://felipenmoura.org/), [Jaydson Gomes](http://jaydson.org) e [Renato Rosa](http://gri.fo). Acredito que a ideia do evento foi dar uma chance pra uma galera local que vinha se preparando pra começar a palestrar, se foi isso: conseguiram. O suporte que eles deram pra mim e pra quem mais esteve envolvido foi fenomenal, permitiu que os palestrantes pudessem se preocupar apenas com sua palestra, correram na volta pra manter a organização de alto nível e o evento correndo tranquilamente. Sou só agradecimentos pra toda organização do evento.
+[Front-in POA](http://frontinpoa.com.br/) foi sensacionalmente bem organizado por [Jean Carlo Emer](http://jcemer.com), [Felipe Moura](http://felipenmoura.org/), [Jaydson Gomes](http://jaydson.org) e [Renatho Rosa](http://gri.fo). Acredito que a ideia do evento foi dar uma chance pra uma galera local que vinha se preparando pra começar a palestrar, se foi isso: conseguiram. O suporte que eles deram pra mim e pra quem mais esteve envolvido foi fenomenal, permitiu que os palestrantes pudessem se preocupar apenas com sua palestra, correram na volta pra manter a organização de alto nível e o evento correndo tranquilamente. Sou só agradecimentos pra toda organização do evento.
 
 Cabe aqui dois agradecimentos muito especiais:
 
