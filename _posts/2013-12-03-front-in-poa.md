@@ -46,7 +46,7 @@ Subi no palco depois do [Franz Figueroa](https://twitter.com/franzfigueroa) fala
 ##Resumo da missa... =)
 Após uma breve ressalva de que Workflow não deve ser escrito em pedra -cada projeto precisa do seu-, fomos direto à UX. Antes de mergulhar nos conceitos de RWD senti a necessidade do quão importante isso é para o mercado como um todo (nossos clientes e nossos usuários finais). Falamos de percepção de sucesso, de marketing e, finalmente, chegamos em design.
 
-Após estabelecermos que design e conteúdo são a mesma coisa (Bauhaus, eu te amo! =P), dobramos a barra da calça e começamos a entrar no mar do RWD (ó, que poético).
+Após estabelecermos que design e conteúdo são a mesma coisa (Bauhaus! \m/), dobramos a barra da calça e começamos a entrar no mar do RWD (ó, que poético).
 
 Partimos com medidas relativas (dos **ems** aos **viewports**), e fomos rapidamente para as media queries. Vimos as novas `media features` formas diferentes de se declarar uma media query com aquela mãozinha do SASS, e falando em SASS...
 
