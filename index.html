@@ -2,33 +2,36 @@
 layout: default
 title: Átila Fassina - Front-end Developer
 ---
-<main id="home">
-  <section id="about">
+<main role="main" class="contentWrap">
+  <ul class="postList">
+    {% for post in paginator.posts %}
+      <li class="homePost">
+        <a class="homePost-link" href="{{ post.url }}">
+          <span class="homePost-date">{{ post.date | date_to_string }}</span>
+          <h3 class="homePost-title">{{ post.title }}</h3>
+        </a>
+        <section class="homePost-excerpt">
+          {{ post.excerpt }}
+        </section>
+      </li>
+    {% endfor %}
+    {% include pagination.html %}
+  </ul>
+
+
+<aside class="about">
     <p>
       Hey, I'm a Front-end Developer, UX Designer, Speaker as often as I can, and Consultant every now and then.
     </p>
     <p>
-      I craft web applications for a living and for fun, always trying to be involved in nice Open-Source projects and around interesting people who share the same passion as I: the web. I strongly believe that Web Design is about User Experience, to craft a good experience means to provide a feeling of success to your user, therefore I'm more interested in techniques that help me (directly or not) to achieve this goal in all my projects.
+      I craft web applications for a living and for fun, getting envolved in nice Open-Source projects and  interesting people passionate about the web.
     </p>
-    <p>
+  </aside>
+  </main>
+  <!--
+  I strongly believe that Web Design is about User Experience, to craft a good experience means to provide a feeling of success to your user, therefore I'm more interested in techniques that help me (directly or not) to achieve this goal in all my projects.
+
+      <p>
       And amongst my biggest interests is Responsive Web Design, take a look at my newest project: <a href="" target="_blank">BrowserFit</a>, hopefully you'll get interested on participating! =)
     </p>
-  </section>
-  <ul class="posts">
-    {% for post in paginator.posts %}
-      <li>
-        <a href="{{ post.url }}">
-          <span class="postDate">{{ post.date | date_to_string }}</span>
-      <img class="postImg" src="{{ post.image }}" />
-      </div>
-          <h3>{{ post.title }}</h3>
-        </a>
-        {{ post.excerpt }}
-        <a class="readmore" href="{{ post.url }}">
-          full post
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</main>
-{% include pagination.html %}
+  -->

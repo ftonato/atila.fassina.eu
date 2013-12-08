@@ -2,12 +2,18 @@
 layout: default
 comments: true
 ---
-<article class="post">
-    <p class="postDate">{{ page.date | date_to_string }}</p>
-    <h3>{{ page.title }}</h3>
-    <img class="postImg" src="{{ page.image }}" />
-    {{ content }}
-</article>
+<main role="main" class="contentWrap postWrap">
+    <header class="fullPost-top">
+        <p class="fullPost-date">{{ page.date | date_to_string }}</p>
+        <h1 class="fullPost-title">{{ page.title }}</h1>
+        <img class="fullPost-img" src="{{ page.image }}" />
+    </header>
+    <article class="fullPost">
+        {{ content }}
+    </article>
+</main>
+<footer>
 {% if page.comments %}
     {% include disquss.html %}
 {% endif %}
+</footer>
