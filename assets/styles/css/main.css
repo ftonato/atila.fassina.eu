@@ -10,7 +10,7 @@ body {
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   color: #323232; }
 
 ul {
@@ -615,8 +615,19 @@ table {
 
 /* Literal.Number.Integer.Long */
 .top {
+  clear: both; }
+  @media (min-width: 72.8em) {
+    .top {
+      width: 72em;
+      margin: 0 auto; } }
+
+.titleWrap {
   width: 100%;
   overflow: hidden; }
+  @media (min-width: 42.5em) {
+    .titleWrap {
+      float: left;
+      width: 45%; } }
 
 .titleLogo {
   float: left;
@@ -624,14 +635,21 @@ table {
   .titleLogo img {
     height: 5em;
     margin: .5em auto; }
+  @media (max-width: 19.5em) {
+    .titleLogo {
+      width: 100%;
+      text-align: center; } }
 
-.top .titleName {
+.titleName {
   float: left;
   padding-top: .75em;
   padding-left: 5%;
   font-size: 1.5em;
   line-height: 1.2;
   color: #323232; }
+  @media (max-width: 19.5em) {
+    .titleName {
+      display: none; } }
 
 .mainMenu {
   text-align: center; }
@@ -644,11 +662,19 @@ table {
     transition: all 250ms linear; }
     .mainMenu a:hover, .mainMenu a:active {
       color: #ff6400; }
+  @media (min-width: 42.5em) {
+    .mainMenu {
+      float: right;
+      width: 50%;
+      margin: 1em .5em; } }
 
 .bottom {
   background-color: #191919;
   color: #fafafa;
   overflow: hidden; }
+  @media (min-width: 42.5em) {
+    .bottom {
+      clear: both; } }
 
 .license {
   float: right;
@@ -657,9 +683,25 @@ table {
   .license::before {
     content: "Content licenses:"; }
 
+.contentWrap {
+  clear: both; }
+  @media (min-width: 72.8em) {
+    .contentWrap {
+      width: 72em;
+      margin: 0 auto; } }
+
 .postList {
   list-style-type: none;
   margin: 0 auto; }
+  @media (min-width: 42.5em) {
+    .postList {
+      float: left;
+      margin-top: 3em;
+      width: 60%; } }
+  @media (min-width: 50.5em) {
+    .postList {
+      width: 55%;
+      margin-left: 2.5%; } }
 
 .homePost {
   padding-top: 1em; }
@@ -695,8 +737,14 @@ table {
   .about p a {
     color: #fafafa;
     border-bottom: dashed 1px #ff6400; }
-  .about p a:hover, .about p a:active {
+  .about p a:hover,
+  .about p a:active {
     border-bottom-style: solid; }
+  @media (min-width: 42.5em) {
+    .about {
+      float: right;
+      width: 35%;
+      margin-top: 20%; } }
 
 .pagination {
   display: flex;
@@ -728,6 +776,14 @@ table {
 .current-page {
   font-weight: bold;
   color: #cc5000; }
+
+@media (min-width: 42.5em) {
+  .postWrap {
+    width: 80%;
+    margin: 0 auto; } }
+@media (min-width: 55em) {
+  .postWrap {
+    width: 60%; } }
 
 .fullPost-top {
   margin-top: 2em; }

@@ -8,7 +8,7 @@ $brandGreen--dark:darken($brandGreen, 10%);
 $fontColor--dark:  rgb(50,50,50);
 $fontColor--light: rgb(250,250,250);
 
-$bkg--light: rgb(245,245,245);
+$bkg--light: rgb(240,240,240);
 $bkg--dark:  rgb(25,25,25);
 
 $important: rgb(0,150,50);
@@ -23,10 +23,13 @@ $txt: $fontColor--dark;
 //=============
 // Breakpoints
 //=============
+$tp-xtra-small: '(max-width: 19.5em)';
 
-$bp-35: '(min-width:35em)';
-$bp-37: '(min-width:37em)';
-$bp-55: '(min-width:55em)';
+$bp-medium: '(min-width: 42.5em)';
+$tp-medium-1: '(min-width: 50.5em)';
+
+$bp-large: '(min-width: 55em)';
+$tp-xtra-large: '(min-width: 72.8em)';
 
 //===============
 // Useful resets

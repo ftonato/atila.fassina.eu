@@ -1,3 +1,13 @@
+.postWrap {
+  @media #{$bp-medium} {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media #{$bp-large} {
+    width: 60%;
+  }
+}
+
 .fullPost-top {
   margin-top:2em;
 }
@@ -17,11 +27,6 @@
 
 .fullPost {
   padding: 2em 1em;
-  // @media (min-width:55em) {
-  //   width:60%;
-  //   max-width:45em;
-  //   margin:0 auto;
-  // }
   h4, //fallback first posts
   h2 {
     margin:2em 0;

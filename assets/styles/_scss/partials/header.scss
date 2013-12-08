@@ -1,45 +1,41 @@
 .top {
+  @media #{$tp-xtra-large} {
+    width:72em;
+    margin: 0 auto;
+  }
+  clear: both;
+}
+.titleWrap {
   width: 100%;
   overflow: hidden;
+  @media #{$bp-medium} {
+    float: left;
+    width: 45%;
+  }
 }
 .titleLogo {
   float: left;
   padding-left: 5%;
   & img {
     height:5em;
-    //width:90%;
     margin: .5em auto;
   }
-  // @media (min-width:37em) {
-  //   float:left;
-  //   width:55%;
-  //   & img {
-  //     width:90%;
-  //     max-width:20em;
-  //   }
-  // }
-}
-.top {
-  // background-color:$bkg--dark;
-  // color:$fontColor--light;
-  // padding-top:7rem;
-  // padding-bottom:1em;
-  .titleName {
-    float: left;
-    padding-top: .75em;
-    padding-left: 5%;
-    font-size:1.5em;
-    line-height: 1.2;
-    color: $fontColor--dark;
+  @media #{$tp-xtra-small} {
+    width: 100%;
+    text-align: center;
   }
-  // @media (min-width:35em) {
-  //   float:right;
-  //   width:45%;
-  // }
-  // @media (min-width:55em) {
-  //   text-align:left;
-  //   padding-left:1em;
-  // }
+}
+
+.titleName {
+  float: left;
+  padding-top: .75em;
+  padding-left: 5%;
+  font-size:1.5em;
+  line-height: 1.2;
+  color: $fontColor--dark;
+  @media #{$tp-xtra-small} {
+    display: none;
+  }
 }
 
 .mainMenu {
@@ -55,5 +51,10 @@
     &:active {
       color: $highlight;
     }
+  }
+  @media #{$bp-medium} {
+    float: right;
+    width: 50%;
+    margin: 1em .5em;
   }
 }

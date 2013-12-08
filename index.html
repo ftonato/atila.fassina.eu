@@ -2,7 +2,7 @@
 layout: default
 title: Átila Fassina - Front-end Developer
 ---
-<main class="home">
+<main role="main" class="contentWrap">
   <ul class="postList">
     {% for post in paginator.posts %}
       <li class="homePost">
@@ -15,9 +15,10 @@ title: Átila Fassina - Front-end Developer
         </section>
       </li>
     {% endfor %}
+    {% include pagination.html %}
   </ul>
-</main>
-{% include pagination.html %}
+
+
 <aside class="about">
     <p>
       Hey, I'm a Front-end Developer, UX Designer, Speaker as often as I can, and Consultant every now and then.
@@ -26,6 +27,7 @@ title: Átila Fassina - Front-end Developer
       I craft web applications for a living and for fun, getting envolved in nice Open-Source projects and  interesting people passionate about the web.
     </p>
   </aside>
+  </main>
   <!--
   I strongly believe that Web Design is about User Experience, to craft a good experience means to provide a feeling of success to your user, therefore I'm more interested in techniques that help me (directly or not) to achieve this goal in all my projects.
 

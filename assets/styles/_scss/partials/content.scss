@@ -1,8 +1,23 @@
-
+.contentWrap {
+  clear: both;
+    @media #{$tp-xtra-large} {
+    width:72em;
+    margin: 0 auto;
+  }
+}
 
 .postList {
   list-style-type: none;
   margin:0 auto;
+  @media #{$bp-medium} {
+    float: left;
+    margin-top: 3em;
+    width: 60%;
+  }
+  @media #{$tp-medium-1} {
+    width: 55%;
+    margin-left: 2.5%;
+  }
 }
 
 .homePost {
@@ -47,22 +62,20 @@
     font-size: .9em;
     padding: 1em;
     text-align: center;
-    // @media (min-width:55em) {
-    //   display:block;
-    //   width:60%;
-    //   max-width:45em;
-    //   font-size:1rem;
-    //   margin:0 auto;
-    // }
   }
 
-  & p a {
+  p a {
     color:$fontColor--light;
     border-bottom:dashed 1px $highlight;
   }
-  & p a:hover,
-  & p a:active {
+  p a:hover,
+  p a:active {
     border-bottom-style:solid;
+  }
+  @media #{$bp-medium} {
+    float: right;
+    width: 35%;
+    margin-top: 20%;
   }
 }
 
