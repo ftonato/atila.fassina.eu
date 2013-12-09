@@ -669,6 +669,7 @@ table {
       margin: 1em .5em; } }
 
 .bottom {
+  padding: .2em 0;
   background-color: #191919;
   color: #fafafa;
   overflow: hidden; }
@@ -678,7 +679,7 @@ table {
 
 .license {
   float: right;
-  font: .7em/1.2 Monaco, "Courier New", monospace;
+  font: .8em/1.2 Monaco, "Courier New", monospace;
   padding: .2em .5em; }
   .license::before {
     content: "Content licenses:"; }
