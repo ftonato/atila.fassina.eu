@@ -1,5 +1,5 @@
 (function(){
-    'use strict'
+    'use strict';
 //add target='_blank' to external links
     var extLink = document.querySelectorAll('a'),
         extLinkLength = extLink.length,
