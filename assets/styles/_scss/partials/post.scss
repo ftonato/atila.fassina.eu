@@ -72,14 +72,10 @@
 }
 
 code {
-  border: 1px solid #BBB;
-  background-color: #DDD;
   padding:.2em;
-  color:#222;
+  color:#DDD;
   text-transform:lowercase;
-  border-radius:.25em;
 }
-
 .post pre code {
   color:#DDD;
   border: none;
@@ -93,9 +89,6 @@ code {
   color: #FFF;
 }
 
-.post pre.terminal code {
-  background-color: #333;
-}
 
 hr {
   margin:2em auto;
