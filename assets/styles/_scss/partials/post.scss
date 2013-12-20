@@ -73,8 +73,11 @@
 
 code {
   padding:.2em;
-  color:#DDD;
+  color:#000;
   text-transform:lowercase;
+  &[data-syntax="none"] {
+    color: #DDD;
+  }
 }
 .post pre code {
   color:#DDD;
