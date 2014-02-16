@@ -1,4 +1,6 @@
 .top {
+  padding-top: 1em;
+  @include clearfix;
   @media #{$tp-xtra-large} {
     width:72em;
     margin: 0 auto;

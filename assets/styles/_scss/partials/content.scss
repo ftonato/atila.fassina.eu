@@ -1,5 +1,5 @@
 .contentWrap {
-  clear: both;
+  @include clearfix;
     @media #{$tp-xtra-large} {
     width:72em;
     margin: 0 auto;
@@ -57,12 +57,19 @@
 // Author Description
 //===================
 .about {
-  background-color:$brandGreen--dark;
-  & p {
+  padding-top: .2em;
+  background-color: $brandGreen--dark;
+  img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  p {
     color: $fontColor--light;
     font-size: .9em;
     padding: 1em;
     text-align: center;
+    text-shadow: 0 2px rgba(0,0,0,.4);
   }
 
   p a {
@@ -77,6 +84,11 @@
     float: right;
     width: 35%;
     margin-top: 20%;
+    padding-top: 0;
+    img {
+        top: -10px;
+        margin-top: 0;
+    }
   }
 }
 

@@ -70,6 +70,17 @@ module.exports = function(grunt) {
           'assets/styles/css/main.css': ['assets/styles/css/*.css']
         }
       }
+    },
+
+    watch: {
+      scripts: {
+        files: 'assets/js/**/*.js',
+        tasks: 'jshint'
+      },
+      css: {
+        files: 'assets/styles/_scss/*.scss',
+        tasks: ['sass']
+      }
     }
 
   });
@@ -80,8 +91,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('build', ['sass', 'cmq', 'cssmin', 'imagemin']); //add svgmin
-  grunt.registerTask('default', ['sass', 'jshint']); //add watcher
+  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('default', ['sass', 'jshint']);
 
 };
