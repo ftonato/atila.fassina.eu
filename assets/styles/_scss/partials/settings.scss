@@ -34,7 +34,9 @@ $tp-xtra-large: '(min-width: 72.8em)';
 //===============
 // Useful resets
 //===============
-* {
+*,
+*::before,
+*::after {
   margin:0;
   padding:0;
   -webkit-box-sizing:border-box;

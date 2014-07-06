@@ -26,14 +26,14 @@
   //   padding:2em 20%;
   // }
 
-  @at-root #{&}-date {
+  &-date {
     font-family: Monaco, "Courier New", monospace;
     font-size: .6em;
     display:block;
     text-align:center;
   }
 
-  @at-root #{&}-title {
+  &-title {
     text-align: center;
     padding-top: .25em;
     color: $highlight;
@@ -44,7 +44,7 @@
       color:$highlight--dark;
     }
   }
-  @at-root #{&}-excerpt {
+  &-excerpt {
     padding:1em 2em;
     font-size:.8em;
     margin:0 auto;

@@ -679,7 +679,9 @@ table {
 }
 
 /* Literal.Number.Integer.Long */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -999,6 +1001,8 @@ a {
 }
 .fullPost p {
   color: #323232;
+  margin: 0 auto 1em;
+  max-width: 50em;
 }
 .fullPost blockquote p {
   padding: 1em;

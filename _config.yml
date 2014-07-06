@@ -21,4 +21,4 @@ permalink: /:title/
 paginate: 5
 
 markdown: redcarpet
-pygments: true
+highlighter: pygments
