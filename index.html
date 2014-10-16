@@ -3,22 +3,7 @@ layout: default
 title: Átila Fassina - Front-end Developer
 ---
 <main role="main" class="contentWrap">
-  <ul class="postList">
-    {% for post in paginator.posts %}
-      <li class="homePost">
-        <a class="homePost-link" href="{{ post.url }}">
-          <span class="homePost-date">{{ post.date | date_to_string }}</span>
-          <h3 class="homePost-title">{{ post.title }}</h3>
-        </a>
-        <section class="homePost-excerpt">
-          {{ post.excerpt }}
-        </section>
-      </li>
-    {% endfor %}
-    {% include pagination.html %}
-  </ul>
-
-
+<a href="blog">go to blog</a>
 <aside class="about">
   <img src="http://www.gravatar.com/avatar/7469dd76fa3e9ae524119b194c466e96.png" alt="Picture of Átila Fassina - Post author" />
     <p>

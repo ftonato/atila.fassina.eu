@@ -43,22 +43,22 @@ module.exports = function(grunt) {
       }
     },
     // soon
-    // svgmin: {
-    //   options: {
-    //     plugins: [{
-    //         removeViewBox: false
-    //     }]
-    //   },
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'assets/img/src',
-    //       src: ['**/*.svg'],
-    //       dest: 'img/',
-    //       ext: '.min.svg'
-    //     }]
-    //   }
-    // },
+    svgmin: {
+      options: {
+        plugins: [{
+            removeViewBox: false
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'assets/img/src',
+          src: ['**/*.svg'],
+          dest: 'img/',
+          ext: '.min.svg'
+        }]
+      }
+    },
 
 
     cssmin: {
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['sass', 'cmq', 'cssmin', 'imagemin']); //add svgmin
+  grunt.registerTask('build', ['svgmin', 'sass', 'cmq', 'cssmin', 'imagemin']);
   grunt.registerTask('dev', ['watch']);
   grunt.registerTask('default', ['sass', 'jshint']);
 
