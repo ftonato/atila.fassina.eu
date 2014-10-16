@@ -19,6 +19,8 @@ $highlight--dark: darken($highlight, 10%);
 $bkg: $bkg--light;
 $txt: $fontColor--dark;
 
+// new variables
+$gray: #bbb;
 
 //=============
 // Breakpoints
@@ -34,21 +36,12 @@ $tp-xtra-large: '(min-width: 72.8em)';
 //===============
 // Useful resets
 //===============
-*,
-*::before,
-*::after {
-  margin:0;
-  padding:0;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
 
 body {
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
-  background-color: $bkg;
+  background-color: #fff;
   color: $txt;
 }
 

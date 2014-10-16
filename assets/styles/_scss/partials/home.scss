@@ -1,0 +1,81 @@
+.helloWorld {
+	background-color: #000;
+	color: #fff;
+	padding: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	strong {
+		font-size: 6rem;
+	}
+}
+
+.atila-picture {
+  &-wrap {
+    max-height: 15em; //hack - whitespace
+    overflow: hidden; //hack - whitespace
+  }
+  width: 100%;
+}
+
+%icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0;
+}
+
+.lightbulb {
+  &-wrap {
+    @extend %icon-wrap;
+    background-color: $brandGreen
+  }
+
+  width: 3em;
+  height: 5em;
+  background-color: #fff;
+}
+
+.pin {
+  &-wrap {
+    @extend %icon-wrap;
+    background-color: $brandGreen;
+  }
+
+  width: 3em;
+  height: 5em;
+  background-color: #fff;
+}
+
+%text-block {
+  display: block;
+  padding: 2em .5em;
+  text-align: center;
+  line-height: 2;
+}
+
+.textblock--green {
+  @extend %text-block;
+  background-color: $brandGreen;
+  color: #fff;
+}
+
+.textblock--gray {
+  @extend %text-block;
+  background-color: $gray;
+  color: #fff;
+
+}
+
+.check {
+  &-wrap {
+    @extend %icon-wrap;
+    background-color: $gray;
+  }
+
+  width: 3em;
+  height: 5em;
+  background-color: #fff;
+}
