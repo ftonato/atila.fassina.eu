@@ -364,23 +364,23 @@ a {
   justify-content: space-around;
   padding: 1em; }
 
-.helloWorld {
+.hello-world {
   background-color: #000;
   color: #fff;
   padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .helloWorld strong {
+  .hello-world strong {
     font-size: 6rem; }
 
 .atila-picture {
   width: 100%; }
   .atila-picture-wrap {
-    max-height: 15em;
+    max-height: 14em;
     overflow: hidden; }
 
-.lightbulb-wrap, .pin-wrap, .check-wrap {
+.lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,8 +404,7 @@ a {
 .textblock--green, .textblock--gray {
   display: block;
   padding: 2em .5em;
-  text-align: center;
-  line-height: 2; }
+  text-align: center; }
 
 .textblock--green {
   background-color: #009632;
@@ -421,6 +420,23 @@ a {
   background-color: #fff; }
   .check-wrap {
     background-color: #bbb; }
+
+.skills-wrap {
+  background-color: #000;
+  color: #fff; }
+.skills-title {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: .5em 0 1em; }
+.skills-icon {
+  width: 3em;
+  height: 5em;
+  background-color: #fff; }
+.skills-list {
+  list-style: disc inside;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem; }
 
 .bottom {
   padding: .2em 0;

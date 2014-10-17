@@ -3,34 +3,87 @@ layout: default
 title: Átila Fassina - Front-end Developer
 ---
 <main role="main" class="contentWrap">
-  <aside class="helloWorld">
+  <aside class="hello-world">
     <strong>Hi!</strong>
   </aside>
-  <div class="atila-picture-wrap">
+  <aside class="atila-picture-wrap">
     <img class="atila-picture" src="http://www.gravatar.com/avatar/7469dd76fa3e9ae524119b194c466e96.png" alt="Picture of Átila Fassina - Site owner" />
-  </div>
-  <article class="about">
-    <div class="lightbulb-wrap">
-      <div class="lightbulb"></div>
-    </div>
+  </aside>
+  <article>
+    <section id="about-me">
+      <div class="lightbulb-wrap">
+        <div class="lightbulb"></div>
+      </div>
+        <p class="textblock--green">
+          I'm a Front-end Developer very passionate about Responsive Web Design, project Workflow and styles architecture.
+        </p>
+      <div class="pin-wrap">
+        <div class="pin"></div>
+      </div>
       <p class="textblock--green">
-        I'm a Front-end Developer very passionate about Responsive Web Design, project Workflow and styles architecture.
+        Currently working at <a href="http://www.terra.com.br">Terra Networks</a>, based in Porto Alegre (RS) - Brazil.
       </p>
-    <div class="pin-wrap">
-      <div class="pin"></div>
-    </div>
-    <p class="textblock--green">
-      Currently working at <a href="http://www.terra.com.br">Terra Networks</a>, based in Porto Alegre (RS) - Brazil.
-    </p>
-    <p class="textblock--gray">
-      I craft web applications for a living and for fun, and I'm always interested about nice projects.
-    </p>
-    <div class="check-wrap">
-      <div class="check"></div>
-    </div>
-    <p class="textblock--gray">
-      So, get in touch and let's work together!
-    </p>
+    </section>
+    <section id="about-work">
+      <p class="textblock--gray">
+        I craft web applications for a living and for fun, and I'm always interested about nice projects.
+      </p>
+      <div class="check-wrap">
+        <div class="check"></div>
+      </div>
+      <p class="textblock--gray">
+        So, get in touch and let's work together!
+      </p>
+    </section>
+    <section id="my-skills" class="skills-wrap">
+      <header class="skills">
+        <div class="skills-icon">
+          <div></div>
+        </div>
+        <h2 class="skills-title">
+          My skills
+        </h2>
+      </header>
+      <ul class="skills-list">
+        <li class="skills-item">Responsive Web Design</li>
+        <li class="skills-item">User Experience</li>
+        <li class="skills-item">HTML/CSS</li>
+        <li class="skills-item">SASS</li>
+        <li class="skills-item">Stylus</li>
+        <li class="skills-item">Javascript</li>
+        <li class="skills-item">Cross-browser support</li>
+        <li class="skills-item">Search Engine Optimization</li>
+        <li class="skills-item">Client-side Performance</li>
+      </ul>
+    </section>
+    <section id="working-process" class="process-wrap">
+      <header class="process">
+        <div class="process-icon">
+          <div></div>
+        </div>
+        <h2 class="process-title">
+          How I work
+        </h2>
+      </header>
+      <ul class="process-list">
+        <li class="process-item">Problem Analysis</li>
+        <li class="process-item">Rough wireframe</li>
+        <li class="process-item">Code Concept</li>
+        <li class="process-item">Visual Refinning</li>
+        <li class="process-item">Code Refinning</li>
+        <li class="process-item">Deploy & Deliver</li>
+      </ul>
+    </section>
   </article>
-<a href="blog">go to blog</a>
-  </main>
+  <nav class="menu">
+    <a href="blog">
+      <span class="articles-icon"></span>
+      <span>Articles</span>
+    </a>
+    <a href="https://speakerdeck.com/{{ site.author.username }}">
+      <span class="talks-icon"></span>
+      <span>Talks</span>
+    </a>
+    a[href='https://github.com/{{ site.author.username }}?tab=repositories']
+  </nav>
+</main>
