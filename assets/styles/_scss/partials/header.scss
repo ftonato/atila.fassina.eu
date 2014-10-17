@@ -1,9 +1,8 @@
 .top {
-  padding-top: 1em;
   //@include clearfix;
 
   @media #{$tp-xtra-large} {
-    width:72em;
+    width: 72em;
     margin: 0 auto;
   }
   clear: both;
@@ -18,10 +17,12 @@
 }
 .titleLogo {
   display: block;
+  margin: 1em 0;
 
   & img {
     display: block;
-    height:5em;
+    width: 80%;
+    //height: 5em;
     margin: .5em auto;
   }
 }
@@ -32,7 +33,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   padding: 1em 0;
   background-color: #000;
 
@@ -41,7 +42,7 @@
   }
 
   .subtitle {
-    color: #ccc;
+    color: #888;
     text-transform: lowercase;
   }
 }

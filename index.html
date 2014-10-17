@@ -65,25 +65,28 @@ title: Átila Fassina - Front-end Developer
           How I work
         </h2>
       </header>
-      <ul class="process-list">
+      <ol class="process-list">
         <li class="process-item">Problem Analysis</li>
         <li class="process-item">Rough wireframe</li>
         <li class="process-item">Code Concept</li>
         <li class="process-item">Visual Refinning</li>
         <li class="process-item">Code Refinning</li>
         <li class="process-item">Deploy & Deliver</li>
-      </ul>
+      </ol>
     </section>
   </article>
   <nav class="menu">
-    <a href="blog">
-      <span class="articles-icon"></span>
-      <span>Articles</span>
+    <a class="articles-link" href="blog">
+      <span class="menu-icon"></span>
+      <span class="menu-label">Articles</span>
     </a>
-    <a href="https://speakerdeck.com/{{ site.author.username }}">
-      <span class="talks-icon"></span>
-      <span>Talks</span>
+    <a class="talks-link" href="https://speakerdeck.com/{{ site.author.username }}">
+      <span class="menu-icon"></span>
+      <span class="menu-label">Talks</span>
     </a>
-    a[href='https://github.com/{{ site.author.username }}?tab=repositories']
+    <a class="projects-link" href="https://github.com/{{ site.author.username }}?tab=repositories">
+      <span class="menu-icon"></span>
+      <span class="menu-label">Projects</span>
+    </a>
   </nav>
 </main>

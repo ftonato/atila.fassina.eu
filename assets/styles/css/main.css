@@ -301,7 +301,8 @@ body {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
   background-color: #fff;
-  color: #323232; }
+  color: #323232;
+  box-sizing: border-box; }
 
 ul {
   list-style: none; }
@@ -323,7 +324,6 @@ a {
     color: #fafafa; }
 
 .top {
-  padding-top: 1em;
   clear: both; }
   @media (min-width: 72.8em) {
     .top {
@@ -339,10 +339,11 @@ a {
       width: 45%; } }
 
 .titleLogo {
-  display: block; }
+  display: block;
+  margin: 1em 0; }
   .titleLogo img {
     display: block;
-    height: 5em;
+    width: 80%;
     margin: .5em auto; }
 
 .titleName {
@@ -350,13 +351,13 @@ a {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   padding: 1em 0;
   background-color: #000; }
   .titleName a {
     color: #fff; }
   .titleName .subtitle {
-    color: #ccc;
+    color: #888;
     text-transform: lowercase; }
 
 .socialList {
@@ -380,12 +381,12 @@ a {
     max-height: 14em;
     overflow: hidden; }
 
-.lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon {
+.lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon, .process-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2em 0; }
+  padding: .5em 0; }
 
 .lightbulb {
   width: 3em;
@@ -403,7 +404,7 @@ a {
 
 .textblock--green, .textblock--gray {
   display: block;
-  padding: 2em .5em;
+  padding: .5em 1em;
   text-align: center; }
 
 .textblock--green {
@@ -411,7 +412,7 @@ a {
   color: #fff; }
 
 .textblock--gray {
-  background-color: #bbb;
+  background-color: #888;
   color: #fff; }
 
 .check {
@@ -419,9 +420,15 @@ a {
   height: 5em;
   background-color: #fff; }
   .check-wrap {
-    background-color: #bbb; }
+    background-color: #888; }
+
+.skills-list, .process-list {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem; }
 
 .skills-wrap {
+  padding-top: 1em;
   background-color: #000;
   color: #fff; }
 .skills-title {
@@ -431,12 +438,82 @@ a {
 .skills-icon {
   width: 3em;
   height: 5em;
+  margin: 0 auto;
   background-color: #fff; }
 .skills-list {
-  list-style: disc inside;
-  width: 90%;
+  list-style: disc inside; }
+
+.process-wrap {
+  padding-top: 1em;
+  background-color: #009632;
+  color: #fff; }
+.process-title {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: .5em 0 1em; }
+.process-icon {
+  width: 3em;
+  height: 5em;
   margin: 0 auto;
-  padding-bottom: 1rem; }
+  background-color: #fff; }
+.process-list {
+  text-align: center;
+  list-style: decimal inside; }
+
+.articles-link, .talks-link, .projects-link {
+  width: 100%;
+  padding: 2em 1em;
+  display: block; }
+
+.articles-link {
+  background-color: #000;
+  color: #fff; }
+
+.talks-link {
+  background-color: #888;
+  color: #fff; }
+
+.projects-link {
+  background-color: #009632;
+  color: #fff; }
+
+.menu-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0 auto;
+  display: block;
+  background-color: #fff; }
+.menu-label {
+  display: block;
+  padding-top: .5em;
+  font-size: 1.3rem;
+  text-align: center; }
+
+.contact {
+  background-color: #888;
+  color: #fff; }
+  .contact-header {
+    padding-top: 1em; }
+  .contact-icon {
+    width: 5em;
+    height: 5em;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff; }
+  .contact-title {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5em 0 1em; }
+  .contact-list {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2em; }
+  .contact-item {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    padding: .5em 0; }
 
 .bottom {
   padding: .2em 0;

@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2em 0;
+  padding: .5em 0;
 }
 
 .lightbulb {
@@ -51,7 +51,7 @@
 
 %text-block {
   display: block;
-  padding: 2em .5em;
+  padding: .5em 1em;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@
 
 .textblock--gray {
   @extend %text-block;
-  background-color: $gray;
+  background-color: #888;
   color: #fff;
 
 }
@@ -71,7 +71,7 @@
 .check {
   &-wrap {
     @extend %icon-wrap;
-    background-color: $gray;
+    background-color: #888;
   }
 
   width: 3em;
@@ -79,10 +79,17 @@
   background-color: #fff;
 }
 
-.skills {
+%list {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+@mixin list_section($bg, $txt) {
   &-wrap {
-    background-color: #000;
-    color: #fff;
+    padding-top: 1em;
+    background-color: $bg;
+    color: $txt;
   }
 
   &-title {
@@ -96,13 +103,104 @@
 
     width: 3em;
     height: 5em;
-    background-color: #fff;
+    margin: 0 auto;
+    background-color: $txt;
   }
 
   &-list {
+    @extend %list;
+
+  }
+}
+
+.skills {
+  @include list_section(#000,#fff);
+  &-list {
     list-style: disc inside;
-    width: 90%;
+  }
+}
+
+.process {
+  @include list_section($brandGreen, #fff);
+
+  &-list {
+    text-align: center;
+    list-style: decimal inside;
+  }
+}
+
+%menu-link {
+  width: 100%;
+  padding: 2em 1em;
+  display: block;
+}
+
+.articles-link {
+  @extend %menu-link;
+  background-color: #000;
+  color: #fff;
+}
+
+.talks-link {
+  @extend %menu-link;
+  background-color: #888;
+  color: #fff;
+}
+.projects-link {
+  @extend %menu-link;
+  background-color: $brandGreen;
+  color: #fff;
+}
+.menu {
+  &-icon {
+    width:3em;
+    height:3em;
     margin: 0 auto;
-    padding-bottom: 1rem;
+    display: block;
+    background-color:#fff;
+  }
+
+  &-label {
+    display: block;
+    padding-top: .5em;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+.contact {
+  background-color: #888;
+  color: #fff;
+
+  &-header {
+    padding-top: 1em;
+  }
+
+  &-icon {
+    width: 5em;
+    height: 5em;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+  }
+
+  &-title {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5em 0 1em;
+  }
+
+  &-list {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+
+  &-item {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    padding: .5em 0;
   }
 }
