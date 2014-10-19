@@ -7,8 +7,8 @@
 
 .top {
   //@include clearfix;
-  @media #{$bp-medium} {
-    margin-bottom: 1.5rem;
+  @media #{$bp-small} {
+    margin-bottom: .75rem;
   }
 
   clear: both;
@@ -35,10 +35,17 @@
     //height: 5em;
     margin: .5em auto;
     @media #{$bp-small} {
-      max-height: 6.5rem;
-      max-width: 10rem;
+      max-height: 10rem;
+      max-width: 12rem;
       margin-top: 0;
     }
+  }
+}
+
+.header-info {
+  @media #{$bp-small} {
+    float: left;
+    width: 60%;
   }
 }
 
@@ -48,8 +55,9 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-size: 1.75rem;
-  padding: 1em 0;
+  //font-size: 1.75rem;
+  font-size: 2rem;
+  padding: 1em 0 .5em;
   background-color: #000;
   @include transition;
 
@@ -64,6 +72,7 @@
   .subtitle {
     color: #888;
     text-transform: lowercase;
+    font-size: .65em;
 
     @media #{$bp-small} {
       font-size: .5em;
@@ -81,10 +90,11 @@
   }
 
   &-list {
-    width: 100%;
+    width: 10rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    padding: 1em;
+    padding-bottom: 1em;
   }
 }
 

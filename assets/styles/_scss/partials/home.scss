@@ -2,8 +2,9 @@ $gap: .75rem !default;
 $gapV: $gap * 2;
 
 
-@media (min-width: 800px) {
-  $gap: .25rem;
+@media (min-width: 750px) {
+  $gap: .25rem !global;
+  $gapV: .5rem !global;
 }
 
 .lobby {
@@ -74,10 +75,10 @@ $gapV: $gap * 2;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: .5rem 0;
+  //padding-top: 3.5rem;
 
   @media #{$bp-small} {
-    padding-top: 2rem;
+    //padding-top: 2rem;
   }
 }
 
@@ -116,7 +117,7 @@ $gapV: $gap * 2;
 
 .box {
   //height: 12rem;
-  height: 15rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +132,7 @@ $gapV: $gap * 2;
 
   @media #{$bp-small} {
     width: calc(50% - #{$gap});
+    height: 15rem;
   }
 
   @media #{$bp-medium} {
@@ -141,9 +143,19 @@ $gapV: $gap * 2;
 .home-text {
   font-size: 1.2rem;
   font-weight: bold;
+
+  &:last-child {
+    margin-bottom: 3rem;
+  }
 }
 
 .lightbulb {
+  margin-top: 3rem;
+
+  @media #{$bp-small} {
+    margin: 2rem 0;
+  }
+
   &-wrap {
     @extend %icon-wrap;
     @extend %mutant-box;
@@ -162,6 +174,11 @@ $gapV: $gap * 2;
 }
 
 .pin {
+  margin-top: 3rem;
+
+  @media #{$bp-small} {
+    margin-top: 0;
+  }
   &-wrap {
     @extend %icon-wrap;
     padding: .5em 0;
@@ -193,6 +210,12 @@ $gapV: $gap * 2;
 }
 
 .check {
+  margin-top: 3rem;
+
+  @media #{$bp-small} {
+    margin: 2rem 0;
+  }
+
   &-wrap {
     @extend %icon-wrap;
     @extend %mutant-box;
@@ -221,9 +244,11 @@ $gapV: $gap * 2;
 
   &-title {
     font-size: 1.5rem;
+    line-height: 1;
     text-align: center;
     //padding: .5em 0;
     padding-top: .25em;
+    padding-bottom: 1rem;
     @include transition;
 
     @media #{$bp-small} {
@@ -253,6 +278,10 @@ $gapV: $gap * 2;
   background-color: #000;
   @include list_section(#000,#fff);
 
+  @media #{$bp-small} {
+    padding-top: 3rem;
+  }
+
   &-wrap {
     overflow: hidden;
     padding-top: 0;
@@ -268,6 +297,7 @@ $gapV: $gap * 2;
 
   &-list {
     list-style: disc inside;
+    width: 60%;
     @include transition;
 
     @media #{$bp-small} {
@@ -282,17 +312,33 @@ $gapV: $gap * 2;
     &-wrap {
       @extend %full-to-double;
       background-color: #000;
+      @include transition;
 
       @media #{$bp-small} {
         padding-top: 3rem;
+      }
+
+      @media #{$bp-medium} {
+        padding-top: 1rem;
+      }
+
+      @media (min-width: 1200px) {
+        padding-top: 1rem;
       }
     }
   }
 
   &-item {
+    display: block;
+    padding-top: 1rem;
+
+    @media #{$bp-small} {
+      padding-top: 0;
+      font-size: 1rem;
       display: inline-block;
       width: calc(50% - 1.5rem);
       margin-right: 1.5rem;
+    }
 
       &:nth-child(even) {
         margin-right: 0;
@@ -328,11 +374,18 @@ $gapV: $gap * 2;
     text-align: center;
     list-style: decimal inside;
     counter-reset: li;
+    line-height: 1;
+
 
     &-wrap {
       @extend %full-to-double;
       background-color: $brandGreen;
       padding-top: 1rem;
+      height: auto;
+
+      @media #{$bp-medium} {
+        height: 15rem;
+      }
     }
   }
 
@@ -344,33 +397,28 @@ $gapV: $gap * 2;
     margin-bottom: 1rem;
     font-weight: bold;
 
-    @media (min-width: 320px) {
-      width: calc(50% - #{$gapV});
-      margin-bottom: 0;
-
-      &:nth-child(even) {
-        margin-right: 0;
-      }
-
-      &::before {
-        counter-increment: li;
-        //content: counter(li)". ";
-      }
+    &:nth-child(even) {
+      margin-right: 0;
     }
 
     @media #{$bp-small} {
       margin-top: 1rem;
+      margin-bottom: 0;
       width: calc(33% - #{$gapV});
     }
   }
 
   &-label {
     display: block;
+    &::before {
+      counter-increment: li;
+      content: counter(li)'. ';
+    }
   }
 }
 
 .step-icon svg {
-  height: 2rem;
+  height: 3rem;
 
   @media #{$bp-small} {
     height: 3rem;
@@ -466,6 +514,7 @@ $gapV: $gap * 2;
   &-title {
     display: block;
     font-size: 1.5rem;
+    line-height: 1;
     text-align: center;
     padding: .5em 0 1em;
     @include transition;
