@@ -1,16 +1,36 @@
-<footer class="contact">
+<footer class="contact full-wrap">
   <header class="contact-header">
-    <span class="contact-icon"></span>
+    <span class="contact-icon">
+      {% include svg/contacts.svg %}
+    </span>
     <span class="contact-title">
       My contacts
     </span>
   </header>
-  <ul class="contact-list">
-    <li class="contact-item">aa</li>
-    <li class="contact-item">aa</li>
-    <li class="contact-item">aa</li>
-    <li class="contact-item">aa</li>
-  </ul>
+  <nav class="contact-list-wrap">
+    <ul class="contact-list">
+      <li class="contact-item">
+        <a href="http://twitter.com/atilafassina">
+          {% include svg/twitter.html %}
+        </a>
+      </li>
+      <li class="contact-item">
+        <a href="http://github.com/atilafassina">
+          {% include svg/github.html %}
+        </a>
+      </li>
+      <li class="contact-item">
+        <a href="http://linkedin.com.br/in/atilafassina">
+          {% include svg/linkedin.html %}
+        </a>
+      </li>
+      <li class="contact-item">
+        <a href="mailto:hey@atilafassina.com">
+          {% include svg/email.svg %}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </footer>
   <!-- scripts -->
   <script type="text/javascript">

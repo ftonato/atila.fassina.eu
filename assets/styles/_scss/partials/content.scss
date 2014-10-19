@@ -9,7 +9,7 @@
 .postList {
   list-style-type: none;
   margin:0 auto;
-  @media #{$bp-medium} {
+  @media #{$bp-medium-old} {
     float: left;
     margin-top: 3em;
     width: 60%;
@@ -80,7 +80,7 @@
 //   p a:active {
 //     border-bottom-style:solid;
 //   }
-//   @media #{$bp-medium} {
+//   @media #{$bp-medium-old} {
 //     float: right;
 //     width: 35%;
 //     margin-top: 20%;

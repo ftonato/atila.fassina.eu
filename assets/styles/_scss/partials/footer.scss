@@ -3,7 +3,7 @@
     background-color: $bkg--dark;
     color: $fontColor--light;
     overflow:hidden;
-    @media #{$bp-medium} {
+    @media #{$bp-medium-old} {
         clear: both;
     }
 }

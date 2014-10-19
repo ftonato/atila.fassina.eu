@@ -2,90 +2,138 @@
 layout: default
 title: Átila Fassina - Front-end Developer
 ---
-<main role="main" class="contentWrap">
-  <aside class="hello-world">
-    <strong>Hi!</strong>
-  </aside>
-  <aside class="atila-picture-wrap">
-    <img class="atila-picture" src="http://www.gravatar.com/avatar/7469dd76fa3e9ae524119b194c466e96.png" alt="Picture of Átila Fassina - Site owner" />
+<main role="main" class="full-wrap">
+  <aside class="lobby">
+    <section class="hello-world">
+      <strong>Hi!</strong>
+    </section>
+    <section class="atila-picture-wrap">
+      <div class="atila-picture"></div>
+    </section>
   </aside>
   <article>
-    <section id="about-me">
+    <section id="about-me" class="group-container">
       <div class="lightbulb-wrap">
-        <div class="lightbulb"></div>
+        <div class="lightbulb">
+          {% include svg/about/idea.svg %}
+        </div>
       </div>
-        <p class="textblock--green">
+      <div class="box textblock--green">
+        <p class="home-text">
           I'm a Front-end Developer very passionate about Responsive Web Design, project Workflow and styles architecture.
         </p>
-      <div class="pin-wrap">
-        <div class="pin"></div>
       </div>
-      <p class="textblock--green">
-        Currently working at <a href="http://www.terra.com.br">Terra Networks</a>, based in Porto Alegre (RS) - Brazil.
-      </p>
+      <div class="box textblock--green">
+        <div class="pin-wrap">
+          <div class="pin">
+            {% include svg/about/pin.svg %}
+          </div>
+        </div>
+        <p class="home-text">
+          Currently working at <a href="http://www.terra.com.br">Terra Networks</a>, based in Porto Alegre (RS) - Brazil.
+        </p>
+      </div>
     </section>
-    <section id="about-work">
-      <p class="textblock--gray">
-        I craft web applications for a living and for fun, and I'm always interested about nice projects.
-      </p>
+    <section id="about-work" class="group-container">
       <div class="check-wrap">
-        <div class="check"></div>
+        <div class="check">
+          {% include svg/about/check.svg %}
+        </div>
       </div>
-      <p class="textblock--gray">
-        So, get in touch and let's work together!
-      </p>
+      <div class="box textblock--gray">
+        <p class="home-text">
+          I craft web applications for a living and for fun, and I'm always interested about nice projects.
+        </p>
+      </div>
+      <div class="box textblock--gray">
+        <p class="home-text">
+          So, get in touch and let's work together!
+        </p>
+      </div>
     </section>
     <section id="my-skills" class="skills-wrap">
       <header class="skills">
         <div class="skills-icon">
-          <div></div>
+          <div>
+            {% include svg/about/skills.svg %}
+          </div>
         </div>
         <h2 class="skills-title">
           My skills
         </h2>
       </header>
-      <ul class="skills-list">
-        <li class="skills-item">Responsive Web Design</li>
-        <li class="skills-item">User Experience</li>
-        <li class="skills-item">HTML/CSS</li>
-        <li class="skills-item">SASS</li>
-        <li class="skills-item">Stylus</li>
-        <li class="skills-item">Javascript</li>
-        <li class="skills-item">Cross-browser support</li>
-        <li class="skills-item">Search Engine Optimization</li>
-        <li class="skills-item">Client-side Performance</li>
-      </ul>
+      <div class="skills-list-wrap">
+        <ul class="skills-list">
+          <li class="skills-item">Responsive Web Design</li>
+          <li class="skills-item">User Experience</li>
+          <li class="skills-item">HTML/CSS</li>
+          <li class="skills-item">SASS</li>
+          <li class="skills-item">Stylus</li>
+          <li class="skills-item">Javascript</li>
+          <li class="skills-item">Cross-browser support</li>
+          <li class="skills-item">Search Engine Optimization</li>
+          <li class="skills-item">Client-side Performance</li>
+        </ul>
+      </div>
     </section>
     <section id="working-process" class="process-wrap">
       <header class="process">
         <div class="process-icon">
-          <div></div>
+          <div>
+            {% include svg/about/works.svg %}
+          </div>
         </div>
         <h2 class="process-title">
           How I work
         </h2>
       </header>
-      <ol class="process-list">
-        <li class="process-item">Problem Analysis</li>
-        <li class="process-item">Rough wireframe</li>
-        <li class="process-item">Code Concept</li>
-        <li class="process-item">Visual Refinning</li>
-        <li class="process-item">Code Refinning</li>
-        <li class="process-item">Deploy & Deliver</li>
-      </ol>
+      <div class="process-list-wrap">
+        <ol class="process-list">
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/1.svg %}</span>
+            <span class="process-label">Problem Analysis</span>
+          </li>
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/2.svg %}</span>
+            <span class="process-label">Rough wireframe</span>
+          </li>
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/3.svg %}</span>
+            <span class="process-label">Code Concept</span>
+          </li>
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/4.svg %}</span>
+            <span class="process-label">Visual Refinning</span>
+          </li>
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/5.svg %}</span>
+            <span class="process-label">Code Refinning</span>
+          </li>
+          <li class="process-item">
+            <span class="step-icon">{% include svg/process/6.svg %}</span>
+            <span class="process-label">Deploy & Deliver</span>
+          </li>
+        </ol>
+      </div>
     </section>
   </article>
   <nav class="menu">
     <a class="articles-link" href="blog">
-      <span class="menu-icon"></span>
+      <span class="menu-icon">
+        {% include svg/menu/glasses.svg %}
+      </span>
       <span class="menu-label">Articles</span>
     </a>
     <a class="talks-link" href="https://speakerdeck.com/{{ site.author.username }}">
-      <span class="menu-icon"></span>
+      <span class="menu-icon">
+        {% include svg/menu/talks.svg %}
+      </span>
       <span class="menu-label">Talks</span>
     </a>
     <a class="projects-link" href="https://github.com/{{ site.author.username }}?tab=repositories">
-      <span class="menu-icon"></span>
+      <span class="menu-icon">
+        {% include svg/menu/projects.svg %}
+      </span>
       <span class="menu-label">Projects</span>
     </a>
   </nav>

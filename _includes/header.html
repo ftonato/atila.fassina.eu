@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/styles/css/main.css">
   </head>
   <body>
-    <header class="top">
+    <header class="top full-wrap">
       <div class="titleWrap">
         <a class="titleLogo" href="{{ site.baseurl }}">
           <img src="{{ site.baseurl }}assets/image/logo-color.png" alt="Átila Fassina - Front-end Developer" />
@@ -22,8 +22,8 @@
             {{ site.author.title }}
           </span>
         </h1>
-        <nav class="socialMenu">
-          <ul class="socialList">
+        <nav class="social-menu">
+          <ul class="social-list">
             <li class="socialItem">
               <a href="http://twitter.com/{{ site.author.username }}">
                 {% include svg/twitter.html %}
@@ -41,7 +41,7 @@
             </li>
             <li class="socialItem">
               <a href="mailto:hey@atilafassina.com">
-                @
+                {% include svg/email.svg %}
               </a>
             </li>
           </ul>
