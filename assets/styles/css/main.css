@@ -628,6 +628,10 @@ a {
     display: block;
     height: 5em;
     margin: 0 auto; }
+  @media (min-width: 750px) {
+    .skills-icon {
+      padding-top: 0;
+      padding-bottom: 0; } }
   @media (min-width: 420px) {
     .skills {
       padding-top: 3rem; } }
@@ -693,6 +697,10 @@ a {
     display: block;
     height: 5em;
     margin: 0 auto; }
+  @media (min-width: 750px) {
+    .process-icon {
+      padding-top: 0;
+      padding-bottom: 0; } }
   .process-icon svg {
     width: 10em;
     height: 10em; }
@@ -753,6 +761,7 @@ a {
   overflow: hidden; }
   .menu-icon svg {
     width: 8rem;
+    height: 8rem;
     display: block;
     margin: 0 auto; }
   .menu-label {
@@ -773,7 +782,8 @@ a {
     padding-top: 4.5rem;
     background-color: #888; }
   .contact-icon svg {
-    width: 5em;
+    width: 5rem;
+    height: 5rem;
     display: block;
     margin: 0 auto; }
   .contact-title {
@@ -812,7 +822,8 @@ a {
       font-size: 3rem;
       font-weight: bolder; }
     .contact-item svg {
-      width: 3rem; }
+      width: 3rem;
+      height: 3rem; }
 
 .contentWrap::after {
   content: "";

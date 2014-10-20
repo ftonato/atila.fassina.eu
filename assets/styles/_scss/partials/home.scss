@@ -71,6 +71,11 @@ $double-gap: .5rem !global;
       height: 5em;
       margin: 0 auto;
     }
+
+    @media #{$bp-medium} {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &-list {
