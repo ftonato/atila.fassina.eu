@@ -28,7 +28,9 @@
     }
   }
   svg {
-    width: 10em;
+    width: 7em;
+    height: 7em;
+
   }
 }
 
@@ -45,6 +47,7 @@
   }
   svg {
     height: 5rem;
+    width: 5rem;
   }
 }
 
@@ -75,10 +78,6 @@
   text-align: center;
   position: relative;
   top: -2em;
-
-  @media #{$bp-small} {
-    margin: 2rem 0;
-  }
 
   &-wrap {
     @extend %icon-wrap;

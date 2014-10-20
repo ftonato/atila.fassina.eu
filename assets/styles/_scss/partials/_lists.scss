@@ -63,6 +63,7 @@
   @include list_section($brandGreen, #fff);
 
   &-icon svg {
+    width: 10em;
     height: 10em;
   }
 
