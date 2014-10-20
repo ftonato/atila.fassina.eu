@@ -372,9 +372,17 @@ a {
     width: 60%; } }
 
 .titleName {
+  -webkit-display: flex;
+  -ms-display: flex;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
   flex-flow: column;
   font-size: 2rem;
   padding: 1em 0 .5em;
@@ -402,7 +410,11 @@ a {
 .social-list {
   width: 10rem;
   margin: 0 auto;
+  -webkit-display: flex;
+  -ms-display: flex;
   display: flex;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
   justify-content: space-around;
   padding-bottom: 1em; }
 .social-item a {
@@ -413,8 +425,14 @@ a {
   width: 1.5rem; }
 
 .lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon, .process-icon {
+  -webkit-display: flex;
+  -ms-display: flex;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   width: 100%; }
 
@@ -458,9 +476,17 @@ a {
         margin-right: 0; } }
 
 .box {
+  -webkit-display: flex;
+  -ms-display: flex;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
   flex-flow: column; }
   @media (min-width: 420px) {
     .box {
@@ -497,8 +523,14 @@ a {
   background-size: cover;
   color: #fff;
   padding: 2em;
+  -webkit-display: flex;
+  -ms-display: flex;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center; }
   @media (min-width: 420px) {
     .hello-world {
@@ -509,6 +541,8 @@ a {
     .hello-world {
       width: 65.9%;
       margin-right: 0.5rem;
+      -webkit-justify-content: flex-end;
+      -ms-justify-content: flex-end;
       justify-content: flex-end; } }
   @media (min-width: 850px) {
     .hello-world {
@@ -647,8 +681,14 @@ a {
       -ms-transition: all 250ms linear 0;
       -moz-transition: all 250ms linear 0;
       transition: all 250ms linear 0;
+      -webkit-display: flex;
+      -ms-display: flex;
       display: flex;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
       align-items: center; }
   .skills-item {
     display: block;
@@ -788,8 +828,14 @@ a {
     margin: 0 auto; }
     .contact-list-wrap {
       background-color: #888;
+      -webkit-display: flex;
+      -ms-display: flex;
       display: flex;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
       align-items: center; }
   .contact-item {
     display: inline-block;

@@ -30,8 +30,14 @@
       @extend %full-to-double;
       background-color: #000;
       @include transition;
+      -webkit-display: flex;
+      -ms-display: flex;
       display: flex;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
       align-items: center;
     }
   }

@@ -36,8 +36,14 @@
     &-wrap {
       @extend %full-to-double;
       background-color: #888;
+      -webkit-display: flex;
+      -ms-display: flex;
       display: flex;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
       align-items: center;
     }
   }

@@ -18,7 +18,6 @@
     @extend %icon-wrap;
     @extend %full-to-single;
     background-color: $brandGreen;
-    //margin-bottom: $double-gap;
 
     @media #{$bp-medium} {
       margin-bottom: 0;
