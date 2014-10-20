@@ -78,8 +78,6 @@
       font-size: .5em;
     }
   }
-
-
 }
 
 .social{
@@ -96,25 +94,16 @@
     justify-content: space-around;
     padding-bottom: 1em;
   }
-}
 
-// .mainMenu {
-//   text-align: center;
-//   a {
-//     display: inline-block;
-//     margin: .5em 1em;
-//     color: $txt;
-//     -webkit-transition:all 250ms linear;
-//     -moz-transition:all 250ms linear;
-//     transition:all 250ms linear;
-//     &:hover,
-//     &:active {
-//       color: $highlight;
-//     }
-//   }
-//   @media #{$bp-medium} {
-//     float: right;
-//     width: 50%;
-//     margin: 1em .5em;
-//   }
-// }
+  &-item {
+    a {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+
+    svg {
+      width: 1.5rem;
+    }
+  }
+}

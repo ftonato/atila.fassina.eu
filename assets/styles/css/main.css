@@ -398,6 +398,12 @@ a {
   display: flex;
   justify-content: space-around;
   padding-bottom: 1em; }
+.social-item a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bolder; }
+.social-item svg {
+  width: 1.5rem; }
 
 .lobby {
   overflow: hidden; }
@@ -406,7 +412,8 @@ a {
       margin-bottom: 0.5rem; } }
 
 .hello-world {
-  background-color: #000;
+  background: #000 url(../../image/layout/hi-bg.svg) no-repeat right;
+  background-size: cover;
   color: #fff;
   padding: 2em;
   display: flex;
@@ -422,6 +429,9 @@ a {
       width: 65.9%;
       margin-right: 0.5rem;
       justify-content: flex-end; } }
+  @media (min-width: 850px) {
+    .hello-world {
+      background-size: contain; } }
   .hello-world strong {
     font-size: 6rem;
     -ms-transition: all 250ms linear 0;
@@ -610,16 +620,10 @@ a {
       background-color: #000;
       -ms-transition: all 250ms linear 0;
       -moz-transition: all 250ms linear 0;
-      transition: all 250ms linear 0; }
-      @media (min-width: 420px) {
-        .skills-list-wrap {
-          padding-top: 3rem; } }
-      @media (min-width: 750px) {
-        .skills-list-wrap {
-          padding-top: 1rem; } }
-      @media (min-width: 1200px) {
-        .skills-list-wrap {
-          padding-top: 1rem; } }
+      transition: all 250ms linear 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .skills-item {
     display: block;
     padding-top: 1rem; }
@@ -769,15 +773,23 @@ a {
         font-size: 3rem; } }
   .contact-list {
     width: 80%;
-    margin: 0 auto;
-    padding-bottom: 2em; }
+    margin: 0 auto; }
     .contact-list-wrap {
-      background-color: #888; }
+      background-color: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .contact-item {
     display: inline-block;
     width: 49%;
     text-align: center;
     padding: .5em 0; }
+    .contact-item a {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bolder; }
+    .contact-item svg {
+      width: 3rem; }
 
 .bottom {
   padding: .2em 0;

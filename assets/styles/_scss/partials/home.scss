@@ -16,7 +16,8 @@ $gapV: $gap * 2;
 }
 
 .hello-world {
-	background-color: #000;
+	background: #000 url(../../image/layout/hi-bg.svg) no-repeat right;
+  background-size: cover;
 	color: #fff;
 	padding: 2em;
 	display: flex;
@@ -33,6 +34,10 @@ $gapV: $gap * 2;
     width: 65.9%;
     margin-right: $gapV;
     justify-content: flex-end;
+  }
+
+  @media (min-width: 850px) {
+    background-size: contain;
   }
 
 
@@ -313,18 +318,21 @@ $gapV: $gap * 2;
       @extend %full-to-double;
       background-color: #000;
       @include transition;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      @media #{$bp-small} {
-        padding-top: 3rem;
-      }
+      //@media #{$bp-small} {
+      //  padding-top: 3rem;
+      //}
 
-      @media #{$bp-medium} {
-        padding-top: 1rem;
-      }
+      //@media #{$bp-medium} {
+      //  padding-top: 1rem;
+      //}
 
-      @media (min-width: 1200px) {
-        padding-top: 1rem;
-      }
+      //@media (min-width: 1200px) {
+      //  padding-top: 1rem;
+      //}
     }
   }
 
@@ -527,11 +535,13 @@ $gapV: $gap * 2;
   &-list {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 2em;
 
     &-wrap {
       background-color: #888;
       @extend %full-to-double;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -540,5 +550,15 @@ $gapV: $gap * 2;
     width: 49%;
     text-align: center;
     padding: .5em 0;
+
+    a {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bolder;
+    }
+
+    svg {
+      width: 3rem;
+    }
   }
 }
