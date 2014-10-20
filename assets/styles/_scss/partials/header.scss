@@ -54,18 +54,8 @@
 }
 
 .titleName {
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
+  display: block;
+  text-align: center;
   font-size: 2rem;
   padding: 1em 0 .5em;
   background-color: #000;
@@ -83,6 +73,8 @@
     color: #888;
     text-transform: lowercase;
     font-size: .65em;
+    display: block;
+    text-align: center;
 
     @media #{$bp-small} {
       font-size: .5em;
@@ -100,16 +92,17 @@
   &-list {
     width: 10rem;
     margin: 0 auto;
-    -webkit-display: flex;
-    -ms-display: flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
     padding-bottom: 1em;
   }
 
   &-item {
+    display: inline-block;
+    margin-left: .75rem;
+
+   &:first-child {
+    margin-left: 0;
+   }
+
     a {
       color: #fff;
       font-size: 1.5rem;
@@ -120,4 +113,9 @@
       width: 1.5rem;
     }
   }
+}
+
+.email {
+  position: relative;
+  top: -.5em;
 }
