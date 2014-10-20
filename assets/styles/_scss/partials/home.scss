@@ -2,16 +2,12 @@ $gap: .25rem !global;
 $double-gap: .5rem !global;
 
 %icon-wrap {
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  padding-top: 3em;
   width: 100%;
+
+  @media #{$bp-small} {
+    padding-bottom: 3em;
+  }
 }
 
 %full-to-single {
@@ -104,18 +100,6 @@ $double-gap: .5rem !global;
 }
 
 .box {
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
   @media #{$bp-small} {
     float: left;
     margin-right: $double-gap;

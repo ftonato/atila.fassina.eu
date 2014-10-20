@@ -30,15 +30,7 @@
       @extend %full-to-double;
       background-color: #000;
       @include transition;
-      -webkit-display: flex;
-      -ms-display: flex;
-      display: flex;
-      -webkit-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -ms-align-items: center;
-      align-items: center;
+      padding-top: 5em;
     }
   }
 
@@ -69,6 +61,10 @@
   padding-top: 1.5rem;
   background-color: $brandGreen;
   @include list_section($brandGreen, #fff);
+
+  &-icon svg {
+    height: 10em;
+  }
 
   &-list {
     text-align: center;

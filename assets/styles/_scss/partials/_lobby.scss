@@ -11,16 +11,7 @@
   background-position: -35px;
   background-size: cover;
   color: #fff;
-  padding: 2em;
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  text-align: center;
 
   @media #{$bp-small} {
     float: left;
@@ -31,9 +22,7 @@
   @media #{$bp-medium} {
     width: 65.9%;
     margin-right: $double-gap;
-    -webkit-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    justify-content: flex-end;
+    text-align: right;
   }
 
   @media (min-width: 850px) {

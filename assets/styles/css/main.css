@@ -420,16 +420,11 @@ a {
   top: -.5em; }
 
 .lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon, .process-icon {
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  padding-top: 3em;
   width: 100%; }
+  @media (min-width: 420px) {
+    .lightbulb-wrap, .pin-wrap, .check-wrap, .skills-icon, .process-icon {
+      padding-bottom: 3em; } }
 
 @media (min-width: 420px) {
   .lightbulb-wrap, .check-wrap, .skills, .process, .contact-header {
@@ -470,32 +465,19 @@ a {
       .articles-link:last-of-type, .talks-link:last-of-type, .projects-link:last-of-type {
         margin-right: 0; } }
 
-.box {
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column; }
-  @media (min-width: 420px) {
-    .box {
-      float: left;
-      margin-right: 0.5rem; } }
-  .box:last-child {
-    margin-right: 0; }
-  @media (min-width: 420px) {
-    .box {
-      width: calc(50% - 0.25rem);
-      height: 15rem; } }
-  @media (min-width: 750px) {
-    .box {
-      width: calc(33% - 0.25rem); } }
+@media (min-width: 420px) {
+  .box {
+    float: left;
+    margin-right: 0.5rem; } }
+.box:last-child {
+  margin-right: 0; }
+@media (min-width: 420px) {
+  .box {
+    width: calc(50% - 0.25rem);
+    height: 15rem; } }
+@media (min-width: 750px) {
+  .box {
+    width: calc(33% - 0.25rem); } }
 
 @media (min-width: 420px) {
   .group-container {
@@ -517,16 +499,7 @@ a {
   background-position: -35px;
   background-size: cover;
   color: #fff;
-  padding: 2em;
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center; }
+  text-align: center; }
   @media (min-width: 420px) {
     .hello-world {
       float: left;
@@ -536,9 +509,7 @@ a {
     .hello-world {
       width: 65.9%;
       margin-right: 0.5rem;
-      -webkit-justify-content: flex-end;
-      -ms-justify-content: flex-end;
-      justify-content: flex-end; } }
+      text-align: right; } }
   @media (min-width: 850px) {
     .hello-world {
       background-size: contain;
@@ -577,12 +548,12 @@ a {
   font-weight: bold; }
   .home-text:last-child {
     margin-bottom: 3rem; }
+    @media (min-width: 420px) {
+      .home-text:last-child {
+        margin-bottom: 0; } }
 
 .lightbulb {
-  margin-top: 3rem; }
-  @media (min-width: 420px) {
-    .lightbulb {
-      margin: 2rem 0; } }
+  text-align: center; }
   .lightbulb-wrap {
     background-color: #009632; }
     @media (min-width: 750px) {
@@ -603,8 +574,10 @@ a {
     height: 5rem; }
 
 .textblock--green, .textblock--gray {
-  padding: .5em 1em;
+  padding: 2.5em 1em .5em;
   text-align: center; }
+  .textblock--green ~ .icon, .textblock--gray ~ .icon {
+    padding-top: .5em; }
 
 .textblock--green {
   background-color: #009632;
@@ -615,7 +588,10 @@ a {
   color: #fff; }
 
 .check {
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+  top: -2em; }
   @media (min-width: 420px) {
     .check {
       margin: 2rem 0; } }
@@ -676,15 +652,7 @@ a {
       -ms-transition: all 250ms linear 0;
       -moz-transition: all 250ms linear 0;
       transition: all 250ms linear 0;
-      -webkit-display: flex;
-      -ms-display: flex;
-      display: flex;
-      -webkit-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -ms-align-items: center;
-      align-items: center; }
+      padding-top: 5em; }
   .skills-item {
     display: block;
     padding-top: 1rem; }
@@ -726,6 +694,8 @@ a {
     display: block;
     height: 5em;
     margin: 0 auto; }
+  .process-icon svg {
+    height: 10em; }
   .process-list {
     text-align: center;
     list-style: decimal inside;

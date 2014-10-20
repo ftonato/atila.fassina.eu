@@ -4,14 +4,18 @@
 
   &:last-child {
     margin-bottom: 3rem;
+
+    @media #{$bp-small} {
+      margin-bottom: 0;
+    }
   }
 }
 
 .lightbulb {
-  margin-top: 3rem;
+  text-align: center;
 
   @media #{$bp-small} {
-    margin: 2rem 0;
+    //margin: 2rem 0;
   }
 
   &-wrap {
@@ -45,8 +49,12 @@
 }
 
 %text-block {
-  padding: .5em 1em;
+  padding: 2.5em 1em .5em;
   text-align: center;
+
+  & ~ .icon {
+    padding-top: .5em;
+  }
 }
 
 .textblock--green {
@@ -64,6 +72,9 @@
 
 .check {
   margin-top: 3rem;
+  text-align: center;
+  position: relative;
+  top: -2em;
 
   @media #{$bp-small} {
     margin: 2rem 0;
