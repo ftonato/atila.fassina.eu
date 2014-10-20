@@ -19,9 +19,6 @@
 
 .homePost {
   padding-top:1em;
-  // @media (min-width:55em) {
-  //   padding:2em 20%;
-  // }
 
   &-date {
     font-family: Monaco, "Courier New", monospace;
@@ -49,45 +46,6 @@
     text-align: center
   }
 }
-
-//====================
-// Author Description
-//===================
-// .about {
-//   padding-top: .2em;
-//   background-color: $brandGreen--dark;
-//   img {
-//     position: relative;
-//     display: block;
-//     margin: 0 auto;
-//   }
-//   p {
-//     color: $fontColor--light;
-//     font-size: .9em;
-//     padding: 1em;
-//     text-align: center;
-//     text-shadow: 0 2px rgba(0,0,0,.4);
-//   }
-
-//   p a {
-//     color:$fontColor--light;
-//     border-bottom:dashed 1px $highlight;
-//   }
-//   p a:hover,
-//   p a:active {
-//     border-bottom-style:solid;
-//   }
-//   @media #{$bp-medium-old} {
-//     float: right;
-//     width: 35%;
-//     margin-top: 20%;
-//     padding-top: 0;
-//     img {
-//         top: -10px;
-//         margin-top: 0;
-//     }
-//   }
-// }
 
 //===========
 // Pagination
