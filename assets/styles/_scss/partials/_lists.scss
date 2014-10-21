@@ -23,14 +23,18 @@
       width: 90%;
       margin: 0 auto;
       padding: .5rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     &-wrap {
       @extend %full-to-double;
       background-color: #000;
       @include transition;
-      padding-top: 5em;
+      padding-top: 2.5rem;
+
+      @media #{$bp-medium} {
+        font-size: 12rem;
+      }
     }
   }
 
@@ -65,6 +69,13 @@
   &-icon svg {
     width: 10em;
     height: 10em;
+  }
+
+  &-title {
+    @media #{$bp-medium} {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &-list {
