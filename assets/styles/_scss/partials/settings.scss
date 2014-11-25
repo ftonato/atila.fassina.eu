@@ -2,6 +2,9 @@
 // Variables
 //==========
 
+$orange: rgb(255,100,0);
+$orange--dark: darken($orange, 10%);
+
 $picture-url: '../../image/layout/atila.png';
 
 $brandGreen:rgb(0,150,50);
@@ -15,8 +18,8 @@ $bkg--dark:  rgb(25,25,25);
 
 $important: rgb(0,150,50);
 
-$highlight: rgb(255,100,0);
-$highlight--dark: darken($highlight, 10%);
+$highlight: $brandGreen;
+$highlight--dark: $brandGreen--dark;
 
 $bkg: $bkg--light;
 $txt: $fontColor--dark;
@@ -60,8 +63,8 @@ a {
 }
 
 ::selection {
-  background-color: $brandGreen;
-  color: rgb(225,225,225);
+  background-color: $bkg--dark;
+  color: #fff;
 }
 
 //===============

@@ -18,20 +18,21 @@
 }
 
 .homePost {
-  padding-top:1em;
+  padding-top: 2em;
 
   &-date {
     font-family: Monaco, "Courier New", monospace;
-    font-size: .6em;
+    font-size: .8em;
     display:block;
     text-align:center;
   }
 
   &-title {
     text-align: center;
-    padding-top: .25em;
+    //padding-top: .25em;
     color: $highlight;
-    font-size:1.5em;
+    font-size: 2rem;
+    text-transform: lowercase;
     font-variant: small-caps;
     @include transition;
     &:hover {
@@ -39,10 +40,10 @@
     }
   }
   &-excerpt {
-    padding:1em 2em;
-    font-size:.8em;
-    margin:0 auto;
-    display:block;
+    padding: 1em 2em;
+    //font-size: .8em;
+    margin: 0 auto;
+    display: block;
     text-align: center
   }
 }

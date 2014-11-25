@@ -14,12 +14,12 @@
 
 .fullPost-date {
   text-align:center;
-  font:.8em/1 Monaco, "Courier New", monospace;
+  font: .8em/1 Monaco, "Courier New", monospace;
 }
 .fullPost-title {
   text-align: center;
-  color:$highlight;
-  font-size:1.2em;
+  color: $highlight;
+  font-size: 2rem;
 }
 .fullPost-img {
   width: 100%;
@@ -29,8 +29,9 @@
   padding: 2em 1em;
   h4, //fallback first posts
   h2 {
-    margin:2em 0;
+    margin:3em 0 .5em;
     color:$txt;
+    font-size: 1.5rem;
   }
   p {
     color:$txt;
@@ -39,14 +40,18 @@
   }
 
   blockquote {
+    margin: 1.5em 2em;
+
     p {
-      padding:1em;
+      padding: .75em;
       display:block;
-      border-left:solid 2px $important;
-      border-top-left-radius:.5em;
-      border-bottom-left-radius:.5em;
-      color:$important;
-      font-size:1.3em;
+      border-left:solid 5px darken($bkg, 30%);
+      //border-top-left-radius:.5em;
+      //border-bottom-left-radius:.5em;
+      color: lighten($txt, 30%);
+      font-size: 1.5em;
+      line-height: 1.5;
+      font-weight: bold;
     }
     em {
       font-size:.6em;
@@ -54,7 +59,7 @@
   }
 
   a {
-    color:darken($txt, 10%);
+    color:darken($txt, 30%);
     border-bottom:dashed 1px $highlight;
   }
 

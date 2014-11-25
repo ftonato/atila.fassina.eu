@@ -50,11 +50,10 @@ body {
   box-sizing: border-box; }
 
 .highlight {
-  margin: 1em 0;
+  margin: 3em 0;
   padding: .5em;
   background-color: #444;
-  overflow: hidden;
-  border-radius: 5px; }
+  overflow: hidden; }
 
 .highlight .hll {
   background-color: #49483e; }
@@ -312,8 +311,8 @@ a {
   text-decoration: none; }
 
 ::selection {
-  background-color: #009632;
-  color: #e1e1e1; }
+  background-color: #191919;
+  color: #fff; }
 
 .previous, .next {
   padding: .2em .5em;
@@ -856,26 +855,25 @@ a {
       width: 55%; } }
 
 .homePost {
-  padding-top: 1em; }
+  padding-top: 2em; }
   .homePost-date {
     font-family: Monaco, "Courier New", monospace;
-    font-size: .6em;
+    font-size: .8em;
     display: block;
     text-align: center; }
   .homePost-title {
     text-align: center;
-    padding-top: .25em;
-    color: #ff6400;
-    font-size: 1.5em;
+    color: #009632;
+    font-size: 2rem;
+    text-transform: lowercase;
     font-variant: small-caps;
     -ms-transition: all 250ms linear 0;
     -moz-transition: all 250ms linear 0;
     transition: all 250ms linear 0; }
     .homePost-title:hover {
-      color: #cc5000; }
+      color: #006321; }
   .homePost-excerpt {
     padding: 1em 2em;
-    font-size: .8em;
     margin: 0 auto;
     display: block;
     text-align: center; }
@@ -909,7 +907,7 @@ a {
 
 .current-page {
   font-weight: bold;
-  color: #cc5000; }
+  color: #006321; }
 
 @media (min-width: 42.5em) {
   .postWrap {
@@ -928,8 +926,8 @@ a {
 
 .fullPost-title {
   text-align: center;
-  color: #ff6400;
-  font-size: 1.2em; }
+  color: #009632;
+  font-size: 2rem; }
 
 .fullPost-img {
   width: 100%; }
@@ -938,25 +936,28 @@ a {
   padding: 2em 1em; }
   .fullPost h4,
   .fullPost h2 {
-    margin: 2em 0;
-    color: #323232; }
+    margin: 3em 0 .5em;
+    color: #323232;
+    font-size: 1.5rem; }
   .fullPost p {
     color: #323232;
     margin: 0 auto 1em;
     max-width: 50em; }
-  .fullPost blockquote p {
-    padding: 1em;
-    display: block;
-    border-left: solid 2px #009632;
-    border-top-left-radius: .5em;
-    border-bottom-left-radius: .5em;
-    color: #009632;
-    font-size: 1.3em; }
-  .fullPost blockquote em {
-    font-size: .6em; }
+  .fullPost blockquote {
+    margin: 1.5em 2em; }
+    .fullPost blockquote p {
+      padding: .75em;
+      display: block;
+      border-left: solid 5px #adadad;
+      color: #7f7f7f;
+      font-size: 1.5em;
+      line-height: 1.5;
+      font-weight: bold; }
+    .fullPost blockquote em {
+      font-size: .6em; }
   .fullPost a {
-    color: #191919;
-    border-bottom: dashed 1px #ff6400; }
+    color: black;
+    border-bottom: dashed 1px #009632; }
   .fullPost a:hover,
   .fullPost a:active {
     border-bottom-style: solid; }
