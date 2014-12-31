@@ -42,13 +42,14 @@ module.exports = function(grunt) {
         }]
       }
     },
-    // soon
+
     svgmin: {
       options: {
         plugins: [{
             removeViewBox: false
         }]
       },
+
       dist: {
         files: [{
           expand: true,
@@ -72,15 +73,51 @@ module.exports = function(grunt) {
       }
     },
 
+     autoprefixer: {
+      options: {
+        browsers: ['last 2 versions'],
+        diff: true,
+      },
+      files: {
+        src: 'assets/styles/css/main.css',
+        dest: 'assets/styles/css/main.css'
+      }
+    },
+
+
+    jekyll: {
+      options: {
+        bundleExec: true,
+        src : '.'
+      },
+      dist: {
+        options: {
+          dest: '_site',
+          config: '_config.yml'
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 8822,
+          base: '_site'
+        }
+      }
+    },
+
     watch: {
       scripts: {
-        files: 'assets/js/**/*.js',
-        tasks: 'jshint'
+        files: [
+          'assets/**',
+          '_layouts/**',
+          '_includes/**',
+          '_posts/**',
+          'blog/**'
+          ],
+        tasks: ['build'],
       },
-      css: {
-        files: 'assets/styles/_scss/*.scss',
-        tasks: ['sass']
-      }
     }
 
   });
@@ -92,9 +129,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('build', ['svgmin', 'sass', 'cmq', 'cssmin', 'imagemin']);
-  grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('default', ['sass', 'jshint']);
+  grunt.registerTask('build', ['jshint', 'imagemin', 'svgmin', 'sass', 'cmq', 'cssmin', 'jekyll']);
+  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('default', ['build']);
 
 };
