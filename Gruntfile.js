@@ -133,7 +133,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('opt', ['imagemin', 'svgmin']);
-  grunt.registerTask('build', ['jshint', 'sass', 'cmq', 'cssmin', 'jekyll']);
+  grunt.registerTask('build', ['jshint', 'sass', 'autoprefixer', 'cmq', 'cssmin', 'jekyll']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('default', ['build']);
 
