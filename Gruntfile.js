@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         options: {
           log: false
         },
-        your_target: {
+        files: {
           files: {
             'assets/styles/css': ['assets/styles/css/*.css']
           }
@@ -53,10 +53,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/img/src',
+          cwd: 'assets/image',
           src: ['**/*.svg'],
-          dest: 'img/',
-          ext: '.min.svg'
+          ext: '.svg'
         }]
       }
     },
@@ -133,7 +132,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('build', ['jshint', 'imagemin', 'svgmin', 'sass', 'cmq', 'cssmin', 'jekyll']);
+  grunt.registerTask('opt', ['imagemin', 'svgmin']);
+  grunt.registerTask('build', ['jshint', 'sass', 'cmq', 'cssmin', 'jekyll']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('default', ['build']);
 
