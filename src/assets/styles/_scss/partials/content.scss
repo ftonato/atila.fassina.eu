@@ -1,0 +1,99 @@
+.contentWrap {
+  @include clearfix;
+    @media #{$tp-xtra-large} {
+    width:72em;
+    margin: 0 auto;
+  }
+}
+
+.postList {
+  list-style-type: none;
+  margin:0 auto;
+  @media #{$bp-medium-old} {
+    width: 60%;
+  }
+  @media #{$tp-medium-1} {
+    width: 55%;
+  }
+}
+
+.homePost {
+  padding-top: 2em;
+
+  &-date {
+    font-family: Monaco, "Courier New", monospace;
+    font-size: .8em;
+    display:block;
+    text-align:center;
+  }
+
+  &-title {
+    text-align: center;
+    color: $highlight;
+    font-size: 2rem;
+    @include transition;
+    &:hover {
+      color:$highlight--dark;
+    }
+  }
+  &-excerpt {
+    padding: 1em 2em;
+    //font-size: .8em;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin-top: 2em;
+      color: $brandGreen;
+      @include transition;
+
+      &:hover,
+      &:focus {
+        color: $brandGreen--dark;
+      }
+    }
+  }
+}
+
+.oldblogLink {
+  text-align: center;
+  margin: 5em auto 2em;
+
+  &:hover,
+  &:focus {
+    color: $highlight--dark;
+    text-decoration: underline;
+    @include transition;
+  }
+}
+
+//===========
+// Pagination
+//===========
+
+.pagination {
+  display:flex;
+  justify-content:center;
+  align-content:space-around;
+}
+.previous {
+  @extend %paginationLink;
+  @include transform(skew(30deg));
+  a {
+    @include transform(skew(-30deg));
+  }
+}
+.next {
+  @extend %paginationLink;
+  @include transform(skew(-30deg));
+  a {
+    @include transform(skew(30deg));
+  }
+
+}
+.current-page {
+  font-weight:bold;
+  color:$highlight--dark;
+}

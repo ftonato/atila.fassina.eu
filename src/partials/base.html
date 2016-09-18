@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    {% block styles %}
+      <link rel="stylesheet" href="assets/css/main.css">
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}
+      {% include './header.html' %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+      {% include './footer.html' %}
+    {% endblock %}
+  <!-- scripts -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.gaAccount }}']);
+    _gaq.push(['_setDomainName', '{{ site.domain }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  {% block scripts %}
+    <script async src="/assets/js/main.js"></script>
+  {% endblock %}
+  </body>
+</html>

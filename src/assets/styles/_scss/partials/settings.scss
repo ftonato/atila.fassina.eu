@@ -1,0 +1,130 @@
+//===========
+// Variables
+//==========
+
+$orange: rgb(255,100,0);
+$orange--dark: darken($orange, 10%);
+
+$picture-url: '../images/layout/atila.png';
+
+$brandGreen:rgb(0,150,50);
+$brandGreen--dark:darken($brandGreen, 10%);
+
+$fontColor--dark:  rgb(50,50,50);
+$fontColor--light: rgb(250,250,250);
+
+$bkg--light: rgb(250,250,250);
+$bkg--dark:  rgb(25,25,25);
+
+$important: rgb(0,150,50);
+
+$highlight: $brandGreen;
+$highlight--dark: $brandGreen--dark;
+
+$bkg: $bkg--light;
+$txt: $fontColor--dark;
+
+// new variables
+$gray: #bbb;
+
+//=============
+// Breakpoints
+//=============
+$tp-xtra-small: '(max-width: 19.5em)';
+
+$bp-medium-old: '(min-width: 42.5em)';
+$tp-medium-1: '(min-width: 50.5em)';
+
+$bp-large: '(min-width: 55em)';
+$tp-xtra-large: '(min-width: 72.8em)';
+
+// new ones
+$bp-small: '(min-width: 420px)';
+$bp-medium: '(min-width: 750px)';
+
+//===============
+// Useful resets
+//===============
+
+body {
+  font-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: $txt;
+  box-sizing: border-box;
+}
+
+ul {list-style:none;}
+
+a {
+  color: darken($txt,10%);
+  text-decoration: none
+}
+
+::selection {
+  background-color: $bkg--dark;
+  color: #fff;
+}
+
+//===============
+// Mixin
+//==============
+@mixin transition($prop: all, $time: 250ms, $time-function: linear, $delay:0) {
+    -ms-transition: $prop $time $time-function $delay;
+    -moz-transition: $prop $time $time-function $delay;
+    transition: $prop $time $time-function $delay;
+}
+
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    transform: $transform;
+}
+
+@mixin animation($name, $duration) {
+    -ms-animation:$name $duration;
+    -webkit-animation:$name $duration;
+    -moz-animation:$name $duration;
+    animation:$name $duration;
+}
+
+@mixin keyframes ($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+    @-ms-keyframes $animation-name {
+        @content;
+    }
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+}
+
+//===============
+// Placeholders
+//==============
+%paginationLink {
+  padding: .2em .5em;
+  background-color: $bkg--dark;
+  text-align: center;
+  a {
+    display:inline-block;
+    color: $fontColor--light;
+  }
+}
