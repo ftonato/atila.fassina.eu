@@ -1,8 +1,4 @@
----
-layout: default
-title: Blog - Átila Fassina
----
-<ul class="postList">
+{# <ul class="postList">
   {% for post in paginator.posts %}
     <li class="homePost">
       <a class="homePost-link" href="{{ post.url }}">
@@ -15,4 +11,9 @@ title: Blog - Átila Fassina
     </li>
   {% endfor %}
   {% include pagination.html %}
-</ul>
+</ul> #}
+{% extends 'base.html' %}
+{% block content %}
+  <article class="mediumWrap"></article>
+  <ul class="postList"></ul>
+{% endblock %}

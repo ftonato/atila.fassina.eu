@@ -6,12 +6,14 @@
 }
 
 .top {
+  overflow: hidden;
+  clear: both;
+
   @media #{$bp-small} {
     margin-bottom: .75rem;
   }
-
-  clear: both;
 }
+
 .titleWrap {
   width: 100%;
   overflow: hidden;
@@ -49,7 +51,7 @@
 .header-info {
   @media #{$bp-small} {
     float: left;
-    width: 60%;
+    width: calc(60% - .8rem);
   }
 }
 

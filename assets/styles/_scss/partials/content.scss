@@ -29,11 +29,8 @@
 
   &-title {
     text-align: center;
-    //padding-top: .25em;
     color: $highlight;
     font-size: 2rem;
-    text-transform: lowercase;
-    font-variant: small-caps;
     @include transition;
     &:hover {
       color:$highlight--dark;
@@ -44,7 +41,19 @@
     //font-size: .8em;
     margin: 0 auto;
     display: block;
-    text-align: center
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin-top: 2em;
+      color: $brandGreen;
+      @include transition;
+
+      &:hover,
+      &:focus {
+        color: $brandGreen--dark;
+      }
+    }
   }
 }
 

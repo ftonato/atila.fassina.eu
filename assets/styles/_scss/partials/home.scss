@@ -105,10 +105,17 @@ $double-gap: .5rem !global;
 }
 
 .box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   @media #{$bp-small} {
     float: left;
     margin-right: $double-gap;
   }
+
   &:last-child {
     margin-right: 0;
   }

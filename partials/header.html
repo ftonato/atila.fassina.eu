@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <header class="top full-wrap">
+      <a class="titleLogo" href="{{ site.baseurl }}">
+        <img src="/assets/images/logo-color.png" alt="Átila Fassina - Front-end Developer" />
+      </a>
+      <div class="header-info">
+        <h1 class="titleName">
+          <a href="{{ site.baseurl }}">
+            {{ site.author.name }}
+          </a>
+          <span class="subtitle">
+            {{ site.author.title }}
+          </span>
+        </h1>
+        <nav class="social-menu">
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="http://twitter.com/{{ site.author.username }}">
+                {% include './svg/twitter.svg' %}
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="http://github.com/{{ site.author.username }}">
+                {% include './svg/github.svg' %}
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="http://linkedin.com/in/{{ site.author.username }}">
+                {% include './svg/linkedin.svg' %}
+              </a>
+            </li>
+            <li class="social-item email">
+              <a href="mailto:hey@atilafassina.com">
+                @
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </header>
