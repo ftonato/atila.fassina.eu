@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <main role="main" class="full-wrap">
+    <aside class="lobby">
+      <section class="hello-world">
+        <strong>Hi!</strong>
+      </section>
+      <section class="atila-picture-wrap">
+        <div class="atila-picture"></div>
+      </section>
+    </aside>
+    <article>
+      <section id="about-me" class="group-container">
+        <div class="lightbulb-wrap">
+          <div class="lightbulb">
+            {% include './svg/about/idea.svg' %}
+          </div>
+        </div>
+        <div class="box textblock--green">
+          <p class="home-text">
+            A good idea is the reason, good UX is the mean, and a good code is the way. Put them together and you have a good product.
+          </p>
+        </div>
+        <div class="box textblock--green">
+          <div class="pin-wrap icon">
+            <div class="pin">
+              {% include './svg/about/pin.svg' %}
+            </div>
+          </div>
+          <p class="home-text">
+            Currently working at <a class="home-link" href="http://www.sparwelt.de">Sparwelt</a>, based in Berlin - Germany.
+          </p>
+        </div>
+      </section>
+      <section id="about-work" class="group-container">
+        <div class="check-wrap">
+          <div class="check">
+            {% include './svg/about/check.svg' %}
+          </div>
+        </div>
+        <div class="box textblock--gray">
+          <p class="home-text">
+            I craft web applications for a living and for fun, and I'm always interested about nice projects.
+          </p>
+        </div>
+        <div class="box textblock--gray">
+          <p class="home-text">
+            So, get in touch and let's work together!
+          </p>
+        </div>
+      </section>
+      <section id="my-skills" class="skills-wrap">
+        <header class="skills">
+          <div class="skills-icon">
+            <div>
+              {% include './svg/about/skills.svg' %}
+            </div>
+          </div>
+          <h2 class="skills-title">
+            Skills
+          </h2>
+        </header>
+        <div class="skills-list-wrap">
+          <ul class="skills-list">
+            <li class="skills-item">Responsive Web Design</li>
+            <li class="skills-item">User Experience</li>
+            <li class="skills-item">On-page SEO</li>
+            <li class="skills-item">HTML/CSS</li>
+            <li class="skills-item">SASS</li>
+            <li class="skills-item">Stylus</li>
+            <li class="skills-item">Javascript</li>
+          </ul>
+        </div>
+      </section>
+      <section id="working-process" class="process-wrap">
+        <header class="process">
+          <div class="process-icon">
+            <div>
+              {% include './svg/about/works.svg' %}
+            </div>
+          </div>
+          <h2 class="process-title">
+            Process
+          </h2>
+        </header>
+        <div class="process-list-wrap">
+          <ol class="process-list">
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/1.svg' %}</span>
+              <span class="process-label">Problem Analysis</span>
+            </li>
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/2.svg' %}</span>
+              <span class="process-label">Rough wireframe</span>
+            </li>
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/3.svg' %}</span>
+              <span class="process-label">Code Concept</span>
+            </li>
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/4.svg' %}</span>
+              <span class="process-label">Visual Refinning</span>
+            </li>
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/5.svg' %}</span>
+              <span class="process-label">Code Refinning</span>
+            </li>
+            <li class="process-item">
+              <span class="step-icon">{% include './svg/process/6.svg' %}</span>
+              <span class="process-label">Deploy & Deliver</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </article>
+    <nav class="menu">
+      <a class="articles-link" href="/articles">
+        <span class="menu-icon">
+          {% include './svg/menu/glasses.svg' %}
+        </span>
+        <span class="menu-label">Articles</span>
+      </a>
+      <a class="talks-link" href="https://speakerdeck.com/{{ site.author.username }}">
+        <span class="menu-icon">
+          {% include './svg/menu/talks.svg' %}
+        </span>
+        <span class="menu-label">Talks</span>
+      </a>
+      <a class="projects-link" href="https://github.com/{{ site.author.username }}?tab=repositories">
+        <span class="menu-icon">
+          {% include './svg/menu/projects.svg' %}
+        </span>
+        <span class="menu-label">Projects</span>
+      </a>
+    </nav>
+  </main>
+{% endblock %}

@@ -6,21 +6,24 @@ import imagemin from 'gulp-imagemin';
 import babel from 'gulp-babel';
 
 gulp.task('js', () => {
-    return gulp.src('./assets/js/main.js')
+    return gulp.src('./src/assets/js/main.js')
     .pipe(babel({
         presets: ['es2015']
     }))
-    .pipe(gulp.dest('./dist/assets/js'));
+    .pipe(gulp.dest('./assets/js'));
 });
 
 gulp.task('nunjucks', () => {
     return gulp.src([
-        './partials/index.html',
-        './partials/articles.html'
+        './src/partials/index.html',
+        './src/partials/**/index.html'
         ])
     .pipe(nunjucks.compile({
         site: {
             baseurl: 'http://atilafassina.com/',
+            gaAccount: 'UA-36837962-1',
+            domain: 'atilafassina.com',
+
             page: {
                 title: 'Átila Fassina'
             },
@@ -31,23 +34,23 @@ gulp.task('nunjucks', () => {
             }
         }
     }))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./'))
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./assets/styles/_scss/main.scss')
+    return gulp.src('./src/assets/styles/_scss/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/assets/css'));
+    .pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('imagemin', () => {
-    return gulp.src('./assets/images/**/*')
+    return gulp.src('./src/assets/images/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/assets/images/'))
+    .pipe(gulp.dest('./assets/images/'))
 });
 
 gulp.task('webserver', ['default'], () => {
-  return gulp.src('./dist')
+  return gulp.src('./')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
