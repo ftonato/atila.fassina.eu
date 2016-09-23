@@ -1,3 +1,51 @@
+.mediumWrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: none;
+
+  &:only-child {
+    display: block
+  }
+}
+
+.loadMore {
+  display: block;
+  margin: 3em auto;
+  border: solid 3px $brandGreen;
+  background-color: transparent;
+  padding: .5em 5em;
+  font-size: 1.5em;
+  @include transition;
+
+  &::before {
+      content: "load more posts"
+  }
+
+  &:hover,
+  &:focus {
+    background: $brandGreen;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    border-color: $bkg--dark;
+    color: $txt;
+    background-color: $bkg--light;
+    opacity: .25;
+    cursor: not-allowed;
+
+    &::before {
+      content: "no more posts"
+    }
+  }
+}
+
 .postWrap {
   @media #{$bp-medium-old} {
     width: 80%;

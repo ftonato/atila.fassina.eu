@@ -5,7 +5,10 @@
 {% endblock %}
 
 {% block content %}
-  <article class="mediumWrap"></article>
+  <article class="mediumWrap">
+    {% include './svg/loader.svg' %}
+  </article>
+  <button id="moreBtn" class="loadMore" disabled></button>
   <section class="oldblogLink">
     <a href="/oldblog">Check older entries on my previous blog</a>
   </section>

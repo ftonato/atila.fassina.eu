@@ -5,6 +5,41 @@
 
   var localDomain = document.location.host;
   var page = document.location.pathname;
+  var otherPosts = void 0,
+      moreBtn = document.querySelector('#moreBtn');
+
+  function renderPosts(posts) {
+    var cachedPosts = '',
+        ul = document.createElement('ul'),
+        mediumWrap = document.querySelector('.mediumWrap');
+
+    if (posts.length > 5) {
+      otherPosts = posts.slice(4);
+      moreBtn.disabled = false;
+    } else {
+      otherPosts = undefined;
+    }
+
+    ul.classList.add('postList');
+
+    posts.forEach(function (post, index) {
+      if (index < 4) {
+        cachedPosts += blogPostTemplate(post);
+      }
+    });
+
+    ul.innerHTML = cachedPosts;
+    mediumWrap.appendChild(ul);
+
+    setLinkTarget();
+  }
+
+  function morePosts() {
+    if (!otherPosts) return;
+    moreBtn.disabled = true;
+
+    renderPosts(otherPosts);
+  }
 
   function blogPostTemplate(post) {
     var postDate = new Date(post.pubDate).toDateString();
@@ -23,7 +58,6 @@
   if (page.includes('articles')) {
     var getPosts = new Promise(function (resolve, reject) {
       var posts = new XMLHttpRequest();
-      // const url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=https://medium.com/feed/@atilafassina"
       var url = "http://rss2json.com/api.json?rss_url=https://medium.com/feed/@atilafassina";
 
       posts.open("GET", url, true);
@@ -38,24 +72,13 @@
 
       posts.send();
     }).then(function (postList) {
-      var cachedPosts = '',
-          ul = document.createElement('ul'),
-          mediumWrap = document.querySelector('.mediumWrap');
-
-      ul.classList.add('postList');
-
-      postList.items.forEach(function (post) {
-        cachedPosts += blogPostTemplate(post);
-      });
-
-      ul.innerHTML = cachedPosts;
-      mediumWrap.appendChild(ul);
-
-      setLinkTarget();
+      renderPosts(postList.items);
     }).catch(function (response) {
       console.error(response);
     });
   } else {
     setLinkTarget();
   }
+
+  moreBtn.addEventListener('click', morePosts, false);
 })();

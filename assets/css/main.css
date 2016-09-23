@@ -941,6 +941,42 @@ a {
   font-weight: bold;
   color: #006321; }
 
+.mediumWrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+
+.loader {
+  display: none; }
+  .loader:only-child {
+    display: block; }
+
+.loadMore {
+  display: block;
+  margin: 3em auto;
+  border: solid 3px #009632;
+  background-color: transparent;
+  padding: .5em 5em;
+  font-size: 1.5em;
+  -ms-transition: all 250ms linear 0;
+  -moz-transition: all 250ms linear 0;
+  transition: all 250ms linear 0; }
+  .loadMore::before {
+    content: "load more posts"; }
+  .loadMore:hover, .loadMore:focus {
+    background: #009632;
+    color: #fff;
+    cursor: pointer; }
+  .loadMore[disabled] {
+    border-color: #191919;
+    color: #323232;
+    background-color: #fafafa;
+    opacity: .25;
+    cursor: not-allowed; }
+    .loadMore[disabled]::before {
+      content: "no more posts"; }
+
 @media (min-width: 42.5em) {
   .postWrap {
     width: 80%;

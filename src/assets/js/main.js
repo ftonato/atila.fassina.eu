@@ -3,6 +3,42 @@
 
   const localDomain = document.location.host;
   const page = document.location.pathname;
+  let otherPosts,
+    moreBtn = document.querySelector('#moreBtn');
+
+  function renderPosts(posts) {
+    let cachedPosts = '',
+        ul = document.createElement('ul'),
+        mediumWrap = document.querySelector('.mediumWrap');
+
+      if (posts.length > 5) {
+        otherPosts = posts.slice(4);
+        moreBtn.disabled = false;
+      } else {
+        otherPosts = undefined;
+      }
+
+      ul.classList.add('postList');
+
+      posts.forEach(function(post, index) {
+        if (index < 4) {
+          cachedPosts += blogPostTemplate(post);
+        }
+
+      });
+
+      ul.innerHTML = cachedPosts;
+      mediumWrap.appendChild(ul);
+
+      setLinkTarget();
+  }
+
+  function morePosts() {
+    if(!otherPosts) return;
+    moreBtn.disabled = true;
+
+    renderPosts(otherPosts);
+  }
 
   function blogPostTemplate(post) {
     let postDate = new Date(post.pubDate).toDateString();
@@ -30,7 +66,6 @@
   if(page.includes('articles')) {
     let getPosts = new Promise((resolve, reject) => {
       let posts = new XMLHttpRequest();
-      // const url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=https://medium.com/feed/@atilafassina"
       const url = "http://rss2json.com/api.json?rss_url=https://medium.com/feed/@atilafassina"
 
       posts.open("GET", url, true);
@@ -44,27 +79,16 @@
       };
 
       posts.send();
-    }).then((postList) => {
-      let cachedPosts = '',
-        ul = document.createElement('ul'),
-        mediumWrap = document.querySelector('.mediumWrap');
-
-      ul.classList.add('postList');
-
-
-      postList.items.forEach(function(post) {
-        cachedPosts += blogPostTemplate(post);
-      });
-
-      ul.innerHTML = cachedPosts;
-      mediumWrap.appendChild(ul);
-
-      setLinkTarget();
-    }).catch((response) => {
+    })
+    .then((postList)=> { renderPosts(postList.items)})
+    .catch((response) => {
       console.error(response);
     });
 
   } else {
     setLinkTarget();
   }
+
+  moreBtn.addEventListener('click', morePosts, false);
+
 })();
