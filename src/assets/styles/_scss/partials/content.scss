@@ -21,7 +21,6 @@
   padding-top: 2em;
 
   &-date {
-    font-family: Monaco, "Courier New", monospace;
     font-size: .8em;
     display:block;
     text-align:center;
@@ -38,10 +37,14 @@
   }
   &-excerpt {
     padding: 1em 2em;
-    //font-size: .8em;
     margin: 0 auto;
     display: block;
     text-align: center;
+
+    img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
 
     a {
       display: inline-block;

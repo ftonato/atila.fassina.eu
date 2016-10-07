@@ -869,7 +869,6 @@ a {
 .homePost {
   padding-top: 2em; }
   .homePost-date {
-    font-family: Monaco, "Courier New", monospace;
     font-size: .8em;
     display: block;
     text-align: center; }
@@ -887,6 +886,9 @@ a {
     margin: 0 auto;
     display: block;
     text-align: center; }
+    .homePost-excerpt img {
+      max-width: 80%;
+      margin: 0 auto; }
     .homePost-excerpt a {
       display: inline-block;
       margin-top: 2em;

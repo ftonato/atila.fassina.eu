@@ -57,6 +57,11 @@ gulp.task('webserver', ['default'], () => {
       open: true
     }));
 });
+gulp.task('watch', () => {
+  gulp.watch([
+      './src/assets/styles/_scss/**/*'
+  ], ['sass']);
+});
 
 gulp.task('default', ['nunjucks', 'js', 'sass']);
 gulp.task('deploy', ['nunjucks', 'js', 'sass', 'imagemin']);
