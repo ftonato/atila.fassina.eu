@@ -16,5 +16,9 @@
     "gulp-webserver": "^0.9.1",
     "nunjucks": "^2.5.2",
     "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "global": "^4.3.1",
+    "gulp-cli": "^1.2.2"
   }
 }
