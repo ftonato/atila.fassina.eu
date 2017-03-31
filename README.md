@@ -1,5 +1,2 @@
-#[atilafassina.com](http://atilafassina.com)
-
->This is my personal website || test lab || blog. I'll be writing about Web Development.
-
-I'll be using this website to test new things and play around, so needless to say: if you find something unusual or broken, do not hesitate in filing an issue or pulling a request, I'll be extremely happy if you do!
+<a href="http://atilafassina.com" target="_blank"><img src="http://atilafassina.com/assets/images/logo-color.png" width='100' /></a>
+[atilafassina.com](http://atilafassina.com)
