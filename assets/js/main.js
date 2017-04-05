@@ -42,9 +42,17 @@
   }
 
   function blogPostTemplate(post) {
-    var postDate = new Date(post.pubDate).toDateString();
+    function buildCategories(array) {
+      var list = array.map(function (category) {
+        return '<li class="homePost-tagItem">' + category + '</li>';
+      });
 
-    return '<li class="homePost">\n        <a class="homePost-link" href="' + post.link + '">\n          <span class="homePost-date">' + postDate + '</span>\n          <h3 class="homePost-title">' + post.title + '</h3>\n        </a>\n        <section class="homePost-excerpt">\n          ' + post.description + '\n        </section>\n      </li>';
+      return list.join().replace(/,/g, '');
+    }
+
+    var postDate = new Date(post.pubDate).toDateString();
+    debugger;
+    return '<li class="homePost">\n        <a class="homePost-link" href="' + post.link + '">\n          <span class="homePost-date">' + postDate + '</span>\n          <h3 class="homePost-title">' + post.title + '</h3>\n        </a>\n        <ul class="homePost-tagList">\n          ' + buildCategories(post.categories) + '\n        </ul>\n      </li>';
   };
 
   function setLinkTarget() {

@@ -41,16 +41,24 @@
   }
 
   function blogPostTemplate(post) {
-    let postDate = new Date(post.pubDate).toDateString();
+    function buildCategories(array) {
+      const list = array.map( category => {
+        return `<li class="homePost-tagItem">${category}</li>`
+      })
 
+      return list.join().replace(/,/g, '')
+    }
+
+    let postDate = new Date(post.pubDate).toDateString();
+    debugger;
     return `<li class="homePost">
         <a class="homePost-link" href="${post.link}">
           <span class="homePost-date">${postDate}</span>
           <h3 class="homePost-title">${post.title}</h3>
         </a>
-        <section class="homePost-excerpt">
-          ${post.description}
-        </section>
+        <ul class="homePost-tagList">
+          ${buildCategories(post.categories)}
+        </ul>
       </li>`;
   };
 

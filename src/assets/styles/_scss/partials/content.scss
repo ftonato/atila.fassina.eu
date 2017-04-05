@@ -35,29 +35,50 @@
       color:$highlight--dark;
     }
   }
-  &-excerpt {
-    padding: 1em 2em;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
 
-    img {
-      max-width: 80%;
-      margin: 0 auto;
-    }
+  &-tagList {
+    display: flex;
+    justify-content: center;
+    margin: .5em 0 0 .2em;
+    opacity: .4;
+    transition: all 250ms linear;
+    will-change: opacity;
+    cursor: none;
 
-    a {
-      display: inline-block;
-      margin-top: 2em;
-      color: $brandGreen;
-      @include transition;
-
-      &:hover,
-      &:focus {
-        color: $brandGreen--dark;
-      }
+    &:hover {
+      opacity: .8;
     }
   }
+
+  &-tagItem {
+    border: solid 2px $gray;
+    padding: .2em .5em;
+    margin: 0 .2em;
+    font-size: .8rem;
+  }
+  // &-excerpt {
+  //   padding: 1em 2em;
+  //   margin: 0 auto;
+  //   display: block;
+  //   text-align: center;
+
+  //   img {
+  //     max-width: 80%;
+  //     margin: 0 auto;
+  //   }
+
+  //   a {
+  //     display: inline-block;
+  //     margin-top: 2em;
+  //     color: $brandGreen;
+  //     @include transition;
+
+  //     &:hover,
+  //     &:focus {
+  //       color: $brandGreen--dark;
+  //     }
+  //   }
+  // }
 }
 
 .oldblogLink {
