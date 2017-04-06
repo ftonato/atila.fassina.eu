@@ -51,7 +51,7 @@
     }
 
     var postDate = new Date(post.pubDate).toDateString();
-    debugger;
+
     return '<li class="homePost">\n        <a class="homePost-link" href="' + post.link + '">\n          <span class="homePost-date">' + postDate + '</span>\n          <h3 class="homePost-title">' + post.title + '</h3>\n        </a>\n        <ul class="homePost-tagList">\n          ' + buildCategories(post.categories) + '\n        </ul>\n      </li>';
   };
 

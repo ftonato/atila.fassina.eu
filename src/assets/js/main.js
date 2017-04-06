@@ -50,7 +50,7 @@
     }
 
     let postDate = new Date(post.pubDate).toDateString();
-    debugger;
+
     return `<li class="homePost">
         <a class="homePost-link" href="${post.link}">
           <span class="homePost-date">${postDate}</span>
