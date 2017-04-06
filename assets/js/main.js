@@ -43,11 +43,11 @@
 
   function blogPostTemplate(post) {
     function buildCategories(array) {
-      var list = array.map(function (category) {
+      var list = array.reduce(function (category) {
         return '<li class="homePost-tagItem">' + category + '</li>';
       });
 
-      return list.join().replace(/,/g, '');
+      return list.join('');
     }
 
     var postDate = new Date(post.pubDate).toDateString();

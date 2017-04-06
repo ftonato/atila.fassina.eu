@@ -42,11 +42,11 @@
 
   function blogPostTemplate(post) {
     function buildCategories(array) {
-      const list = array.map( category => {
+      const list = array.reduce( category  => {
         return `<li class="homePost-tagItem">${category}</li>`
       })
 
-      return list.join().replace(/,/g, '')
+      return list.join('')
     }
 
     let postDate = new Date(post.pubDate).toDateString();
