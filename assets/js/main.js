@@ -22,7 +22,11 @@
 
     ul.classList.add('postList');
 
-    posts.forEach(function (post, index) {
+    var realPosts = posts.filter(function (post) {
+      return post.categories.length > 0;
+    });
+
+    realPosts.forEach(function (post, index) {
       if (index < 4) {
         cachedPosts += blogPostTemplate(post);
       }
@@ -43,7 +47,7 @@
 
   function blogPostTemplate(post) {
     function buildCategories(array) {
-      var list = array.reduce(function (category) {
+      var list = array.map(function (category) {
         return '<li class="homePost-tagItem">' + category + '</li>';
       });
 

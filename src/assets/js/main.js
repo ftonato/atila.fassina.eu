@@ -20,7 +20,11 @@
 
       ul.classList.add('postList');
 
-      posts.forEach(function(post, index) {
+      const realPosts = posts.filter( post => {
+        return post.categories.length > 0
+      })
+
+      realPosts.forEach(function(post, index) {
         if (index < 4) {
           cachedPosts += blogPostTemplate(post);
         }
@@ -42,14 +46,14 @@
 
   function blogPostTemplate(post) {
     function buildCategories(array) {
-      const list = array.reduce( category  => {
+      const list = array.map( category  => {
         return `<li class="homePost-tagItem">${category}</li>`
       })
 
       return list.join('')
     }
 
-    let postDate = new Date(post.pubDate).toDateString();
+    const postDate = new Date(post.pubDate).toDateString();
 
     return `<li class="homePost">
         <a class="homePost-link" href="${post.link}">
