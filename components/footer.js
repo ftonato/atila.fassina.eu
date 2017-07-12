@@ -16,7 +16,7 @@ export default () => (<div>
       </li>
 
       <li>
-        <Link href="https://github.com/atilafassina/atilafassina.github.io">
+        <Link href="https://github.com/atilafassina/atilafassina.github.io/blob/master/LICENSES.md">
           <a target="_blank">
             licenses
           </a>
