@@ -5,7 +5,6 @@ import Social from '../components/social'
 import Footer from '../components/footer'
 import {social} from '../config'
 
-
 export default () => (<Page>
   <header className="top">
     <h1>
