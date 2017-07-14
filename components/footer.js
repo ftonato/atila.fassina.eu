@@ -119,7 +119,7 @@ export default () => (<div>
       cursor: pointer;
     }
 
-    footer a::before, { content: "_" }
+    footer a::before { content: "_" }
 
     footer a:hover,
     footer a:focus { text-decoration: underline }
@@ -155,6 +155,5 @@ export default () => (<div>
         width: 90vw;
       }
     }
-
   `}</style>
 </div>)

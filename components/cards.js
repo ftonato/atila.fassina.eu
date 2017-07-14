@@ -59,7 +59,7 @@ export default ({cardList = []}) => (<div>
       align-items: center;
     }
 
-    .cardIcon img {width: 100%; max-height: 100%; }
+    .cardIcon img { width: 100%; max-height: 100%; }
     .projects { max-height: 80% !important }
 
     .cardName {

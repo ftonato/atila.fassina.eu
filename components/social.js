@@ -31,13 +31,13 @@ export default ({socialList = []}) => (<div className="socialWrapper">
 
     .icon { height: 100%; font-size: inherit; }
 
-    .medium {width: 2rem;}
+    .medium { width: 2rem; }
 
     .email {
       color: #222;
       line-height: 1;
       font-weight: 500;
-    }
       text-decoration: none !important;
+    }
   `}</style>
 </div>)

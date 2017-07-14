@@ -42,7 +42,7 @@ export default ({children}) => (<div>
       background-color: white;
       box-sizing: border-box;
     }
-    ul { margin: 0; padding: 0;}
+    ul { margin: 0; padding: 0; }
     h1,h2,h3,h4, strong { font-weight: 200 }
   `}</style>
 </div>)
