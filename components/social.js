@@ -5,7 +5,7 @@ export default ({socialList = []}) => (<div className="socialWrapper">
     {socialList.map( ({name, url}) => (
       <li key={name} className="socialIcon">
         <Link href={url}>
-          <a className={name} target="_blank">
+          <a className={name} target="_blank" title={name}>
             {name !== 'email' && <img className={name} src={`/static/${name}.svg`} alt={name}/>}
             {name === 'email' && <span className="emailIcon">@</span>}
           </a>
@@ -31,11 +31,13 @@ export default ({socialList = []}) => (<div className="socialWrapper">
       height: 2rem;
     }
 
-    .medium {width: 2.5rem;}
+     .medium {width: 2rem;}
 
     .email {
       font-size: 2rem;
       color: #222;
+      line-height: 1;
+      font-weight: 500;
     }
       text-decoration: none !important;
   `}</style>

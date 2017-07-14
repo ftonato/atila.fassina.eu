@@ -6,8 +6,8 @@ export default ({cardList = []}) => (<div>
       <li className="card" key={name}>
         <Link href={url}>
           <a target="_blank">
-            <div>
-              <img src={`/static/${name}.svg`} className="cardIcon" alt={`${name}`}/>
+            <div className="cardIcon">
+               <img src={`/static/${name}.svg`} className={`${name}`} alt={`${name}`}/>
             </div>
             <h3 className="cardName">{name}</h3>
           </a>
@@ -34,6 +34,8 @@ export default ({cardList = []}) => (<div>
       align-items: center;
       color: black;
       background-color: white;
+      border-top: solid 2px transparent;
+      border-bottom: solid 2px transparent;
       border-radius: 2px;
     }
 
@@ -45,10 +47,15 @@ export default ({cardList = []}) => (<div>
     }
 
     .card:hover {
-      box-shadow: inset 0 0 0 2px rgb(30, 200, 10);
+      {/* box-shadow: inset 0 0 0 2px rgb(30, 200, 10); */}
+      border-top-color: rgb(30, 200, 10);
+      border-bottom-color: rgb(30, 200, 10);
     }
 
-    .cardIcon { height: 10rem;}
+    .cardIcon { height: 10rem; max-width: 100%; display: flex; flex-flow: column; justify-content: center; align-items: center;}
+    .cardIcon img {width: 100%; max-height: 100%; }
+    .projects { max-height: 80% !important }
+    {/* .articles { height: 5rem; margin: 2.5rem 0} */}
 
     .cardName {
       text-align: center;
