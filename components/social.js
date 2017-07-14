@@ -6,21 +6,16 @@ export default ({socialList = []}) => (<div className="socialWrapper">
       <li key={name} className="socialIcon">
         <Link href={url}>
           <a className={name} target="_blank" title={name}>
-            {name !== 'email' && <img className={name} src={`/static/${name}.svg`} alt={name}/>}
-            {name === 'email' && <span className="emailIcon">@</span>}
+            {name !== 'email' && <img className={`${name} icon`} src={`/static/${name}.svg`} alt={name}/>}
+            {name === 'email' && <span className={`${name} icon`}>@</span>}
           </a>
         </Link>
       </li>
     ))}
   </ul>
   <style jsx>{`
-    .socialWrapper {
-      background-color: #bbb;
-    }
     .socialMedias {
-      width: 80%;
       margin: 0 auto;
-      padding: .5em 0;
       list-style: none;
       display: flex;
       justify-content: space-around;
@@ -28,13 +23,16 @@ export default ({socialList = []}) => (<div className="socialWrapper">
     }
 
     .socialIcon {
-      height: 2rem;
+      height: 1.5rem;
+      font-size: 1.5rem;
+      margin: 0 .5em;
     }
 
-     .medium {width: 2rem;}
+    .icon { height: 100%; font-size: inherit; }
+
+    .medium {width: 2rem;}
 
     .email {
-      font-size: 2rem;
       color: #222;
       line-height: 1;
       font-weight: 500;

@@ -18,7 +18,7 @@ export default ({cardList = []}) => (<div>
   <style jsx>{`
     .cardList {
       width: 80vw; height: 100%;
-      margin: 5rem 0;
+      margin: 10rem 0;
       display: flex;
       flex-flow: column;
       justify-content: space-around;
@@ -47,15 +47,20 @@ export default ({cardList = []}) => (<div>
     }
 
     .card:hover {
-      {/* box-shadow: inset 0 0 0 2px rgb(30, 200, 10); */}
       border-top-color: rgb(30, 200, 10);
       border-bottom-color: rgb(30, 200, 10);
     }
 
-    .cardIcon { height: 10rem; max-width: 100%; display: flex; flex-flow: column; justify-content: center; align-items: center;}
+    .cardIcon {
+      height: 10rem; max-width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .cardIcon img {width: 100%; max-height: 100%; }
     .projects { max-height: 80% !important }
-    {/* .articles { height: 5rem; margin: 2.5rem 0} */}
 
     .cardName {
       text-align: center;
