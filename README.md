@@ -1,2 +1,5 @@
-<a href="http://atilafassina.com" target="_blank"><img src="http://atilafassina.com/assets/images/logo-color.png" width='100' /></a>
-[atilafassina.com](http://atilafassina.com)
+<div align="center">
+  <a href="https://atilafassina.com" target="_blank">
+    <img src="https://atilafassina.com/static/logo.png" width='200' />
+  </a>
+</div>
