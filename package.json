@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "next build && next export && cd out && surge"
+    "deploy": "next build && next export && surge --project ./out --domain atilafassina.com"
   },
   "dependencies": {
     "next": "^3.0.1-beta.5",
