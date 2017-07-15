@@ -20,12 +20,13 @@ export default ({socialList = []}) => (<div className="socialWrapper">
       display: flex;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .socialIcon {
       height: 1.5rem;
       font-size: 1.5rem;
-      margin: 0 .5em;
+      margin: .5em;
     }
 
     .icon { height: 100%; font-size: inherit; }

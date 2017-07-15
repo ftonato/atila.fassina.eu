@@ -13,6 +13,7 @@ export default () => (<div>
     }
 
     .logo {
+      max-width: 90vw;
       height: 15rem;
       margin: 10rem 0;
     }

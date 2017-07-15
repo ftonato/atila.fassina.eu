@@ -141,12 +141,13 @@ export default () => (<div>
     .powered {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding-bottom: 1rem;
     }
 
     .powered li {
-      margin: 0 1em;
+      margin: 1em;
     }
 
     @media (min-width: 860px) {
