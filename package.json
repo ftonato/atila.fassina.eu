@@ -2,11 +2,10 @@
   "name": "atilafassina.com",
   "version": "6.0.1",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next -p 8080",
+    "start": "next build && next start -p 8080",
     "export": "next export",
-    "deploy": "next build && next export && surge --project ./out --domain atilafassina.com"
+    "deploy": "we deploy -p atilafassina"
   },
   "dependencies": {
     "next": "^3.0.1-beta.5",

@@ -46,9 +46,9 @@ export default () => (<div>
         </li>
 
         <li>
-          <Link href="https://surge.sh/">
+          <Link href="https://wedeploy.com/">
             <a target="_blank">
-              surge.sh
+              wedeploy™
             </a>
           </Link>
         </li>
