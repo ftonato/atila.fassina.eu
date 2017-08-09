@@ -4,7 +4,7 @@ export default ({cardList = []}) => (<div>
   <ul className="cardList">
     {cardList.map( ({name, url}) => (
       <li className="card" key={name}>
-        <Link href={url}>
+        <Link href={`/${name}`}>
           <a target="_blank">
             <div className="cardIcon">
                <img src={`/static/${name}.svg`} className={`${name}`} alt={`${name}`}/>
