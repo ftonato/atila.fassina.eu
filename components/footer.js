@@ -3,10 +3,10 @@ import Social from '../components/social'
 import {social} from '../config'
 
 export default ({internal}) => (<div>
-  <footer className={internal ? 'internal' : ''}>
+  <footer className={internal && 'internal'}>
     <section className="listsWrap">
       <div className="socialContainer">
-        <Social socialList={social} />
+        <Social socialList={social} internal={internal}/>
       </div>
       <ul className="linkList">
         <li>
@@ -75,7 +75,7 @@ export default ({internal}) => (<div>
     .internal { background: black }
 
     .listsWrap {
-      margin: 5rem auto 0;
+      padding-top: 2rem;
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -92,7 +92,6 @@ export default ({internal}) => (<div>
 
     .socialContainer {
       width: 100%;
-      background-color: white;
       flex-shrink: 2;
       text-align: center;
     }
