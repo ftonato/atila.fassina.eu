@@ -1,10 +1,23 @@
 import Link from 'next/link'
 
+function getLink (section) {
+  switch (section) {
+    case 'articles':
+    return '/articles'
+
+    case 'projects':
+    return 'https://github.com/atilafassina'
+
+    case 'talks':
+    return 'https://speakerdeck.com/atilafassina'
+  }
+}
+
 export default ({cardList = []}) => (<div>
   <ul className="cardList">
     {cardList.map( ({name, url}) => (
       <li className="card" key={name}>
-        <Link href={`/${name}`}>
+        <Link prefetch href={getLink(name)}>
           <a target="_blank">
             <div className="cardIcon">
                <img src={`/static/${name}.svg`} className={`${name}`} alt={`${name}`}/>
