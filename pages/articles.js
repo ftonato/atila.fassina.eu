@@ -4,8 +4,8 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import PostList from '../components/PostList'
 
-async function getPosts (username) {
-  const response = await fetch(`https://blogium.wedeploy.io/${username}`)
+async function getPosts () {
+  const response = await fetch('https://blogium.wedeploy.io/atilafassina')
   return response.json()
 }
 
@@ -18,7 +18,7 @@ const articles = props => (
 )
 
 articles.getInitialProps = async () => {
-  const posts = await getPosts('atilafassina')
+  const posts = await getPosts()
   return {posts}
 }
 
