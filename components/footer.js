@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Social from '../components/social'
 import {social} from '../config'
 
-export default () => (<div>
-  <footer>
+export default ({internal}) => (<div>
+  <footer className={internal ? 'internal' : ''}>
     <section className="listsWrap">
       <div className="socialContainer">
         <Social socialList={social} />
@@ -72,6 +72,8 @@ export default () => (<div>
     </aside>
   </footer>
   <style jsx>{`
+    .internal { background: black }
+
     .listsWrap {
       margin: 5rem auto 0;
       display: flex;
@@ -89,7 +91,8 @@ export default () => (<div>
     .logo img { height: 100%; }
 
     .socialContainer {
-      width: 50%;
+      width: 100%;
+      background-color: white;
       flex-shrink: 2;
       text-align: center;
     }
@@ -150,10 +153,10 @@ export default () => (<div>
       margin: 1em;
     }
 
-    @media (min-width: 860px) {
+    {/* @media (min-width: 860px) {
       .listsWrap {
         width: 90vw;
       }
-    }
+    } */}
   `}</style>
 </div>)

@@ -14,6 +14,10 @@ export default ({socialList = []}) => (<div className="socialWrapper">
     ))}
   </ul>
   <style jsx>{`
+    .socialWrapper {
+      width: 50%;
+      margin: 0 auto;
+    }
     .socialMedias {
       margin: 0 auto;
       list-style: none;

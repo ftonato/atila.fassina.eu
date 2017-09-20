@@ -11,9 +11,9 @@ async function getPosts () {
 
 const articles = props => (
   <Page>
-    <Header />
-    <PostList {...props} />
-    <Footer />
+    <Header internal={true}/>
+    <PostList {...props}/>
+    <Footer internal={true}/>
   </Page>
 )
 
