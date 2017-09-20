@@ -1,8 +1,17 @@
+function getDate (string) {
+  const dateObj = new Date(string)
+
+  return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDay()}`
+}
+
 export default ({posts}) => (
   <ul className="list">
-    {posts && posts.map( ({title, link, categories, date}) => (
+    {posts && posts.map( ({title, link, categories, date, image}) => (
       <li className="post" key={title}>
-        <span>{date}</span>
+        <span>{getDate(date)}</span>
+        <div>
+          <img className="image" src={image} />
+        </div>
         <a href={link} >
           {title}
         </a>
@@ -32,6 +41,10 @@ export default ({posts}) => (
       flex-flow: column;
       justify-content: center;
       text-align: center;
+    }
+
+    .image {
+      max-height: 10rem;
     }
 
     .tag {
