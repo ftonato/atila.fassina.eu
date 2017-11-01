@@ -1,5 +1,5 @@
 {
-  "id": "site",
+  "id": "web",
   "port": 8080,
-  "customDomains": ["atilafassina.wedeploy.io"]
+  "customDomains": ["atila.fassina.eu", "atilafassina.com", "atila.wedeploy.io"]
 }
