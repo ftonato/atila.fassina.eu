@@ -1,11 +1,10 @@
 {
-  "name": "atilafassina.com",
+  "name": "atila.fassina.eu",
   "version": "6.0.1",
   "scripts": {
     "dev": "next -p 8080",
     "start": "next build && next start -p 8080",
-    "export": "next build && next export",
-    "deploy": "we deploy -p atilafassina"
+    "export": "next build && next export"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",

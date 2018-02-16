@@ -46,9 +46,9 @@ export default ({internal}) => (<div>
         </li>
 
         <li>
-          <Link href="https://wedeploy.com/">
+          <Link href="https://www.netlify.com">
             <a target="_blank">
-              wedeploy™
+              netlify
             </a>
           </Link>
         </li>
