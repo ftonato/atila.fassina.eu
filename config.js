@@ -20,18 +20,3 @@ export const social = [
     url: 'mailto: atila@fassina.eu'
   }
 ]
-
-export const cardList = [
-  {
-    name: 'articles',
-    url: 'https://medium.com/@atilafassina'
-  },
-  {
-    name: 'projects',
-    url: 'https://github.com/atilafassina'
-  },
-  {
-    name: 'talks',
-    url: 'https://speakerdeck.com/atilafassina'
-  }
-]

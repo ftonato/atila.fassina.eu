@@ -10,9 +10,6 @@ function getDate (string) {
 
 export default ({posts}) => (
   <div>
-    {/* <header className="postListHeader"> */}
-      {/* <span>✏︎</span> */}
-    {/* </header> */}
     <ul className="list">
       {posts && posts.map( ({title, link, categories, date, image}) => (
         <li className="post" key={title}>
