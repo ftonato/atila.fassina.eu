@@ -1,3 +1,9 @@
+export const colors = {
+  RADIOACTIVE_LIME: 'rgb(80, 250, 60)',
+  BERLINER_SKY: 'rgb(230,230,230)',
+  BRUSHED_STEEL: 'rgb(50,50,50)'
+}
+
 export const social = [
   {
     name: 'linkedin',

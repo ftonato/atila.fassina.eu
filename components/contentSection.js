@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PostList from './PostList'
 import TextSection from './TextSection'
+import {colors} from '../config'
 
 export default ({posts}) => (
   <div className="contentSections">
@@ -71,12 +72,12 @@ export default ({posts}) => (
 
       .shareButton:hover,
       .shareButton:active {
-        border-top-color: rgb(80, 250, 60);
-        border-bottom-color: rgb(80, 250, 60);
+        border-top-color: ${colors.RADIOACTIVE_LIME};
+        border-bottom-color: ${colors.RADIOACTIVE_LIME};
       }
 
       .subject {
-        color: rgb(80, 250, 60);
+        color: ${colors.RADIOACTIVE_LIME};
         font-style: italic;
       }
     `}</style>
