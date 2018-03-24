@@ -1,4 +1,4 @@
-import React from 'react'
+import { Component } from 'react'
 import Link from 'next/link'
 import TextSection from './TextSection'
 import {colors} from '../config'
@@ -9,7 +9,7 @@ function getDate (string) {
   return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDay()}`
 }
 
-export default class PostList extends React.Component {
+export default class PostList extends Component {
 
   state = {
     showPosts: 6
