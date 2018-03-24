@@ -1,9 +1,15 @@
+import Link from 'next/link'
+
 export default ({internal}) => {
   return (
 <div>
   <header className={`top ${internal ? 'internal': ''}`}>
     <h1>
-      <img className="logo" src={`/static/${internal ? 'white-single' : ''}logo.svg`} alt="Atila Fassina"/>
+      <Link href="/">
+        <a>
+          <img className="logo" src={`/static/${internal ? 'white-single' : ''}logo.svg`} alt="Atila Fassina"/>
+        </a>
+      </Link>
     </h1>
   </header>
   <style jsx>{`
