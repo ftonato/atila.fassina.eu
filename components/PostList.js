@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import TextSection from './TextSection'
 import {colors} from '../config'
 
 function getDate (string) {
@@ -23,6 +24,7 @@ export default class PostList extends React.Component {
 
     return (
       <div className="wrapper">
+        <h2 className='pageTitle'>Writings</h2>
         <ul className="list">
           {posts.slice(0,this.state.showPosts).map( ({title, link, categories, date, image}) => (
             <li className="post" key={title}>
@@ -41,9 +43,17 @@ export default class PostList extends React.Component {
         <button className='loadButton' onClick={this.showMorePosts}>load more</button>
         <style jsx>{`
           .wrapper {
-            background-color: rgb(245,245,245);
+            background-color: ${colors.COLD_FOG};
             display: flex;
             flex-direction: column;
+          }
+
+          .pageTitle {
+            margin: 3ex 0 1ex;
+            display: block;
+            text-align: center;
+            font-size: 3em;
+            color: ${colors.BRUSHED_STEEL};
           }
 
           .list {

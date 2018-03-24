@@ -1,8 +1,10 @@
-export default ({title, children}) => (
-  <section className="wrapper">
-    <h2 className="sectionTitle">{title}</h2>
+import {colors} from '../config'
+
+export default props => (
+  <section className='wrapper'>
+    <h2 className="sectionTitle">{props.title}</h2>
     <div className="textWrapper">
-      {children}
+      {props.children}
     </div>
 
     <style jsx>{`

@@ -23,7 +23,7 @@ export default () => (
       </li>
     </ul>
     <p>
-      But please: <span className='subject'>web tech</span> only 😉
+      But please: <span className='subject'>web tech</span> only.
     </p>
     <style jsx>{`
       .buttonList {
@@ -32,10 +32,21 @@ export default () => (
         list-style: none;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
+
       
-      .buttonList li { margin-left: 5em; }
-      .buttonList li:first-of-type { margin-left: 0; }
+      .buttonList li { margin-top: 3ex; }
+      .buttonList li:first-of-type { margin-top: 0; }
+      
+      @media(min-width: 650px) {
+        .buttonList {
+          flex-direction: row;
+        }
+        .buttonList li { margin-left: 5em; margin-top: 0; }
+        .buttonList li:first-of-type { margin-left: 0; }
+      }
 
       .shareButton {
         padding: 2ch 5ch;
@@ -43,6 +54,7 @@ export default () => (
         color: black;
         text-decoration: none;
         cursor: pointer;
+        display: block;
         font-size: 1.2em;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
