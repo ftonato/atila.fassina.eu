@@ -32,7 +32,11 @@ export default class PostList extends Component {
                 <a target="_blank">
                   <h2 className="title">{title}</h2>
                   <div>
-                    <img className="image" src={image} />
+                    <img
+                      className="image"
+                      src={image}
+                      aria-hidden
+                    />
                   </div>
                   <span className="date">{getDate(date)}</span>
                 </a>
