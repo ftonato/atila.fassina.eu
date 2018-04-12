@@ -112,7 +112,11 @@ export default class PostList extends Component {
             text-align: center;
           }
 
-          .image { width: 100%; }
+          .image {
+            height: 20ex;
+            width: 100%;
+            object-fit: contain;
+          }
 
           .loadButton {
             margin: 3ch auto 5ch;
