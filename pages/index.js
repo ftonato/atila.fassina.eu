@@ -1,25 +1,36 @@
 import 'isomorphic-fetch'
-import Link from 'next/link'
+import { Component } from 'react'
 import Page from '../layouts/page'
 import Header from '../components/header'
 import Content from '../components/contentSection'
 import Footer from '../components/footer'
 
-async function getPosts () {
-  const response = await fetch('https://blogium.wedeploy.io/atilafassina')
-  return response.json()
+class Main extends Component {
+  state = {
+    posts: []
+  }
+  
+  getPosts = async () => {
+    const response = await fetch('https://blogium.wedeploy.io/atilafassina')
+    
+    return response.json()
+  }
+
+  componentDidMount = async () => {
+    const posts = await this.getPosts()
+    
+    this.setState({ posts })
+  }
+
+  render () {
+    return (
+      <Page>
+        <Header />
+        <Content {...this.state}/>
+        <Footer />
+      </Page>
+    )
+  }
 }
 
-const main = props => (<Page>
-  <Header />
-  <Content {...props}/>
-  <Footer />
-</Page>)
-
-
-main.getInitialProps = async () => {
-  const posts = await getPosts()
-  return {posts}
-}
-
-export default main
+export default Main
