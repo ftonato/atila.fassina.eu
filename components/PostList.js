@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import Link from 'next/link'
-import TextSection from './TextSection'
 import {colors} from '../config'
 
 function getDate (string) {

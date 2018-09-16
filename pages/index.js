@@ -11,7 +11,7 @@ class Main extends Component {
   }
   
   getPosts = async () => {
-    const response = await fetch('https://blogium.wedeploy.io/atilafassina')
+    const response = await fetch('https://blogium-service-apcafewmjf.now.sh/atilafassina')
     
     return response.json()
   }
