@@ -38,7 +38,8 @@ const about = props => (
         Team of{' '}
         <Link href="https://next.n26.com/en-eu">
           <a target="_blank">N26</a>
-        </Link>, building a bank the world loves to use.
+        </Link>
+        , building a bank the world loves to use.
       </p>
 
       <strong>fun facts</strong>

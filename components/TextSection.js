@@ -1,11 +1,9 @@
-import {colors} from '../config'
+import { colors } from '../config'
 
 export default props => (
-  <section className='wrapper'>
+  <section className="wrapper">
     <h2 className="sectionTitle">{props.title}</h2>
-    <div className="textWrapper">
-      {props.children}
-    </div>
+    <div className="textWrapper">{props.children}</div>
 
     <style jsx>{`
       .sectionTitle {

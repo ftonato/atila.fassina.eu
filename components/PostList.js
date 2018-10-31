@@ -1,15 +1,14 @@
 import { Component } from 'react'
 import Link from 'next/link'
-import {colors} from '../config'
+import { colors } from '../config'
 
-function getDate (string) {
+function getDate(string) {
   const dateObj = new Date(string)
 
   return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDay()}`
 }
 
 export default class PostList extends Component {
-
   state = {
     showPosts: 6
   }
@@ -17,33 +16,33 @@ export default class PostList extends Component {
   showMorePosts = () => {
     this.setState(() => ({ showPosts: this.state.showPosts + 6 }))
   }
-  
-  render ()  {
-    const {posts=[]} = this.props
+
+  render() {
+    const { posts = [] } = this.props
 
     return (
       <div className="wrapper">
-        <h2 className='pageTitle'>Writings</h2>
+        <h2 className="pageTitle">Writings</h2>
         <ul className="list">
-          {posts.slice(0,this.state.showPosts).map( ({title, link, categories, date, image}) => (
-            <li className="post" key={title}>
-              <Link href={link}>
-                <a target="_blank">
-                  <h2 className="title">{title}</h2>
-                  <div>
-                    <img
-                      className="image"
-                      src={image}
-                      aria-hidden
-                    />
-                  </div>
-                  <span className="date">{getDate(date)}</span>
-                </a>
-              </Link>
-            </li>
-          ))}
+          {posts
+            .slice(0, this.state.showPosts)
+            .map(({ title, link, categories, date, image }) => (
+              <li className="post" key={title}>
+                <Link href={link}>
+                  <a target="_blank">
+                    <h2 className="title">{title}</h2>
+                    <div>
+                      <img className="image" src={image} aria-hidden />
+                    </div>
+                    <span className="date">{getDate(date)}</span>
+                  </a>
+                </Link>
+              </li>
+            ))}
         </ul>
-        <button className='loadButton' onClick={this.showMorePosts}>load more</button>
+        <button className="loadButton" onClick={this.showMorePosts}>
+          load more
+        </button>
         <style jsx>{`
           .wrapper {
             background-color: ${colors.COLD_FOG};
@@ -136,12 +135,12 @@ export default class PostList extends Component {
           @keyframes fadeUp {
             0% {
               opacity: 0;
-              transform: translateY(35px)
+              transform: translateY(35px);
             }
 
             100% {
               opacity: 1;
-              transform: translateY(0)
+              transform: translateY(0);
             }
           }
         `}</style>

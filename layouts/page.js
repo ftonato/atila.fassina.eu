@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 export default ({ children }) => (
   <div>
@@ -99,9 +99,9 @@ export default ({ children }) => (
       body {
         padding: 0;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
         font-weight: 200;
         line-height: 1.2;
         background-color: white;
@@ -120,4 +120,4 @@ export default ({ children }) => (
       }
     `}</style>
   </div>
-);
+)

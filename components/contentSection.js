@@ -3,11 +3,11 @@ import PostList from './PostList'
 import PostRequest from './PostRequest'
 import TextSection from './TextSection'
 
-export default ({posts}) => (
+export default ({ posts }) => (
   <div className="contentSections">
-   <Intro />
-   <PostList posts={posts} />
-   <PostRequest />
+    <Intro />
+    <PostList posts={posts} />
+    <PostRequest />
     <style jsx>{`
       .contentSections {
         min-height: 40vh;

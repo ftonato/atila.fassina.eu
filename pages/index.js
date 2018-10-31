@@ -1,16 +1,16 @@
-import "isomorphic-fetch";
-import Page from "../layouts/page";
-import Header from "../components/header";
-import Content from "../components/contentSection";
-import Footer from "../components/footer";
+import 'isomorphic-fetch'
+import Page from '../layouts/page'
+import Header from '../components/header'
+import Content from '../components/contentSection'
+import Footer from '../components/footer'
 
 const getPosts = async () => {
   const response = await fetch(
-    "https://blogium-service-apcafewmjf.now.sh/atilafassina"
-  );
+    'https://blogium-service-apcafewmjf.now.sh/atilafassina'
+  )
 
-  return response.json();
-};
+  return response.json()
+}
 
 const Main = props => (
   <Page>
@@ -18,12 +18,12 @@ const Main = props => (
     <Content {...props} />
     <Footer />
   </Page>
-);
+)
 
 Main.getInitialProps = async () => {
-  const posts = await getPosts();
+  const posts = await getPosts()
 
-  return { posts };
-};
+  return { posts }
+}
 
-export default Main;
+export default Main

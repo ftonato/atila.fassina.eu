@@ -1,29 +1,29 @@
 import Link from 'next/link'
 import TextSection from './TextSection'
-import {colors} from '../config'
+import { colors } from '../config'
 
 export default () => (
-  <TextSection title='Post requests'>
-    <p>
-      If there's anything you feel like having me writing about:
-    </p>
+  <TextSection title="Post requests">
+    <p>If there's anything you feel like having me writing about:</p>
     <small>(for whatever reason)</small>
-    <ul className='buttonList'>
+    <ul className="buttonList">
       <li>
-        <Link href='https://github.com/atilafassina/atila.fassina.eu/issues/new?labels=post-request'>
-          <a className='shareButton' target='_blank'>Open an issue</a>
+        <Link href="https://github.com/atilafassina/atila.fassina.eu/issues/new?labels=post-request">
+          <a className="shareButton" target="_blank">
+            Open an issue
+          </a>
         </Link>
       </li>
       <li>
-        <Link href='https://twitter.com/intent/tweet?hashtags=PostRequest&text=@atilafassina ✎'>
-        <a className='shareButton' target='_blank'>
-          Drop me a line
-        </a>  
-      </Link>
+        <Link href="https://twitter.com/intent/tweet?hashtags=PostRequest&text=@atilafassina ✎">
+          <a className="shareButton" target="_blank">
+            Drop me a line
+          </a>
+        </Link>
       </li>
     </ul>
     <p>
-      But please: <span className='subject'>web tech</span> only.
+      But please: <span className="subject">web tech</span> only.
     </p>
     <style jsx>{`
       .buttonList {
@@ -36,16 +36,24 @@ export default () => (
         align-items: center;
       }
 
-      
-      .buttonList li { margin-top: 3ex; }
-      .buttonList li:first-of-type { margin-top: 0; }
-      
-      @media(min-width: 650px) {
+      .buttonList li {
+        margin-top: 3ex;
+      }
+      .buttonList li:first-of-type {
+        margin-top: 0;
+      }
+
+      @media (min-width: 650px) {
         .buttonList {
           flex-direction: row;
         }
-        .buttonList li { margin-left: 5em; margin-top: 0; }
-        .buttonList li:first-of-type { margin-left: 0; }
+        .buttonList li {
+          margin-left: 5em;
+          margin-top: 0;
+        }
+        .buttonList li:first-of-type {
+          margin-left: 0;
+        }
       }
 
       .shareButton {
