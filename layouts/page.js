@@ -1,15 +1,19 @@
 import Head from 'next/head'
 
+const TITLE = 'Atila Fassina: Web Developer'
+const DESCRIPTION =
+  'Web Developer based in Berlin, very passionate about web performance, code maintainability and user-experience'
+
 export default ({ children }) => (
   <div>
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@atilafassina" />
-      <meta name="og:title" content="Atila Fassina: Web Developer" />
+      <meta name="og:title" content={TITLE} />
       <meta name="og:url" content="https://atila.fassina.eu" />
-      <meta name="description" content="Web Developer" />
-      <meta name="og:description" content="Web Developer" />
+      <meta name="description" content={DESCRIPTION} />
+      <meta name="og:description" content={DESCRIPTION} />
       <meta
         name="og:image"
         content="https://atila.fassina.eu/static/logo.png"
@@ -91,7 +95,7 @@ export default ({ children }) => (
       />
       <meta name="theme-color" content="#ffffff" />
       <link rel="canonical" href="https://atila.fassina.eu/" />
-      <title>Atila Fassina: Frontend</title>
+      <title>{TITLE}</title>
     </Head>
     <main>{children}</main>
     <style jsx global>{`
