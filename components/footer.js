@@ -107,7 +107,7 @@ export default ({ internal }) => (
         font-size: 1.2rem;
         font-weight: 100;
         font-family: monospace;
-        color: #bbb;
+        color: rgb(118, 118, 118);
         text-decoration: none;
         cursor: pointer;
       }
@@ -126,13 +126,13 @@ export default ({ internal }) => (
         font-family: monospace;
         text-align: center;
         font-size: 0.8rem;
-        color: #aaa;
+        color: rgb(118, 118, 118);
         padding-bottom: 0.5em;
       }
 
       .footnote a {
         font-size: 0.8rem;
-        color: #ccc;
+        color: rgb(115, 115, 115);
       }
 
       .powered {
@@ -148,11 +148,6 @@ export default ({ internal }) => (
       }
 
        {
-        /* @media (min-width: 860px) {
-      .listsWrap {
-        width: 90vw;
-      }
-    } */
       }
     `}</style>
   </div>
