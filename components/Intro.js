@@ -4,8 +4,7 @@ import { colors } from '../config'
 export default () => (
   <TextSection title="About me">
     <p className="textWrapper">
-      A Brazilian/Italian Web developer who calls Berlin his home since late
-      2014.
+      A Brazilian/Italian Web developer living in the beautiful city of Auckland, New Zealand.
     </p>
     <p className="textWrapper">
       I'm very passionate about delivering good overall UX through fast and

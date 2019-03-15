@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 const TITLE = 'Atila Fassina: Web Developer'
 const DESCRIPTION =
-  'Web Developer based in Berlin, very passionate about web performance, code maintainability and user-experience'
+  'Web Developer based in Auckland, very passionate about web performance, code maintainability and user-experience'
 
 export default ({ children }) => (
   <div>
