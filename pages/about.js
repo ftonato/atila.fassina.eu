@@ -27,19 +27,18 @@ const about = props => (
 
       <strong>I'm also:</strong>
       <p>
-        {new Date().getFullYear() - 1986} years old. Husband. Father of 2. Nerd.
-        Brazilian born and raised. Italian by heritage. Berliner from choice.
+        {new Date().getFullYear() - 1987} years old. Husband. Father of 2. Nerd.
+        Brazilian born and raised. Italian from heritage. Kiwi by choice.
       </p>
 
       <strong>and very lucky:</strong>
 
       <p>
-        fortunate enough to work with some extremely talented people at the Web
-        Team of{' '}
-        <Link href="https://next.n26.com/en-eu">
-          <a target="_blank">N26</a>
+        working at beautiful Auckland with a bunch of the nicest smart people I have met at {' '}
+        <Link href="https://pushpay.com">
+          <a target="_blank">Pushpay</a>
         </Link>
-        , building a bank the world loves to use.
+        , spreading some generosity all around.
       </p>
 
       <strong>fun facts</strong>
