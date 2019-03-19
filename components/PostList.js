@@ -2,7 +2,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 import { colors } from '../config'
 
-function getDate(string) {
+function getDate (string) {
   const dateObj = new Date(string)
 
   return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDay()}`
@@ -17,7 +17,7 @@ export default class PostList extends Component {
     this.setState(() => ({ showPosts: this.state.showPosts + 6 }))
   }
 
-  render() {
+  render () {
     const { posts = [] } = this.props
 
     return (
@@ -60,6 +60,7 @@ export default class PostList extends Component {
 
           .list {
             width: 90%;
+            max-width: 1200px;
             list-style: none;
             margin: 0 auto;
             display: flex;
