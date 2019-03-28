@@ -25,6 +25,6 @@ export const social = [
   },
   {
     name: 'email',
-    url: 'mailto: atila@fassina.eu'
+    url: 'mailto: site@fassina.eu'
   }
 ]

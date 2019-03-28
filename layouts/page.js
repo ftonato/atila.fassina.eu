@@ -10,12 +10,12 @@ export default ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@atilafassina" />
-      <meta name="og:title" content={TITLE} />
-      <meta name="og:url" content="https://atila.fassina.eu" />
-      <meta name="description" content={DESCRIPTION} />
-      <meta name="og:description" content={DESCRIPTION} />
+      <meta property="og:title" content={TITLE} />
+      <meta property="og:url" content="https://atila.fassina.eu" />
+      <meta property="description" content={DESCRIPTION} />
+      <meta property="og:description" content={DESCRIPTION} />
       <meta
-        name="og:image"
+        property="og:image"
         content="https://atila.fassina.eu/static/logo.png"
       />
       <link
