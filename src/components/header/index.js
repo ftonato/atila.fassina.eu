@@ -1,11 +1,9 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
 import { Top, Logo } from './styles'
 import logo from '../../images/logo.svg'
 
-// className={`top ${internal ? 'internal' : ''}`
-
-export default ({ internal = false }) => (
+export default ({ data, internal = false }) => (
   <Top internal={internal}>
     <h1>
       <Link to="/">

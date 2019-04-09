@@ -1,28 +1,56 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
-// import Content from '../components/contentSection'
+import Content from '../components/contentSection'
 import Footer from '../components/footer'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      title="Home"
-      keywords={[
-        'web',
-        'development',
-        'frontend',
-        'engineering',
-        'javascript',
-        'nodejs'
-      ]}
-    />
-    <Header />
-    {/* <Content props={{}} /> */}
-    <Footer />
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const mediumPosts = (data.allMediumPost || {}).edges
+
+  return (
+    <Layout>
+      <SEO
+        title="Home"
+        keywords={[
+          'web',
+          'development',
+          'frontend',
+          'engineering',
+          'javascript',
+          'nodejs'
+        ]}
+      />
+      <Header data={data} internal={false} />
+      <Content posts={mediumPosts} />
+      /}
+      <Footer />
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          virtuals {
+            subtitle
+            previewImage {
+              imageId
+            }
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+  }
+`
 
 // const IndexPage = () => (
 //   <Layout>

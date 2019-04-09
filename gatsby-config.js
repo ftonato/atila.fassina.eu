@@ -27,6 +27,13 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/logo.png`
       }
+    },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@atilafassina`,
+        limit: 20
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
