@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
-import Content from '../components/contentSection'
+// import Content from '../components/contentSection'
 import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
-  const mediumPosts = (data.allMediumPost || {}).edges
+  // const mediumPosts = (data.allMediumPost || {}).edges
+  const posts = (data.allMarkdownRemark || {}).edges || []
 
   return (
     <Layout>
@@ -23,8 +24,10 @@ const IndexPage = ({ data }) => {
         ]}
       />
       <Header data={data} internal={false} />
-      <Content posts={mediumPosts} />
-      /}
+      {/* <Content posts={mediumPosts} /> */}
+      {posts.map(post => (
+        <span>{post.node.frontmatter.title}</span>
+      ))}
       <Footer />
     </Layout>
   )
@@ -32,19 +35,15 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
-          title
-          virtuals {
-            subtitle
-            previewImage {
-              imageId
-            }
-          }
-          author {
-            name
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
           }
         }
       }
@@ -53,6 +52,23 @@ export const query = graphql`
 `
 
 // const IndexPage = () => (
+// allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+//   edges {
+//     node {
+//       id
+//       title
+//       virtuals {
+//         subtitle
+//         previewImage {
+//           imageId
+//         }
+//       }
+//       author {
+//         name
+//       }
+//     }
+//   }
+// }
 //   <Layout>
 //     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 //     <h1>Hi people</h1>

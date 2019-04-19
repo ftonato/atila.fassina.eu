@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 export const Top = styled.header`
+  display: flex;
   ${({ internal }) =>
     internal
       ? `
       min-height: 0;
       height: 5rem;
-      background-color: black;
+      background-color: whitesmoke;
       justify-content: center;
       align-items: center;
+      margin: 0;
 
       `
       : `
       min-height: 50vh;
-      display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center;
