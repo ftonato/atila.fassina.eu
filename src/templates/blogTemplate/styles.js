@@ -22,8 +22,8 @@ export const PostWrap = styled.main`
   width: 40em;
   font-size: 1.2rem;
 `
-const h2 = `
-h2 {
+const headlines = `
+h1, h2, h3, h4, h5, h6 {
   margin: 3em auto 1em;
 
   a {
@@ -83,7 +83,7 @@ li {
 `
 
 export const Post = styled.article`
-  ${h2}
+  ${headlines}
   ${p}
   ${a}
   ${img}
