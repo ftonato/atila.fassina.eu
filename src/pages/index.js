@@ -7,7 +7,6 @@ import Content from '../components/contentSection'
 import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
-  // const mediumPosts = (data.allMediumPost || {}).edges
   const posts = (data.allMarkdownRemark || {}).edges || []
 
   return (
@@ -52,35 +51,5 @@ export const query = graphql`
     }
   }
 `
-
-// const IndexPage = () => (
-// allMediumPost(sort: { fields: [createdAt], order: DESC }) {
-//   edges {
-//     node {
-//       id
-//       title
-//       virtuals {
-//         subtitle
-//         previewImage {
-//           imageId
-//         }
-//       }
-//       author {
-//         name
-//       }
-//     }
-//   }
-// }
-//   <Layout>
-//     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-//     <h1>Hi people</h1>
-//     <p>Welcome to your new Gatsby site.</p>
-//     <p>Now go build something great.</p>
-//     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-//       <Image />
-//     </div>
-//     <Link to="/page-2/">Go to page 2</Link>
-//   </Layout>
-// )
 
 export default IndexPage
