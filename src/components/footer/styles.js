@@ -13,15 +13,6 @@ export const ListWrap = styled.section`
   overflow: hidden;
 `
 
-// .logo {
-//   height: 5rem;
-//   flex-shrink: 0.3;
-//   transform: translateY(2rem);
-// }
-// .logo img {
-//   height: 100%;
-// }
-
 export const SocialContainer = styled.div`
   width: 100%;
   flex-shrink: 2;

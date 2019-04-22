@@ -3,6 +3,7 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import Header from '../../components/header'
 import Banner from '../../components/mediumBanner'
+import Author from '../../components/Author'
 import Footer from '../../components/footer'
 import { MainTitle, PostDate, PostWrap, Post, TitleWrap } from './styles'
 
@@ -56,6 +57,7 @@ export default function Template({ data }) {
         <Post dangerouslySetInnerHTML={{ __html: html }} />
         {!!frontmatter.mediumURL && <Banner link={frontmatter.mediumURL} />}
       </PostWrap>
+      <Author />
       <Footer />
     </Layout>
   )

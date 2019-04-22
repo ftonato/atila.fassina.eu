@@ -1,7 +1,6 @@
 import React from 'react'
 import Intro from './Intro'
 import PostList from './PostList'
-// import PostRequest from './PostRequest'
 import styled from 'styled-components'
 
 const ContentSections = styled.div`
@@ -16,7 +15,6 @@ export default ({ posts }) => {
     <ContentSections>
       <Intro />
       <PostList posts={posts} />
-      {/* <PostRequest /> */}
     </ContentSections>
   )
 }

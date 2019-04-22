@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const Top = styled.header`
   display: flex;
   ${({ internal }) =>
@@ -7,7 +6,7 @@ export const Top = styled.header`
       ? `
       min-height: 0;
       height: 5rem;
-      background-color: whitesmoke;
+      background-color: black;
       justify-content: center;
       align-items: center;
       margin: 0;
@@ -21,8 +20,7 @@ export const Top = styled.header`
 `}
 `
 
-export const Logo = styled.img`
-  height: ${({ internal }) => (internal ? '3rem' : '10rem')};
-  max-width: '90vw';
+export const LogoWrap = styled.h1`
+  width: ${({ internal }) => (internal ? '7rem' : 'auto')};
   margin: ${({ internal }) => (internal ? '0' : '3rem 0')};
 `

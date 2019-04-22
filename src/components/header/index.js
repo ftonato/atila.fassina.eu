@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Top, Logo } from './styles'
-import logo from '../../images/logo.svg'
+import Logo from '../Logo'
+import { Top, LogoWrap } from './styles'
 
 export default ({ data, internal = false }) => (
   <Top internal={internal}>
-    <h1>
+    <LogoWrap internal={internal}>
       <Link to="/">
-        <Logo src={logo} internal={internal} alt="Atila Fassina" />
+        <Logo color={internal ? '#fff' : '#000'} />
       </Link>
-    </h1>
+    </LogoWrap>
   </Top>
 )

@@ -33,7 +33,7 @@ export default ({ internal = false }) => (
 
         <LinkItem>
           <FooterLink
-            href="https://github.com/atilafassina/atilafassina.github.io/blob/master/LICENSES.md"
+            href="https://github.com/atilafassina/atila.fassina.eu/blob/master/LICENSES.md"
             target="_blank"
             rel="noopener noreferrer"
           >
