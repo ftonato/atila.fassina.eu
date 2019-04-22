@@ -1,9 +1,7 @@
 import React from 'react'
 import Intro from './Intro'
 import PostList from './PostList'
-// import PostList from '../../../next/components/PostList'
-// import PostRequest from '../../../next/components/PostRequest'
-// import TextSection from '../../../next/components/TextSection'
+// import PostRequest from './PostRequest'
 import styled from 'styled-components'
 
 const ContentSections = styled.div`
@@ -13,10 +11,12 @@ const ContentSections = styled.div`
   justify-content: center;
 `
 
-export default ({ posts }) => (
-  <ContentSections>
-    <Intro />
-    <PostList posts={posts} />
-    {/* <PostRequest /> */}
-  </ContentSections>
-)
+export default ({ posts }) => {
+  return (
+    <ContentSections>
+      <Intro />
+      <PostList posts={posts} />
+      {/* <PostRequest /> */}
+    </ContentSections>
+  )
+}

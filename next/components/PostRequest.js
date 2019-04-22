@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'gatsby'
 import TextSection from './TextSection'
 import { colors } from '../config'
 

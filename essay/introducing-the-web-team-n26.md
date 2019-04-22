@@ -1,9 +1,10 @@
 ---
-path: /blog/introducing-the-web-team-n26
+path: /essay/introducing-the-web-team-n26
 date: 2018-09-11T12:03:55.437Z
 title: Introducing the Web Team at N26
 image: https://cdn-images-1.medium.com/max/1600/1*z4WvigcrZN5Ut3jG-H1jaQ.png
 mediumURL: https://medium.com/@atilafassina/introducing-the-web-team-738587760c5e
+excerpt: An overview on who/how got the job done.
 keywords:
   ['JavaScript', 'React', 'GraphQL', 'Test Automation', 'Server Side Rendering']
 ---

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
-// import Content from '../components/contentSection'
+import Content from '../components/contentSection'
 import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
@@ -13,7 +13,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Home"
         keywords={[
           'web',
           'development',
@@ -24,10 +23,7 @@ const IndexPage = ({ data }) => {
         ]}
       />
       <Header data={data} internal={false} />
-      {/* <Content posts={mediumPosts} /> */}
-      {posts.map(post => (
-        <span>{post.node.frontmatter.title}</span>
-      ))}
+      <Content posts={posts} />
       <Footer />
     </Layout>
   )
@@ -39,11 +35,17 @@ export const query = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            excerpt
+          }
+          fields {
+            readingTime {
+              text
+              words
+            }
           }
         }
       }

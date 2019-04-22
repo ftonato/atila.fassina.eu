@@ -23,8 +23,9 @@ export default ({ internal = false }) => (
       <LinkList>
         <LinkItem>
           <FooterLink
-            href="https://github.com/atilafassina/atilafassina.github.io"
+            href="https://github.com/atilafassina/atila.fassina.eu"
             target="_blank"
+            rel="noopener noreferrer"
           >
             src
           </FooterLink>
@@ -34,6 +35,7 @@ export default ({ internal = false }) => (
           <FooterLink
             href="https://github.com/atilafassina/atilafassina.github.io/blob/master/LICENSES.md"
             target="_blank"
+            rel="noopener noreferrer"
           >
             licenses
           </FooterLink>
@@ -44,19 +46,34 @@ export default ({ internal = false }) => (
       <FootTitle>thanks</FootTitle>
       <Powered>
         <PoweredItem>
-          <FooterLink footnote href="https://gatsbyjs.org" target="_blank">
+          <FooterLink
+            footnote
+            href="https://gatsbyjs.org"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             gatsby
           </FooterLink>
         </PoweredItem>
 
         <PoweredItem>
-          <FooterLink footnote href="https://github.com" target="_blank">
+          <FooterLink
+            footnote
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             github
           </FooterLink>
         </PoweredItem>
 
         <PoweredItem>
-          <FooterLink footnote href="https://www.netlify.com" target="_blank">
+          <FooterLink
+            footnote
+            href="https://www.netlify.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             netlify
           </FooterLink>
         </PoweredItem>
@@ -66,6 +83,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://www.cloudflare.com"
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             cloudfare
           </FooterLink>
@@ -76,6 +94,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://thenounproject.com/"
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             thenounproject
           </FooterLink>

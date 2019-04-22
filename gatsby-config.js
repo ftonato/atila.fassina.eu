@@ -10,14 +10,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/essay`,
         name: 'markdown-pages'
       }
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-autolink-headers`]
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-reading-time`
+        ]
       }
     },
     `gatsby-plugin-react-helmet`,
@@ -40,13 +43,6 @@ module.exports = {
         theme_color: `rgb(10, 100, 0)`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`
-      }
-    },
-    {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@atilafassina`,
-        limit: 20
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
