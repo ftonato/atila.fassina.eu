@@ -54,7 +54,9 @@ Yarn broke the process into 3 steps, making the interface with the enduser much 
 
 And to start using it couldn't be any simpler:
 
-    npm i -g yarnpkg
+```sh
+npm i -g yarnpkg
+```
 
 Done. You have it now. [Here](https://yarnpkg.com/en/docs/migrating-from-npm) is a quick list with npm commands and their Yarn respectives.
 
@@ -62,11 +64,15 @@ Done. You have it now. [Here](https://yarnpkg.com/en/docs/migrating-from-npm) is
 
 I've just started playing with Yarn, and I've merely scratched the surface, but here are 2 commands that I've found super cool I recommend you to use them.
 
-    yarn clean
+```sh
+yarn clean
+```
 
 [removes unnecessary files from your dependencies](https://yarnpkg.com/en/docs/cli/clean). (it's kind of magical when you run it the first time! :P).
 
-    yarn why <package>
+```sh
+yarn why <package>
+```
 
 [Identify why you installed a package](https://yarnpkg.com/en/docs/cli/why). Pointing it as a sub-dependency among your modules or if directly specified by you as a dependency.
 

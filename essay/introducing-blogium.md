@@ -42,9 +42,11 @@ You can install it as a dependency on your project with Bower or NPM, or also ju
 
 To launch it, just instantiate _Blogium_ class:
 
-    const blog = new Blogium({
-      username: @my-username
-    });
+```js
+const blog = new Blogium({
+  username: '@my-username'
+})
+```
 
 Done. This will launch the request, and serve your posts. You can let _Blogium_ handle that with the default config, or make more advanced adjustments by adding another layer for rendering the posts.
 

@@ -20,7 +20,17 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-reading-time`,
-          { resolve: 'gatsby-remark-prismjs' }
+          {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+                {
+                  resolve: `gatsby-remark-prismjs`,
+                  options: {}
+                }
+              ]
+            }
+          }
         ]
       }
     },
