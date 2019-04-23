@@ -30,7 +30,7 @@ const dayName = rawDate => {
   }
 }
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
@@ -57,8 +57,7 @@ export default function Template({ data }) {
         <Post dangerouslySetInnerHTML={{ __html: html }} />
         {!!frontmatter.mediumURL && <Banner link={frontmatter.mediumURL} />}
       </PostWrap>
-      <Author />
-      <Footer />
+      <Author next={pageContext.next} />
     </Layout>
   )
 }

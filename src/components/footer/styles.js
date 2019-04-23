@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Footer = styled.footer`
+  border-top: ${({ internal }) => (internal ? 'none' : 'solid 3rem black')};
   background: ${({ internal }) => (internal ? 'black' : 'white')};
 `
 

@@ -5,7 +5,7 @@ import { FRESH_GRASS, DONKEY_FUR } from '../../../settings'
 
 const List = styled.ul`
   max-width: 42rem;
-  margin: 5rem auto;
+  margin: 5rem auto 1rem;
   list-style: none;
 `
 

@@ -33,11 +33,23 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
+      const prev =
+        index === 0
+          ? false
+          : result.data.allMarkdownRemark.edges[index - 1].node
+      const next =
+        index === result.data.allMarkdownRemark.edges.length - 1
+          ? false
+          : result.data.allMarkdownRemark.edges[index + 1].node
+
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}
+        context: {
+          prev,
+          next
+        }
       })
     })
   })
