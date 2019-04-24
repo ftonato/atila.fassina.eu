@@ -1,5 +1,5 @@
 ---
-path: /essay/react-amsterdam-2017
+path: /react-amsterdam-2017
 date: 2017-04-23T13:52:07.155Z
 title: React Amsterdam 2017 Review
 image: https://cdn-images-1.medium.com/max/1600/1*T4CCFC7oRZI-SAINmeKkVQ.jpeg

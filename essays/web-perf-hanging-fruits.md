@@ -1,5 +1,5 @@
 ---
-path: /essay/web-performance-low-hanging-fruits
+path: /web-performance-low-hanging-fruits
 date: 2017-08-22T17:36:58.497Z
 title: Web perf low hanging fruits
 image: https://cdn-images-1.medium.com/max/1600/1*Y9Wf1Py9tQd3nc4l0AFsCQ.png

@@ -1,5 +1,5 @@
 ---
-path: /essay/start-yarn
+path: /start-yarn
 date: 2016-10-12T21:28:45.073Z
 title: Let's start with Yarn
 image: https://cdn-images-1.medium.com/max/1600/1*m6zlwvyKm9BPeFQCKvGQEQ.png

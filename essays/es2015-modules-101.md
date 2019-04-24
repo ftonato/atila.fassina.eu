@@ -1,5 +1,5 @@
 ---
-path: /essay/es2015-modules-101
+path: /es2015-modules-101
 date: 2016-09-11T17:32:54.272Z
 title: ES2015 Modules 101
 image: https://cdn-images-1.medium.com/max/1600/

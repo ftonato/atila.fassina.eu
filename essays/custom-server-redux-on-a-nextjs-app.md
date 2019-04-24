@@ -1,5 +1,5 @@
 ---
-path: /essay/custom-server-redux-nextjs
+path: /custom-server-redux-nextjs
 date: 2017-02-17T13:54:14.561Z
 title: Custom Server & Redux on a NextJS App
 image: https://cdn-images-1.medium.com/max/1600/1*BUTP4qvc65dmmCy9NUcgvQ.png

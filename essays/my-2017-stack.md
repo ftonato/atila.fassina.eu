@@ -1,5 +1,5 @@
 ---
-path: /essay/tech-stack-2017
+path: /tech-stack-2017
 date: 2017-07-16T19:17:23.593Z
 title: My 2017 stack 🚀
 image: https://cdn-images-1.medium.com/max/1600/1*64oGqB4O9KevKTQLBUV2nw.png
