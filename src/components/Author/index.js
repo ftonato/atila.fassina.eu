@@ -7,6 +7,11 @@ import { RADIOACTIVE_LIME } from '../../../settings'
 
 const FooterSection = styled.footer`
   background-color: #000;
+  padding: 0 2rem;
+
+  @media (min-width: 650px) {
+    padding: 0;
+  }
 `
 
 const AuthorWrap = styled.div`
@@ -39,6 +44,11 @@ const InteractionList = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   width: 70%;
+  margin-top: 2rem;
+
+  @media (min-width: 650px) {
+    margin-top: 0;
+  }
 `
 const InteractionItem = styled.li`
   padding-top: 1rem;
