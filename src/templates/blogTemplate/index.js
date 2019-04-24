@@ -48,6 +48,7 @@ export default function Template({ data, pageContext }) {
         title={frontmatter.title}
         description={frontmatter.pitch}
         keywords={frontmatter.keywords}
+        medium={frontmatter.mediumURL}
       />
       <Header internal={true} />
       <PostWrap>
