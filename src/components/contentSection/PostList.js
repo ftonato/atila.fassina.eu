@@ -10,7 +10,7 @@ const List = styled.ul`
   padding: 0 2rem;
   transition: all 300ms linear;
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     padding: 0;
   }
 `
@@ -30,7 +30,7 @@ const PostTitle = styled(Link)`
   color: black;
   transition: all 300ms linear;
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     font-size: 3rem;
   }
 `

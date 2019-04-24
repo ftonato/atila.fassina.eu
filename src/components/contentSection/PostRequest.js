@@ -20,7 +20,7 @@ const ButtonList = styled.ul`
     margin-top: 0;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     flex-direction: row;
 
     li {

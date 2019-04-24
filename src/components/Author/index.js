@@ -9,7 +9,7 @@ const FooterSection = styled.footer`
   background-color: #000;
   padding: 0 2rem;
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     padding: 0;
   }
 `
@@ -46,7 +46,7 @@ const InteractionList = styled.ul`
   width: 70%;
   margin-top: 2rem;
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     margin-top: 0;
   }
 `

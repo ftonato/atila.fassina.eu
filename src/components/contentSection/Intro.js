@@ -50,7 +50,7 @@ const InnerWrap = styled.div`
   align-items: center;
   margin: 0 auto;
 
-  @media (min-width: 650px) {
+  @media (min-width: 800px) {
     flex-direction: row;
   }
 `
