@@ -194,7 +194,7 @@ pre[data-line] {
   border-radius: 10px;
   background: #011627;
   -webkit-overflow-scrolling: touch;
-  overflow: hidden;
+  overflow: auto;
 }
 
 @media (max-width: 672px) {
@@ -205,7 +205,7 @@ pre[data-line] {
 
 .gatsby-highlight pre[class*='language-'] {
   float: left;
-  min-width: 100%;
+  max-width: 100%;
 }
 `
 
