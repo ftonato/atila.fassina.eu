@@ -4,7 +4,7 @@ date: 2016-10-07T10:11:00.683Z
 title: Introducing Blogium
 image: https://cdn-images-1.medium.com/max/1600/1*9lKf1_GJ_OtAYuiJCSsCKQ.png
 mediumURL: https://medium.com/@atilafassina/introducing-blogium-d6ee1a343919
-excerpt: List your medium posts anywhere.
+pitch: List your medium posts anywhere.
 keywords: ['JavaScript', 'Web Development', 'Medium', 'Blogging', 'Writing']
 ---
 

@@ -23,6 +23,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               keywords
               image
               mediumURL
+              pitch
             }
           }
         }

@@ -4,7 +4,7 @@ date: 2017-07-16T19:17:23.593Z
 title: My 2017 stack 🚀
 image: https://cdn-images-1.medium.com/max/1600/1*64oGqB4O9KevKTQLBUV2nw.png
 mediumURL: https://medium.com/@atilafassina/my-2017-stack-e4c6a93f977
-excerpt: This website stack from 2017 to 2019
+pitch: This website stack from 2017 to 2019
 keywords:
   [
     'Front End Development',

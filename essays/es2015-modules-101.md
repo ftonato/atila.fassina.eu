@@ -4,7 +4,7 @@ date: 2016-09-11T17:32:54.272Z
 title: ES2015 Modules 101
 image: https://cdn-images-1.medium.com/max/1600/
 mediumURL: https://medium.com/@atilafassina/es2015-modules-101-d9977dc4d4c7
-excerpt: A brief overview on how to use ES2015 modules.
+pitch: A brief overview on how to use ES2015 modules.
 keywords: ['JavaScript", "ES6", "Es2015']
 ---
 

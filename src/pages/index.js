@@ -38,7 +38,7 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
-            excerpt
+            pitch
           }
           fields {
             readingTime {

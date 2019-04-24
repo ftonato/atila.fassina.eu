@@ -44,7 +44,11 @@ export default function Template({ data, pageContext }) {
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} keywords={frontmatter.keywords} />
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.pitch}
+        keywords={frontmatter.keywords}
+      />
       <Header internal={true} />
       <PostWrap>
         <TitleWrap>
@@ -70,6 +74,7 @@ export const pageQuery = graphql`
         rawDate: date
         path
         title
+        pitch
         keywords
         mediumURL
         image

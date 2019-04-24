@@ -4,7 +4,7 @@ date: 2017-04-23T13:52:07.155Z
 title: React Amsterdam 2017 Review
 image: https://cdn-images-1.medium.com/max/1600/1*T4CCFC7oRZI-SAINmeKkVQ.jpeg
 mediumURL: https://medium.com/@atilafassina/react-amsterdam-3fcfb7e6a15
-excerpt: List your medium posts anywhere.
+pitch: List your medium posts anywhere.
 keywords: ['JavaScript', 'React', 'Reactjs', 'Redux', 'Mobx']
 ---
 

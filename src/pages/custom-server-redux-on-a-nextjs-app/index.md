@@ -5,7 +5,7 @@ title: Custom Server & Redux on a NextJS App
 image: https://cdn-images-1.medium.com/max/1600/1*BUTP4qvc65dmmCy9NUcgvQ.png
 mediumURL: https://medium.com/@atilafassina/custom-server-redux-on-a-nextjs-app-d3a042ee3045
 pitch: A couple of performance tips to boost a website
-keywords: ['React', 'JavaScript', 'Redux', 'Nextjs', 'Nodejs']
+keywords: ["React", "JavaScript", "Redux", "Nextjs", "Nodejs"]
 ---
 
 # Custom Server & Redux on a NextJS App

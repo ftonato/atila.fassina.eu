@@ -4,7 +4,7 @@ date: 2017-08-22T17:36:58.497Z
 title: Web perf low hanging fruits
 image: https://cdn-images-1.medium.com/max/1600/1*Y9Wf1Py9tQd3nc4l0AFsCQ.png
 mediumURL: https://medium.com/@atilafassina/high-performance-apps-multiplexing-debouncing-system-fonts-and-other-tricks-37c6fd3d7b2d
-excerpt: A couple of performance tips to boost a website
+pitch: A couple of performance tips to boost a website
 keywords: ['Tech', 'Technology', 'Startup', 'Web Development', 'Programming']
 ---
 

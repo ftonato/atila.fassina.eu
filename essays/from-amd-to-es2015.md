@@ -4,7 +4,7 @@ date: 2016-09-21T12:50:35.664Z
 title: From AMD to ES2015
 image: https://cdn-images-1.medium.com/max/1600/
 mediumURL: https://medium.com/@atilafassina/from-amd-to-es2015-dbed7213ebfb
-excerpt: Migrating from AMD to ES2015 modules.
+pitch: Migrating from AMD to ES2015 modules.
 keywords: ['JavaScript', 'Webpack', 'Es2015', 'ES6', 'Babeljs']
 ---
 

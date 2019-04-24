@@ -4,7 +4,7 @@ date: 2016-10-12T21:28:45.073Z
 title: Let's start with Yarn
 image: https://cdn-images-1.medium.com/max/1600/1*m6zlwvyKm9BPeFQCKvGQEQ.png
 mediumURL: https://medium.com/@atilafassina/lets-start-with-yarn-890687bb1902
-excerpt: Why to give Yarn a try as your package manager.
+pitch: Why to give Yarn a try as your package manager.
 keywords: ['JavaScript', 'NPM', 'Yarn', 'Package Management']
 ---
 
