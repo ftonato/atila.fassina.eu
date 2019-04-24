@@ -42,25 +42,25 @@ Now we're reaching the "no comeback point" of our migration, and if you did took
 
 - Remove the function wrap, not necessary anymore.
 
-- Don't bother with the _'use strict'_, by default every ES2015 module runs in strict mode.
+- Don't bother with the `'use strict'`, by default every ES2015 module runs in strict mode.
 
-- On AMD, exported variables were sent to the upper scope by a _return_ statement, now you can _export_ as many data (variables) as you want. Just choose the [correct syntax and declaration](https://medium.com/@atilafassina/es2015-modules-101-d9977dc4d4c7#28f8).
+- On AMD, exported variables were sent to the upper scope by a `return` statement, now you can `export` as many data (variables) as you want. Just choose the [correct syntax and declaration](https://medium.com/@atilafassina/es2015-modules-101-d9977dc4d4c7#28f8).
 
-- If your code is changing imported variables on runtime, stop. ES2015 imported variables are _read-only_, remember that! If you really need to do that, make a copy, also for better practice, it's tricky to change imported variables, as you probably can imagine…
+- If your code is changing imported variables on runtime, stop. ES2015 imported variables are `read-only`, remember that! If you really need to do that, make a copy, also for better practice, it's tricky to change imported variables, as you probably can imagine…
 
 ## Libraries
 
 So, if you have a library that should be compiled with the Babel/Webpack set there are some keys that need to be set in your webpack.config inside the library so your namespace remain unchanged:
 
-    // webpack config
-    // ...
-    output: {
-      filename: 'library.js', // output compiled file
-      libraryTarget: 'umd',   // which mod definitions to support
-      library: 'foo',         // lib namespace
-      umdNamedDefine: true    // well, if the define is named
-    }
-    // ...
+```js
+// webpack config
+output: {
+  filename: 'library.js', // output compiled file
+  libraryTarget: 'umd',   // which mod definitions to support
+  library: 'foo',         // lib namespace
+  umdNamedDefine: true    // well, if the define is named
+}
+```
 
 With the above config, your library namespace will be available as _foo_ and supporting both CommonJS and AMD (which if you're using Webpack on your main project shouldn't be a concern). You just need to add the _library.js_ file as a dependency of your main project and include it where necessary as any regular module.
 

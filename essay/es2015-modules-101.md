@@ -1,5 +1,6 @@
 ---
-path: /essay/es2015-modules-101 date: 2016-09-11T17:32:54.272Z
+path: /essay/es2015-modules-101
+date: 2016-09-11T17:32:54.272Z
 title: ES2015 Modules 101
 image: https://cdn-images-1.medium.com/max/1600/
 mediumURL: https://medium.com/@atilafassina/es2015-modules-101-d9977dc4d4c7
@@ -27,12 +28,14 @@ I see this as the most concise and common use of a module, this variable could c
 
 While we're on this, let's have it said that a single _import/export_ statement can carry multiple variables. As in:
 
-    // -- module.js
-    /* ... */
-    export { foo, bar, baz};
+```js
+// -- module.js
+/* ... */
+export { foo, bar, baz }
 
-    // -- main.js
-    import { foo, bar, baz } from './module.js';
+// -- main.js
+import { foo, bar, baz } from './module.js'
+```
 
 - **Default Exports** (usually an _anonymous function_ or a _class)_
 
@@ -40,23 +43,31 @@ While we're on this, let's have it said that a single _import/export_ statement 
 
 This would be the second most used way, and probably the most necessary to keep your code organised and with its concerns separated. If by the _import_ the difference isn't explicit, let's first check the _export_ before going deeper on the why.
 
-    export default class {
-       // ...
-    }
+```js
+export default class {
+  // ...
+}
+```
 
 As you can see, there's another _keyword_ on the statement. And that means there can be only one _default_ export per module. You can combine this type of _export_ with the one mentioned above, therefore you're able to _import_ the same module in different ways along your code — as long as you use _export default_ only **ONCE** per module. It would look something like the following:
 
-    import MyClass, { foo, bar, baz } from './module.js';
+```js
+import MyClass, { foo, bar, baz } from './module.js'
+```
 
 - The entire content of the file as an object
 
-  import \* as Module from './module.js';
+```js
+import \* as Module from './module.js';
+```
 
 This code, brings the entire content (upper scoped variables, functions, etc) from the given module and encapsulates it in the *Module *object, in that way, the variable *foo *present in* module.js *would be accessible through as a property of this imported object (_Module.foo_)
 
 - Nothing. Only execute whatever code is in the file.
 
-  import './module.js';
+```js
+import './module.js'
+```
 
 In this way, no content from our _module.js_ will be available, though, when your _import_ statement is evaluated, the code inside the file will run.
 
@@ -77,9 +88,11 @@ Done. And as I said before, good code is self-explanatory.
 
 As you may have deducted or seen by now, _import_ declarations can be mixed to simplify your code, basically what will tell you how many _import_ declarations you need is the number of files you need to make use of. Some examples are below:
 
-    import * as All, { foo as bar } from './mod1.js';
-    import Class, { var1, var2, var3 as baz } from './mod2.js';
-    import SomeDefault, * as Everyone from './mod3.js';
+```js
+import * as All, { foo as bar } from './mod1.js';
+import Class, { var1, var2, var3 as baz } from './mod2.js';
+import SomeDefault, * as Everyone from './mod3.js';
+```
 
 ## Catches
 
@@ -89,6 +102,6 @@ As you may have deducted or seen by now, _import_ declarations can be mixed to s
 
 - All _imports_ are and must-be top levelled
 
-- _imports_ are always [\*hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)\*
+- _imports_ are always [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)\*
 
 Hopefully this was useful for you and encouraged you to start playing with this new syntax. If you have any feedback or questions feel free to comment here or call me up on twitter, I'll be happy to help! ;)

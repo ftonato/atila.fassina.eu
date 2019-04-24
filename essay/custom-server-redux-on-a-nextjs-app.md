@@ -16,7 +16,7 @@ In case you never heard about [NextJS](https://zeit.co/blog/next), it’s a fram
 
 As NextJS carries a lot of very cool functionalities out-of-the-box I wouldn’t recommend you using the practices described here if you’re not 100% certain you will need them.
 
-As [Dan Abramov](undefined) brilliantly stated [You might not need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.lhbv0mh51), and I’ll take the right to state that you might also don’t need a custom server on your NextJS webapp.
+As [Dan Abramov](https://overreacted.io) brilliantly stated [You might not need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.lhbv0mh51), and I’ll take the right to state that you might also don’t need a custom server on your NextJS webapp.
 
 ## Redux
 
@@ -52,25 +52,23 @@ As you may be wondering, the 4th parameter on our app.render()method is the obje
 
 Could not be simpler, you just need to go to your package.json and change
 
-    {
-        scripts: {
-
+```js
+{
+  scripts: {
     "start": "next"
-        }
-
-    }
+  }
+}
+```
 
 to
 
-    {
-
-    scripts: {
-
+```js
+{
+  scripts: {
     "start": "node server.js"
-
-    }
-
-    }
+  }
+}
+```
 
 Assuming, of course, the server.js is at the root of your project.
 

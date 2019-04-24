@@ -94,8 +94,10 @@ Remember the good old window.onload function? Or moving all the scripts to the b
 
 **Defer** will also download your script during the HTML parsing, though it will only attempt to run your script after the parser is finished. Also, declaring multiple deferred scripts guarantees that they will be executed in declaration order.
 
-    <script async src="./my-async-script.js"></script>
-    <script defer src="./my-deferred-script.js"></script>
+```html
+<script async src="./my-async-script.js"></script>
+<script defer src="./my-deferred-script.js"></script>
+```
 
 ## data:uri and <svg>
 

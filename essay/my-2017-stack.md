@@ -17,9 +17,7 @@ keywords:
 
 # My 2017 stack 🚀
 
-"image": "", "link": "", "categories": [
-
-] Recently I started refactoring my website, it has reached now its 5th stack over these its 5 years of existence. From [wordpress](https://wordpress.com) to [jekyll](https://jekyllrb.com/), passing quickly through [nunjucks](https://mozilla.github.io/nunjucks/) templates compiled first with [Grunt](https://gruntjs.com/) then with [Gulp](http://gulpjs.com/), I can say I've been through a lot of setups. Since the whole point of having a personal website for a developer is to experiment, so I think it has been serving its purpose.
+Recently I started refactoring my website, it has reached now its 5th stack over these its 5 years of existence. From [wordpress](https://wordpress.com) to [jekyll](https://jekyllrb.com/), passing quickly through [nunjucks](https://mozilla.github.io/nunjucks/) templates compiled first with [Grunt](https://gruntjs.com/) then with [Gulp](http://gulpjs.com/), I can say I've been through a lot of setups. Since the whole point of having a personal website for a developer is to experiment, so I think it has been serving its purpose.
 
 As tradition goes, it's time to write about my current decisions, why I'm happy about them in comparison to what I had immediately before.
 
@@ -41,7 +39,9 @@ Then, you move on to your Registrar. Add the **nameservers** and _bam_. Done.
 
 Once your **DNS** has propagated (can take some time, but for me it took minutes), you can go over the **Page Rules** settings, create a new rule (_Force HTTPS_) and on the filter you can add
 
-    http://*.yourdomain.com*
+```
+http://*.yourdomain.com*
+```
 
 Your traffic will almost instantly start being redirected to HTTPS.
 
