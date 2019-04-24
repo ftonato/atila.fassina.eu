@@ -45,9 +45,14 @@ const Wrap = styled.aside`
 const InnerWrap = styled.div`
   max-width: 42rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  @media (min-width: 650px) {
+    flex-direction: row;
+  }
 `
 
 export default () => (
