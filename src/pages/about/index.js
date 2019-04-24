@@ -21,7 +21,12 @@ export default () => (
     <Header internal={true} />
     <Wrap>
       <SalutationHeader>
-        <Greetings>👋 I'm Atila.</Greetings>
+        <Greetings>
+          <span role="img" aria-label="waving">
+            👋
+          </span>{' '}
+          I'm Atila.
+        </Greetings>
         <Avatar
           src="https://pbs.twimg.com/profile_images/783062449822035968/h8q0Y5F6_400x400.jpg"
           alt="Picture of Atila"
@@ -70,14 +75,30 @@ export default () => (
       <strong>fun facts</strong>
 
       <FunFactsList>
-        <FunFact>I have a bachelor in Physical Education. 💪</FunFact>
         <FunFact>
-          I've swum more than 60Km at open waters in official competitions 🏊‍
+          I have a bachelor in Physical Education.{' '}
+          <span role="img" aria-label="flexing arm">
+            💪
+          </span>
         </FunFact>
         <FunFact>
-          I like dad jokes and <strike>stupid</strike> puns. 🧐
+          I've swum more than 60Km at open waters in official competitions{' '}
+          <span role="img" aria-label="man swimming">
+            🏊‍
+          </span>
         </FunFact>
-        <FunFact>I don't drink coffee. But I compensate with mate. 🔥</FunFact>
+        <FunFact>
+          I like dad jokes and <strike>stupid</strike> puns.{' '}
+          <span role="img" aria-label="smile with monocle">
+            🧐
+          </span>
+        </FunFact>
+        <FunFact>
+          I don't drink coffee. But I compensate with mate.{' '}
+          <span role="img" aria-label="fire">
+            🔥
+          </span>
+        </FunFact>
       </FunFactsList>
     </Wrap>
     <Footer internal />
