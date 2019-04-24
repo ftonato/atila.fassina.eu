@@ -12,7 +12,7 @@ export const MainTitle = styled.h1`
 `
 export const PostDate = styled.small`
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
 `
 
 export const PostWrap = styled.main`

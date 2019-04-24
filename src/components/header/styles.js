@@ -5,7 +5,7 @@ export const Top = styled.header`
     internal
       ? `
       min-height: 0;
-      height: 5rem;
+      height: 10rem;
       background-color: black;
       justify-content: center;
       align-items: center;
@@ -21,6 +21,6 @@ export const Top = styled.header`
 `
 
 export const LogoWrap = styled.h1`
-  width: ${({ internal }) => (internal ? '7rem' : 'auto')};
+  width: ${({ internal }) => (internal ? '12rem' : 'auto')};
   margin: ${({ internal }) => (internal ? '0' : '3rem 0')};
 `

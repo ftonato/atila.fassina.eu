@@ -14,6 +14,12 @@ const GlobalStyle = createGlobalStyle`
 :root {
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
+  --fresh-grass: rgb(10, 100, 0)
+  --radioactive-lime: rgb(80, 250, 60)
+  --donkey-fur: rgb(150,150,150)
+  --berliner-sky: rgb(230,230,230)
+  --cold-fog: rgb(245,245,245)
+  --brushed-steel: rgb(50,50,50)
 }
 
 html,
@@ -40,13 +46,14 @@ strong {
   font-weight: 200;
 }
 /**
- * Based on copypasta from Remy Bach and Sarah Drasner
+ * Based on Overreacted.io by Dan Abramov, which is based on copypasta from Remy Bach and Sarah Drasner
+ * 😉
  */
 code[class*='language-'],
 pre[class*='language-'] {
   color: white;
   background: none;
-  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: Fira Code, Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -150,7 +157,7 @@ pre[class*='language-'] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #ffa7c4;
+  color: rgb(80, 250, 60);
 }
 
 .token.boolean {
@@ -177,7 +184,7 @@ pre[data-line] {
   margin-left: -1.3125rem;
   padding-right: 1em;
   padding-left: 1.25em;
-  border-left: 0.25em solid #ffa7c4;
+  border-left: 0.25em solid rgb(80, 250, 60);
 }
 
 .gatsby-highlight {

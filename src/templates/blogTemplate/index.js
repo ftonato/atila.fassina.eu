@@ -4,7 +4,6 @@ import SEO from '../../components/seo'
 import Header from '../../components/header'
 import Banner from '../../components/mediumBanner'
 import Author from '../../components/Author'
-import Footer from '../../components/footer'
 import { MainTitle, PostDate, PostWrap, Post, TitleWrap } from './styles'
 
 const dayName = rawDate => {
@@ -45,7 +44,7 @@ export default function Template({ data, pageContext }) {
 
   return (
     <Layout>
-      <SEO title="blogPost" keywords={frontmatter.keywords} />
+      <SEO title={frontmatter.title} keywords={frontmatter.keywords} />
       <Header internal={true} />
       <PostWrap>
         <TitleWrap>
