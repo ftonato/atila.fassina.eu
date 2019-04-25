@@ -4,7 +4,7 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import Header from '../../components/header'
 import Banner from '../../components/mediumBanner'
-import Author from '../../components/author'
+import Author from '../../components/postFooter'
 import { MainTitle, PostDate, PostWrap, Post, TitleWrap } from './styles'
 
 const dayName = rawDate => {
