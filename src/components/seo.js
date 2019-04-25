@@ -9,6 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import MetaLogo from '../images/logo-whitebg.png'
 
 function SEO({ description, lang, meta, keywords, title, medium }) {
   const { site } = useStaticQuery(
@@ -44,11 +45,15 @@ function SEO({ description, lang, meta, keywords, title, medium }) {
         },
         {
           property: `og:title`,
-          content: title
+          content: title || site.siteMetadata.title
         },
         {
           property: `og:description`,
           content: metaDescription
+        },
+        {
+          property: `og:image`,
+          content: `https://atila.fassina.eu${MetaLogo}`
         },
         {
           property: `og:type`,
@@ -64,7 +69,7 @@ function SEO({ description, lang, meta, keywords, title, medium }) {
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title || site.siteMetadata.title
         },
         {
           name: `twitter:description`,
