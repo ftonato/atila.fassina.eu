@@ -6,7 +6,23 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-amplitude-analytics`,
+      options: {
+        apiKey: 'de6346a20358bc2021e979507c27d788',
+        head: false,
+        respectDNT: true,
+        eventTypes: {
+          outboundLinkClick: 'OUTBOUND_LINK_CLICK',
+          pageView: 'PAGE_VIEW'
+        },
+        amplitudeConfig: {
+          saveEvents: true,
+          includeUtm: true,
+          includeReferrer: true
+        }
+      }
+    }`gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
