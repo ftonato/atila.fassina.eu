@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Atila Fassina - Web Engineer`,
     description: `Web Engineer based in Auckland, very passionate about web performance, code maintainability and user-experience.`,
-    author: `@atilafassina`
+    author: `@atilafassina`,
+    siteUrl: `https://atila.fassina.eu`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-amplitude-analytics`,
       options: {
@@ -22,7 +24,8 @@ module.exports = {
           includeReferrer: true
         }
       }
-    }`gatsby-plugin-netlify-cms`,
+    },
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
