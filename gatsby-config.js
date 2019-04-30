@@ -35,6 +35,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
+          `gatsby-remark-responsive-iframe`,
           `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-transformer-remark`,
