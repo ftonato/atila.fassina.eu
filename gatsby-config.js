@@ -9,20 +9,9 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-feed`,
     {
-      resolve: `gatsby-plugin-amplitude-analytics`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        apiKey: 'de6346a20358bc2021e979507c27d788',
-        head: false,
-        respectDNT: true,
-        eventTypes: {
-          outboundLinkClick: 'OUTBOUND_LINK_CLICK',
-          pageView: 'PAGE_VIEW'
-        },
-        amplitudeConfig: {
-          saveEvents: true,
-          includeUtm: true,
-          includeReferrer: true
-        }
+        trackingId: `UA-139459581-1`
       }
     },
     `gatsby-plugin-netlify-cms`,
