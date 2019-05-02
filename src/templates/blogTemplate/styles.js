@@ -23,8 +23,8 @@ export const PostWrap = styled.main`
   font-size: 1.2rem;
 `
 const headlines = `
-h1, h2, h3, h4, h5, h6 {
-  margin: 3em auto 1em;
+h3, h4, h5, h6 {
+  margin: 1.5em auto 0.5em;
 
   a {
     border: none;
@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
       border: none;
     }
   }
+}
+
+h1, h2 {
+  margin: 3em auto 1em;
 }
 `
 const p = `
@@ -81,6 +85,10 @@ li {
   }
 }
 `
+const textTransforms = `
+strong { font-weight: 600; }
+i { font-style: italic; }
+`
 
 export const Post = styled.article`
   ${headlines}
@@ -88,4 +96,5 @@ export const Post = styled.article`
   ${a}
   ${img}
   ${li}
+  ${textTransforms}
 `

@@ -16,11 +16,21 @@ These will boost your app’s [perceived performance](https://en.wikipedia.org/w
 
 ## Preload your resources
 
-rel="preload" is a way of letting your browser know that a specific resource is important. This way, your browser will fetch the resource as quickly as possible. Then it will store it locally until it finds the expected reference in the DOM.
+`rel="preload"` is a way of letting your browser know that a specific resource is important. This way, your browser will fetch the resource as quickly as possible. Then it will store it locally until it finds the expected reference in the DOM.
 
 Here are some examples of using a link with this attribute:
 
-<iframe src="https://medium.com/media/07c488b78f7130cb4eb36c2219836fad" frameborder=0></iframe>
+```html
+<link rel="preload" href="script.js" as="script" />
+<link
+  rel="preload"
+  href="fontfamily.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link rel="preload" href="styles.css" as="style" />
+```
 
 The as attribute is mandatory here, because it tells the browser what filetype that it is fetching. This way it can interpret the request and add the proper headers. Otherwise, your request would have the incorrect mime/type so your browser wouldn’t be able to parse it.
 
@@ -40,32 +50,36 @@ You can [read more about preloading here](https://caniuse.com/#search=preload).
 
 By using system fonts, it’s possible to emulate your users’ Operational System’s look and feel. This way, your application has a better chance of looking like a native one, while saving your user the trouble of downloading more resources.
 
-<iframe src="https://medium.com/media/e847425419b227999e1fcac0c8548bc6" frameborder=0></iframe>
+<!-- prettier-ignore-start -->
+```css
+body {
+  font-family: -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+}
+```
+<!-- prettier-ignore-end -->
 
-Let's analyze more closely each of these declarations:
+Let's analyze closely each of these declarations:
 
 - _apple-system_: as the name suggests, these target OSX/iOS-related systems
-
 - _system-ui_: these target the system font, regardless of the system
-
 - _BlinkMacSystemFont_: Chrome’s font on MacOS
-
 - _Segoe UI_: Windows/Windows Phone
-
 - _Roboto_: Android
 
 This solution is widely used even though many developers don’t yet know about it. For example, at time of writing this article, it's used at:
 
 - GitHub
-
 - Wordpress
-
 - Bootstrap
-
 - Medium
-
 - Ghost
-
 - Zeit
 
 And probably others that I haven't yet heard about.
@@ -78,13 +92,46 @@ Resize and scroll, for instance, get fired on _every_ pixel. That’s an awful l
 
 If you get an autocomplete, for example, you don’t want to fire on every key press. In most cases, it would be good to start autocompleting after the 3rd character. Especially if you plan to fetch information for that.
 
-**Debounce **holds up your trigger until the event stops firing for a given amount of time (usually 500 milliseconds).
+**Debounce** holds up your trigger until the event stops firing for a given amount of time (usually 500 milliseconds).
 
-<iframe src="https://medium.com/media/6c662353c2583babf3f94985c6df8b24" frameborder=0></iframe>
+```js
+function debounce(func, wait) {
+  let timeout
+  return (...args) => {
+    clearTimeout(timeout)
+
+    timeout = setTimeout(() => {
+      timeout = null
+      func.apply(this, args)
+    }, wait)
+  }
+}
+```
 
 **Throttle** holds up your trigger if it attempts to fire more often than a given interval (usually 25o milliseconds).
 
-<iframe src="https://medium.com/media/21d32f9a27745eb3e127c9248a6da6f7" frameborder=0></iframe>
+```js
+function throttle(func, threshhold = 250) {
+  let last
+  let deferTimer
+
+  return (...args) => {
+    const now = +new Date()
+
+    if (last && now < last + threshhold) {
+      clearTimeout(deferTimer)
+
+      deferTimer = setTimeout(() => {
+        last = now
+        func.apply(this, args)
+      }, threshhold)
+    } else {
+      last = now
+      func.apply(this, args)
+    }
+  }
+}
+```
 
 ## Use async/defer
 
@@ -99,11 +146,11 @@ Remember the good old window.onload function? Or moving all the scripts to the b
 <script defer src="./my-deferred-script.js"></script>
 ```
 
-## data:uri and <svg>
+## data:uri and `<svg>`
 
-When adding icons or small image files, an interesting technique is to use data-uri. A data URL is usually encoded as base64 and provides an easy way of embedding files into your DOM directly. In a similar way, you can add <svg> as markup. This way your SVG image will be parsed and rendered by the browser.
+When adding icons or small image files, an interesting technique is to use data-uri. A data URL is usually encoded as base64 and provides an easy way of embedding files into your DOM directly. In a similar way, you can add `<svg>` as markup. This way your SVG image will be parsed and rendered by the browser.
 
-Note that using the <svg> instead of embedding as an <img> or icon-font brings other functionalities that are beyond the scope of this article.
+Note that using the `<svg>` instead of embedding as an `<img>` or icon-font brings other functionalities that are beyond the scope of this article.
 
 Adding the files straight into your markup instead of referencing them saves you one HTTP request each time. This is nice when your file is so small that it isn’t worth the trouble of making a roundtrip to the server. Especially while on mobile networks, since [handshakes](https://en.wikipedia.org/wiki/Handshaking) can be quite expensive.
 
@@ -119,14 +166,7 @@ I hope these tips help you improve the perceived performance of your app. If you
 
 ## Further Reading
 
-### On rel=preload:
-
 - [SmashingMagazine — Preload What is it Good for](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)
-
 - [Zach Letherman — Preload](https://www.zachleat.com/web/preload/)
-
-### On system fonts:
-
 - [Bitsofcode — The New System Font Stack?](https://bitsofco.de/the-new-system-font-stack/)
-
 - [Normalize.css — issue#665](https://github.com/necolas/normalize.css/issues/665)

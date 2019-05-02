@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
   --fresh-grass: rgb(10, 100, 0)
-  --radioactive-lime: rgb(80, 250, 60)
+  --radioactive-lime: rgb(80, 250, 60);
   --donkey-fur: rgb(150,150,150)
   --berliner-sky: rgb(230,230,230)
   --cold-fog: rgb(245,245,245)
@@ -104,10 +104,11 @@ pre[class*='language-'] ::selection {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
+  font-size: 1rem;
   border-radius: 0.3em;
-  background: var(--inlineCode-bg);
-  color: var(--inlineCode-text);
-  padding: 0.15em 0.2em 0.05em;
+  background: rgb(230,230,230);
+  color: rgb(50,50,50);
+  padding: 0.3em 0.25em 0.05em;
   white-space: normal;
 }
 
