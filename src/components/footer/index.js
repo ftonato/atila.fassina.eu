@@ -40,6 +40,9 @@ export default ({ internal = false }) => (
             licenses
           </FooterLink>
         </LinkItem>
+        <LinkItem>
+          <FooterLink href="/rss.xml">rss</FooterLink>
+        </LinkItem>
       </LinkList>
     </ListWrap>
     <Footnote>
