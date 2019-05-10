@@ -75,6 +75,14 @@ const InteractionLink = styled(Link)`
   }
 `
 
+const IconText = styled.span`
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+`
+
 export default ({ next }) => {
   const { path = '', title = '' } = next.frontmatter || {}
   const githubURL = `https://github.com/atilafassina/atila.fassina.eu/edit/master/src/pages/${path.slice(
@@ -99,7 +107,7 @@ export default ({ next }) => {
               to={twitterURL}
               target="noopener noreferrer nofollow"
             >
-              Discuss this post.
+              Discuss.
             </InteractionLink>
           </InteractionItem>
           <InteractionItem>
@@ -108,8 +116,12 @@ export default ({ next }) => {
               to={githubURL}
               target="noopener noreferrer nofollow"
             >
-              Edit this post.
+              Edit.
             </InteractionLink>
+          </InteractionItem>
+          <InteractionItem>
+            <IconText>rss</IconText>
+            <InteractionLink to="/rss.xml">Don’t miss another.</InteractionLink>
           </InteractionItem>
           {!!next && (
             <InteractionItem>
