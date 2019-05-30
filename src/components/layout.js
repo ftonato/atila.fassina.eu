@@ -54,8 +54,9 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: white;
   background: none;
-  font-family: Fira Code, Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: "Fira Code", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
+  font-variant-ligatures: normal;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -105,11 +106,8 @@ pre[class*='language-'] ::selection {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  font-size: 1rem;
-  border-radius: 0.3em;
-  background: rgb(230,230,230);
-  color: rgb(50,50,50);
-  padding: 0.3em 0.25em 0.05em;
+  font-size: 1.5ch;
+  color: DarkGreen;
   white-space: normal;
 }
 
