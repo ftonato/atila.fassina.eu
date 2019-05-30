@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const SVG = styled.svg`
   width: 100%;
+  max-width: 20rem;
 `
 
 export default ({ color = '#000000', accent = '#07963D' }) => (
