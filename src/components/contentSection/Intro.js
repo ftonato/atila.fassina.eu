@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import TextSection from './TextSection'
-import avatar from '../../images/front-avatar.png'
+import avatar from '../../images/front-avatar.jpg'
 import { BERLINER_SKY, RADIOACTIVE_LIME } from '../../../settings'
 import styled from 'styled-components'
 

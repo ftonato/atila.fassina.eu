@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import SocialIcon from '../SocialIcons'
-import avatar from '../../images/internal-avatar.png'
+import avatar from '../../images/internal-avatar.jpg'
 import { RADIOACTIVE_LIME } from '../../../settings'
 
 const FooterSection = styled.footer`

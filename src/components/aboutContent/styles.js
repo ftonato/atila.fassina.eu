@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { FRESH_GRASS, BRUSHED_STEEL } from '../../../settings'
 
 export const Wrap = styled.article`
@@ -62,7 +61,7 @@ export const FunFact = styled.li`
   }
 `
 
-export const TextLink = styled(Link)`
+export const TextLink = styled.a`
   position: relative;
   display: inline-block;
   border-bottom: dotted 1px ${FRESH_GRASS};

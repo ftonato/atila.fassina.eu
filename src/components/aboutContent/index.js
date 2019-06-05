@@ -1,4 +1,5 @@
 import React from 'react'
+import AvatarTwitter from '../../images/avatar-twitter.jpg'
 import {
   Wrap,
   FunFactsList,
@@ -19,10 +20,7 @@ export default () => (
         </span>{' '}
         I'm Atila.
       </Greetings>
-      <Avatar
-        src="https://pbs.twimg.com/profile_images/783062449822035968/h8q0Y5F6_400x400.jpg"
-        alt="Picture of Atila"
-      />
+      <Avatar src={AvatarTwitter} alt="Picture of Atila" />
     </SalutationHeader>
 
     <ParagraphWrap>
@@ -64,7 +62,7 @@ export default () => (
       , spreading some generosity all around.
     </ParagraphWrap>
 
-    <strong>fun facts</strong>
+    <Subtitle>fun facts</Subtitle>
 
     <FunFactsList>
       <FunFact>

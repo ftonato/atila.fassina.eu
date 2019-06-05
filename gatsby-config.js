@@ -62,7 +62,7 @@ module.exports = {
         background_color: `rgb(0,0,0)`,
         theme_color: `rgb(10, 100, 0)`,
         display: `minimal-ui`,
-        icon: `src/images/logo-whitebg.png`
+        icon: `src/images/logo-whitebg.jpg`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
