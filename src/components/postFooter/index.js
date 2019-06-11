@@ -7,6 +7,7 @@ import { RADIOACTIVE_LIME } from '../../../settings'
 
 const FooterSection = styled.footer`
   background-color: #000;
+  margin-top: 7rem;
   padding: 0 2rem;
 
   @media (min-width: 800px) {
@@ -58,8 +59,8 @@ const InteractionItem = styled.li`
   }
 `
 
-const InteractionLink = styled(Link)`
-  color: #fff;
+const styles = `
+color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
 
@@ -72,7 +73,13 @@ const InteractionLink = styled(Link)`
   :hover,
   :focus {
     border-bottom: dotted 1px ${RADIOACTIVE_LIME};
-  }
+  }`
+
+const InteractionLink = styled(Link)`
+  ${styles}
+`
+const InteractionAnchor = styled.a`
+  ${styles}
 `
 
 const IconText = styled.span`
@@ -83,8 +90,9 @@ const IconText = styled.span`
   margin-right: 1rem;
 `
 
-export default ({ next }) => {
-  const { path = '', title = '' } = next.frontmatter || {}
+export default ({ next, frontmatter: current }) => {
+  const { path } = current
+  const { path: nextPath, title: nextTitle } = next.frontmatter || {}
   const githubURL = `https://github.com/atilafassina/atila.fassina.eu/edit/master/src/pages/${path.slice(
     1,
     path.length - 1
@@ -103,21 +111,21 @@ export default ({ next }) => {
         <InteractionList>
           <InteractionItem>
             <SocialIcon media="twitter" color="#fff" />
-            <InteractionLink
-              to={twitterURL}
+            <InteractionAnchor
+              href={twitterURL}
               target="noopener noreferrer nofollow"
             >
               Discuss.
-            </InteractionLink>
+            </InteractionAnchor>
           </InteractionItem>
           <InteractionItem>
             <SocialIcon media="github" color="#fff" />
-            <InteractionLink
-              to={githubURL}
+            <InteractionAnchor
+              href={githubURL}
               target="noopener noreferrer nofollow"
             >
               Edit.
-            </InteractionLink>
+            </InteractionAnchor>
           </InteractionItem>
           <InteractionItem>
             <IconText>rss</IconText>
@@ -125,7 +133,7 @@ export default ({ next }) => {
           </InteractionItem>
           {!!next && (
             <InteractionItem>
-              <InteractionLink to={path}>{title} →</InteractionLink>
+              <InteractionLink to={nextPath}>{nextTitle} →</InteractionLink>
             </InteractionItem>
           )}
         </InteractionList>

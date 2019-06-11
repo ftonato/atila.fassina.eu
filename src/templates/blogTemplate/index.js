@@ -62,7 +62,7 @@ export default function Template({ data, pageContext }) {
         <Post dangerouslySetInnerHTML={{ __html: html }} />
         {!!frontmatter.mediumURL && <Banner link={frontmatter.mediumURL} />}
       </PostWrap>
-      <Author next={pageContext.next} />
+      <Author frontmatter={frontmatter} next={pageContext.next} />
     </Layout>
   )
 }
