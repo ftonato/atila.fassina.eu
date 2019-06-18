@@ -11,9 +11,9 @@ According to behavioural psychology, it is possible to force any individual to a
 
 Now, what the hell does this anectote has to do with web development?
 
-At the pace we new tools surface, with ease taking down paradigms and replacing best practices, it's important to keep ourselves questioning the motivation to how we do things. In this case, should I never use pixels again? Should I really go `rem` / `em` for everything?
+At the pace new tools surface, with ease taking down paradigms and replacing best practices, it's important to keep ourselves questioning the motivation to how we do things. In this case, should I never use pixels again? Should I really go `rem` / `em` for everything?
 
-In software development we are constantly reminded there are no silver bullets, in my opinion, this isn't the exception of this rule yet.
+In software development we are constantly reminded that there are no silver bullets. In my opinion, this isn't the exception of this rule yet.
 
 ## The bad side of pixels
 
@@ -37,13 +37,13 @@ Luckily, `CSS` provides us with some good tools to get by with this plan, I will
 
 ### `em` vs `ch`
 
-Now that we decided to base ourselves on text-based units, we need to choose which one gets the job done in a more consistent and reliable way. In order to choose, it's required first to comprehend how each of them are defined.
+Now that we decided to use text-based units, we need to choose which one gets the job done in a more consistent and reliable way. In order to choose, it's required first to comprehend how each of them are defined.
 
 ### The width of the `m`
 
 "Why the `m`?" may probably be the first question. When creating a new typeface, designers use (or _used_) a squared block (_kerning_) which served as reference to assure each character was proportionally designed in comparison to the other ones. The `m` is the only character in our entire alphabet that would touch the left and right boundaries of this box. So, `1em` is actually the maximal width of a character, regardless of which font-family it belongs to.
 
-### Zero for relativity
+### Absolute zero
 
 The `0` does not touch any of the _kerning_ boundaries. As a matter of fact, the number zero tends to be the average width of all characters (alphanumeric) in a typeface. The `ch` is, therefore, an estimation of the character length for a specific font, hence its name (`character`).
 
@@ -51,9 +51,21 @@ Because the zero is an average, it becomes a more reliable unit than `em`. On th
 
 ## What about percentage?
 
-The use of percentages is extremely powerful, but can also be tricky. Depdending on the CSS property which you're adding a value too, the percentage relates to a different measure. For padding and margin, for example, the percentage relates to its own box height or width (respectively for vertical and horizontal distances), keep in mind it also depends on the `display` property: `display: inline` elements have `height: auto`, which is invalid to calculate a fractions.
+The use of percentages is extremely powerful, but can also be tricky. Depdending on the CSS property which you're adding a value to, the percentage relates to a different measure. For padding and margin, for example, the percentage relates to the width of the containing box (regardless if it is vertical or horizontal padding/margin).
 
-Also, if for example you're intending to set a percentage value to `width`, `heigth`, and its derivatives, the fraction will correspond to its container, so `width: 50%` is half the width of the elements container (given it has a measurable length at parsing time).
+```css
+.wrapper {
+  width: 10rem;
+  height: 3rem;
+}
+
+.child {
+  padding-top: 10%; /* 1rem */
+  margin-top: 10%; /* 1rem */
+}
+```
+
+Also, if for example you're intending to set a percentage value to `width`, `height`, and its derivatives, the fraction will correspond to its container, so `height: 50%` is half the height of the elements container (given it has a measurable length at parsing time).
 
 To some extent, I like to think `%` as the `em` equivalent of viewport sizes. They are both extremely powerful, but they also require a level of understanding on how CSS rendering/parsing will work and a more strategic view of how the UI elements will integrate and interact with each other.
 
