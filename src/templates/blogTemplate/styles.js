@@ -1,4 +1,4 @@
-import { BRUSHED_STEEL, RADIOACTIVE_LIME } from '../../../settings'
+import { BRUSHED_STEEL, FLUORESCENT_PINE } from '../../../settings'
 import styled from 'styled-components'
 
 export const TitleWrap = styled.header`
@@ -6,9 +6,9 @@ export const TitleWrap = styled.header`
 `
 
 export const MainTitle = styled.h1`
-  font-size: 2.5rem;
-  margin-top: 3em;
-  line-height: 1;
+  font-size: 4rem;
+  margin-top: 1.5em;
+  line-height: 1.4;
 `
 export const PostDate = styled.small`
   font-family: monospace;
@@ -23,8 +23,8 @@ export const PostWrap = styled.main`
   font-size: 1.2rem;
 `
 const headlines = `
-h3, h4, h5, h6 {
-  margin: 1.5em auto 0.5em;
+h1, h2, h3, h4, h5, h6 {
+  margin: 3em auto 1em;
 
   a {
     border: none;
@@ -33,10 +33,6 @@ h3, h4, h5, h6 {
       border: none;
     }
   }
-}
-
-h1, h2 {
-  margin: 3em auto 1em;
 }
 `
 const p = `
@@ -49,7 +45,7 @@ const a = `
 a {
   text-decoration: none;
   color: ${BRUSHED_STEEL};
-  border-bottom: dotted 2px ${RADIOACTIVE_LIME};
+  border-bottom: dotted 2px ${FLUORESCENT_PINE};
 
   :hover,
   :focus {
@@ -78,8 +74,10 @@ li {
   }
 
   ::before {
+    position: relative;
+    top: 0.2em;
     content: '－  ';
-    color: ${RADIOACTIVE_LIME};
+    color: ${FLUORESCENT_PINE};
     font-size: 1.5rem;
     line-height: 1;
   }
