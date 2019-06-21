@@ -33,6 +33,7 @@ body {
   line-height: 1.2;
   background-color: white;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 ul {
   margin: 0;
