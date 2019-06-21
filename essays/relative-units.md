@@ -67,14 +67,30 @@ The use of percentages is extremely powerful, but can also be tricky. Depdending
 
 Also, if for example you're intending to set a percentage value to `width`, `height`, and its derivatives, the fraction will correspond to its container, so `height: 50%` is half the height of the elements container (given it has a measurable length at parsing time).
 
-To some extent, I like to think `%` as the `em` equivalent of viewport sizes. They are both extremely powerful, but they also require a level of understanding on how CSS rendering/parsing will work and a more strategic view of how the UI elements will integrate and interact with each other.
+```css
+.parent {
+  width: 40rem;
+  height: 20rem;
+}
+
+.child {
+  width: 50%; /* 20rem */
+  height: 70%; /* 14rem */
+}
+```
+
+To some extent, I like to think `%` as the `em` equivalent of viewport sizes. They are both extremely powerful, but they also require a level of understanding on how CSS rendering/parsing will work and a more strategic view of how the UI elements will integrate and interact with each other because they depend on the context where they are inserted.
 
 ## Viewport based units
 
-- `vh`
-- `vw`
-- `vmax`
-- `vmin`
+Viewports, on the other hand, are much more intuitive. Their spec is part of the `CSS3` level, so they are quite new, though their learning curve helps a lot on advocating towards their usage.
+
+- `vh`: Viewport height. `1vh` is `1%` of the actual viewport's **height**.
+- `vw`: Viewport width. `1vw` is `1%` of the actual viewport's **width**.
+- `vmax`: Viewport max. `1vmax` is `1%` of the viewport's **biggest dimension**
+- `vmin`: Viewport min. `1vmin` is `1%` of the viewport's **smallest dimension**
+
+As you may have come to realise, the viewport units do not depend on the context they are inserted into. So, to keep the comparison between units: if `%` is the `em` of viewport, `viewport units` are the `rem`.
 
 ## Special cases
 
