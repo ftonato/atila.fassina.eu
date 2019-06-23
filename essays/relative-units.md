@@ -92,15 +92,11 @@ Viewports, on the other hand, are much more intuitive. Their spec is part of the
 
 As you may have come to realise, the viewport units do not depend on the context they are inserted into. So, to keep the comparison between units: if `%` is the `em` of viewport, `viewport units` are the `rem`.
 
-## Special cases
-
-- `line-height`
-- Breakpoints
-- `(min|max)-(width|height)`
-
 ---
 
-On this essay.
+On this essay we take a look back on how decisions have been made towards adopting relative units on CSS layout. We then re-evaluate the choices ahead to make sure we still use the best tools for the job.
+
+Remeber, there is no silver bullet and do not be shy of using every resource at your disposal. Find what is the _first-class citizen_ for what you're displaying and make the context adjust to that.
 
 ## References
 
