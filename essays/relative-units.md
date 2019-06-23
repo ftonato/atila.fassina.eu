@@ -92,6 +92,14 @@ Viewports, on the other hand, are much more intuitive. Their spec is part of the
 
 As you may have come to realise, the viewport units do not depend on the context they are inserted into. So, to keep the comparison between units: if `%` is the `em` of viewport, `viewport units` are the `rem`.
 
+## So what should we use?
+
+It's not actually a question of _what_ to use, but more a question of _when_ should we use _which_. What determines the reliability and use-case of a measuring unit is based upon. For example, `Celsius` is defined by the freezing temperature of water, `kilocalorie` is the amount of energy to heat `1Kg` of water by `1ºC`, etc. The closer we get from the very definition of the scale, the more reliable it can be.
+
+In a nutshell, we should strive to find the message on that piece of layout we are creating, once we do that, the best unit will reveal itself as the one which is more likely to provide a reliable measure of it.
+
+Let's go through a quick example, if your piece of display text-base (e.g.: a blog post), you can narrow it down your options to `rem`, `em`, or `ch`. Now, does the specific element in question depends on its parent? (if yes, `em` or `ch` probably). Do you need it to be scalable in case you switch typefaces? (if yes, definitely `ch`). Of course, this situation is oversimplified, but I believe it would provide a valid gist of the rationale.
+
 ---
 
 On this essay we take a look back on how decisions have been made towards adopting relative units on CSS layout. We then re-evaluate the choices ahead to make sure we still use the best tools for the job.
