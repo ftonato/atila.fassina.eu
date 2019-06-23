@@ -8,8 +8,15 @@ export const TitleWrap = styled.header`
 export const MainTitle = styled.h1`
   font-size: 4rem;
   margin-top: 1.5em;
-  line-height: 1.4;
+  line-height: 1.2;
 `
+export const Pitch = styled.strong`
+  display: block;
+  margin-bottom: 1.5em;
+  line-height: 1.2;
+  color: ${BRUSHED_STEEL};
+`
+
 export const PostDate = styled.small`
   font-family: monospace;
   font-size: 1.2rem;

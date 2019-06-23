@@ -5,7 +5,7 @@ import SEO from '../../components/seo'
 import Header from '../../components/header'
 import Banner from '../../components/mediumBanner'
 import Author from '../../components/postFooter'
-import { MainTitle, PostDate, PostWrap, Post, TitleWrap } from './styles'
+import { MainTitle, PostDate, PostWrap, Post, TitleWrap, Pitch } from './styles'
 
 const dayName = rawDate => {
   const dayIndex = new Date(rawDate).getDay()
@@ -55,6 +55,7 @@ export default function Template({ data, pageContext }) {
       <PostWrap>
         <TitleWrap>
           <MainTitle>{frontmatter.title}</MainTitle>
+          <Pitch>{frontmatter.pitch}</Pitch>
           <PostDate>
             {frontmatter.date} － {dayName(frontmatter.rawDate)}
           </PostDate>

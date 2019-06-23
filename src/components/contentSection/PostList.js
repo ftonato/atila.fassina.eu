@@ -24,7 +24,7 @@ const Post = styled.li`
 
 const PostTitle = styled(Link)`
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   text-decoration: none;
   color: black;
@@ -35,12 +35,13 @@ const PostTitle = styled(Link)`
   }
 `
 const PostData = styled.small`
+  display: block;
   font-size: 0.8rem;
+  margin-top: 1rem;
   color: rgb(70, 70, 70);
 `
 
 const Pitch = styled.section`
-  margin-top: 0.8rem;
   font-size: 1.2rem;
   color: ${DONKEY_FUR};
 `
@@ -52,11 +53,11 @@ export default ({ posts }) => (
         <PostTitle to={node.frontmatter.path}>
           {node.frontmatter.title}
         </PostTitle>
+        <Pitch>{node.frontmatter.pitch}</Pitch>
         <PostData>
           {node.frontmatter.date} | {node.fields.readingTime.text} (
           {node.fields.readingTime.words} words)
         </PostData>
-        <Pitch>{node.frontmatter.pitch}</Pitch>
       </Post>
     ))}
   </List>
