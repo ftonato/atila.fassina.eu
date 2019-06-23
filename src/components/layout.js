@@ -141,12 +141,13 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  // color: rgb(199, 146, 234);
+  color: rgb(100, 235, 150);
 }
 
 .token.selector,
 .token.doctype {
-  color: rgb(199, 146, 234);
+  color: rgb(100, 235, 150);
   font-style: 'italic';
 }
 
@@ -166,6 +167,7 @@ pre[class*='language-'] ::selection {
 
 .token.property {
   color: rgb(128, 203, 196);
+  color: rgb(203, 128, 100);
 }
 
 .token.namespace {
