@@ -14,7 +14,7 @@ keywords:
 
 The speed with which new tools and practices spawn in the web development world can be a bit daunting. If you don't take all the advices with a pinch of salt, you mind find yourself switching tools and workflows faster than you can deliver projects. That's definitely not good, and although we shouldn't be afraid of refactoring our code, we still ought to be cautious when deciding for a switch.
 
-As most of us, I also have been part of discussions, <abbr title="Request for Comment">RFCs</abbr>, and other decision-making processes and I've come to realise that without a proper track and clear priorities, discussion tends to run wild and we lose sight of what is really important: delivering the best product. In the following essay, I intend to share how I try to guide my thinking when advocating towards the adoption or dismissal of a tool, regardless if in a big team, small team, or talking to myself (we all do that 😜).
+As most of us, I also have been part of discussions, <abbr title="Request for Comment">RFCs</abbr>, and other decision-making processes. Without a proper track and clear priorities, discussion tends to run wild and we lose sight of what is really important: delivering the best product. In the following essay, I intend to share how I try to guide my thinking when advocating towards the adoption or dismissal of a tool. Regardless if in a big team, small team, or talking to myself (we all do that 😜).
 
 ## Mandatory disclaimer
 
