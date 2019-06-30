@@ -47,21 +47,6 @@ export default () => (
       Brazilian born and raised. Italian from heritage. Kiwi by choice.
     </ParagraphWrap>
 
-    <Subtitle>and very lucky:</Subtitle>
-
-    <ParagraphWrap>
-      working at beautiful Auckland with a bunch of the nicest smart people I
-      have met at{' '}
-      <TextLink
-        href="https://pushpay.com"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
-        Pushpay
-      </TextLink>
-      , spreading some generosity all around.
-    </ParagraphWrap>
-
     <Subtitle>fun facts</Subtitle>
 
     <FunFactsList>
