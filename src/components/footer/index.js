@@ -41,7 +41,9 @@ export default ({ internal = false }) => (
           </FooterLink>
         </LinkItem>
         <LinkItem>
-          <FooterLink href="/rss.xml">rss</FooterLink>
+          <FooterLink internal={internal} href="/rss.xml">
+            rss
+          </FooterLink>
         </LinkItem>
       </LinkList>
     </ListWrap>

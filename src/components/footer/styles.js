@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FRESH_GRASS } from '../../../settings'
+import { FRESH_GRASS, RADIOACTIVE_LIME } from '../../../settings'
 
 export const Footer = styled.footer`
   border-top: ${({ internal }) => (internal ? 'none' : 'solid 3rem black')};
@@ -58,7 +58,7 @@ export const FooterLink = styled.a`
   &[href$='rss.xml'] {
     text-shadow: rgba(0, 0, 0, 0.4) 0 3px 5px 2px;
     position: relative;
-    color: ${FRESH_GRASS};
+    color: ${({ internal }) => (internal ? RADIOACTIVE_LIME : FRESH_GRASS)};
   }
 `
 export const Footnote = styled.aside`
