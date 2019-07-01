@@ -34,7 +34,7 @@ export default () => (
       writer, speaker or coder.
     </ParagraphWrap>
     <ParagraphWrap>
-      A Web Developer, as in: I love coding Javascript and NodeJS, I'm very
+      A Web Developer, as in: I love coding JavaScript and NodeJS, I'm very
       passionate about performance (specially, but not restricted to,
       client-side), <abbr title="accessibility">A11Y</abbr> is a paramount
       responsability and good <abbr title="user experience">UX</abbr> is always
