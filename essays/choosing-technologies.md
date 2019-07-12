@@ -92,4 +92,8 @@ Does the change makes a developer task more pleasuring? This criteria is usually
 
 ---
 
+On this essay, I tried to offer a quick highlight on how I tend to weight the criteria of choosing technologies in a pragmatic way. Each criteria should be considered an individual block and the order they're ranked depends greatly on the context of the product.
+
+---
+
 Did I forget any important criteria? Please, reach out and share.
