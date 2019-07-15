@@ -1,6 +1,6 @@
 ---
 path: /choosing-tools
-date: 2019-06-24
+date: 2019-06-16
 title: Choosing the best tools
 pitch: Be pragmatic when choosing a toolset
 keywords:
@@ -12,7 +12,7 @@ keywords:
   ]
 ---
 
-The speed with which new tools and practices spawn in the web development world can be a bit daunting. If you don't take all the advices with a pinch of salt, you mind find yourself switching tools and workflows faster than you can deliver projects. That's definitely not good, and although we shouldn't be afraid of refactoring our code, we still ought to be cautious when deciding for a switch.
+The speed with which new tools and practices spawn in the web development world can be a bit daunting. If you don't take all the advices with a pinch of salt, you mind find yourself switching tools and workflows faster than you can deliver projects. That is definitely not good, and although we should not be afraid of refactoring our code, we still ought to be cautious when deciding for a switch.
 
 As most of us, I also have been part of discussions, <abbr title="Request for Comment">RFCs</abbr>, and other decision-making processes. Without a proper track and clear priorities, discussion tends to run wild and we lose sight of what is really important: delivering the best product. In the following essay, I intend to share how I try to guide my thinking when advocating towards the adoption or dismissal of a tool. Regardless if in a big team, small team, or talking to myself.
 
@@ -22,7 +22,7 @@ The following opinions are what I have found out that work for me, in any way I 
 
 ## The criteria
 
-As a mental model, I tend to divide the criteria into two categories, without a fancy name:
+As a mental model, I tend to divide the criteria in two categories:
 
 1. Imperative: The ones that are too important to be simply removed, if something happens along the way, you will want to _roll-forward_ because rollingback would bring considerable headache. Examples.: React, Webpack, Babel.
 
