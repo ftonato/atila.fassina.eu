@@ -1,6 +1,6 @@
 ---
 path: /choosing-tools
-date: 2019-06-16
+date: 2019-07-16
 title: Choosing the best tools
 pitch: Be pragmatic when choosing a toolset
 keywords:
@@ -58,13 +58,7 @@ Your application speed eventually boils down to how your audience will perceive 
 
 In other words:
 
-> Perceived performance, in computer engineering, refers to how quickly a software feature appears to perform its task. The concept applies mainly to user acceptance aspects.
-
-<caption>
-
-[Perceived Performance at Wikipedia](https://en.wikipedia.org/wiki/Perceived_performance)
-
-</caption>
+> Perceived performance, in computer engineering, refers to how quickly a software feature appears to perform its task. The concept applies mainly to user acceptance aspects. <span>[Perceived Performance at Wikipedia](https://en.wikipedia.org/wiki/Perceived_performance)</span>
 
 Obviously, it's needless to point out the importance of this benchmark for your product success, therefore you should protect it against any change that would impact it negatively.
 

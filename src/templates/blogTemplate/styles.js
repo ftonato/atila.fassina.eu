@@ -90,6 +90,51 @@ li {
   }
 }
 `
+
+const quotes = `
+  blockquote {
+    color: rgb(100, 100, 100);
+    font-style: italic;
+    padding-left: 0.8em;
+    border-left: 2px solid var(--radioactive-lime);
+  }
+
+  blockquote span {
+    font-style: normal;
+    color: var(--donkey-fur);
+
+    a {
+      color: var(--donkey-fur);
+    }
+
+    ::before {
+      content: " --";
+    }
+  }
+`
+
+const lines = `
+  hr {
+    position: relative;
+    margin: 4rem auto;
+    background-color: transparent;
+    border:none;
+    border-bottom: solid 1px var(--radioactive-lime);
+    width: 3rem;
+
+    ::after {
+      content: "▲";
+      font-size: 2rem;
+      color: var(--donkey-fur);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+`
+
 const textTransforms = `
 strong { font-weight: 600; }
 i { font-style: italic; }
@@ -102,4 +147,6 @@ export const Post = styled.article`
   ${img}
   ${li}
   ${textTransforms}
+  ${quotes}
+  ${lines}
 `

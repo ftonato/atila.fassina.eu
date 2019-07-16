@@ -14,12 +14,12 @@ const GlobalStyle = createGlobalStyle`
 :root {
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
-  --fresh-grass: rgb(10, 100, 0)
+  --fresh-grass: rgb(10, 100, 0);
   --radioactive-lime: rgb(80, 250, 60);
-  --donkey-fur: rgb(150,150,150)
-  --berliner-sky: rgb(230,230,230)
-  --cold-fog: rgb(245,245,245)
-  --brushed-steel: rgb(50,50,50)
+  --donkey-fur: rgb(150,150,150);
+  --berliner-sky: rgb(230,230,230);
+  --cold-fog: rgb(245,245,245);
+  --brushed-steel: rgb(50,50,50);
 }
 
 html,
