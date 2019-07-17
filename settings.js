@@ -1,7 +1,7 @@
 export const FRESH_GRASS = 'rgb(10, 100, 0)'
 export const RADIOACTIVE_LIME = 'rgb(80, 250, 60)'
 export const FLUORESCENT_PINE = 'rgb(50, 230, 30)'
-export const DONKEY_FUR = 'rgb(150,150,150)'
+export const DONKEY_FUR = 'rgb(115,115,115)'
 export const BERLINER_SKY = 'rgb(230,230,230)'
 export const COLD_FOG = 'rgb(245,245,245)'
 export const BRUSHED_STEEL = 'rgb(50,50,50)'

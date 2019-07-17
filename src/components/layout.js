@@ -9,17 +9,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components'
+import {
+  DONKEY_FUR,
+  RADIOACTIVE_LIME,
+  FRESH_GRASS,
+  BERLINER_SKY,
+  COLD_FOG,
+  BRUSHED_STEEL
+} from '../../settings'
 
 const GlobalStyle = createGlobalStyle`
 :root {
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
-  --fresh-grass: rgb(10, 100, 0);
-  --radioactive-lime: rgb(80, 250, 60);
-  --donkey-fur: rgb(150,150,150);
-  --berliner-sky: rgb(230,230,230);
-  --cold-fog: rgb(245,245,245);
-  --brushed-steel: rgb(50,50,50);
+  --fresh-grass: ${FRESH_GRASS};
+  --radioactive-lime: ${RADIOACTIVE_LIME};
+  --donkey-fur: ${DONKEY_FUR};
+  --berliner-sky: ${BERLINER_SKY};
+  --cold-fog: ${COLD_FOG};
+  --brushed-steel: ${BRUSHED_STEEL};
 }
 
 html,
