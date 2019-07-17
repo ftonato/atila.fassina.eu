@@ -25,7 +25,7 @@ export default ({ internal = false }) => (
           <FooterLink
             href="https://github.com/atilafassina/atila.fassina.eu"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             src
           </FooterLink>
@@ -35,7 +35,7 @@ export default ({ internal = false }) => (
           <FooterLink
             href="https://github.com/atilafassina/atila.fassina.eu/blob/master/LICENSES.md"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             licenses
           </FooterLink>
@@ -55,7 +55,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://gatsbyjs.org"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener"
           >
             gatsby
           </FooterLink>
@@ -66,7 +66,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://github.com"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener"
           >
             github
           </FooterLink>
@@ -77,7 +77,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://www.netlify.com"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener"
           >
             netlify
           </FooterLink>
@@ -88,7 +88,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://www.cloudflare.com"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener"
           >
             cloudfare
           </FooterLink>
@@ -99,7 +99,7 @@ export default ({ internal = false }) => (
             footnote
             href="https://thenounproject.com/"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener"
           >
             thenounproject
           </FooterLink>
