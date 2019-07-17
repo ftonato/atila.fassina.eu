@@ -7,7 +7,7 @@ export default ({ socialList = [], internal = false }) => (
     <SocialMedias>
       {socialList.map(({ name, url }) => (
         <SocialMediaItem key={name}>
-          <Icon href={url} target="_blank" title={name}>
+          <Icon href={url} rel="noopener" target="_blank" title={name}>
             <SocialIcons media={name} color={internal ? '#fff' : '#222'} />
           </Icon>
         </SocialMediaItem>
