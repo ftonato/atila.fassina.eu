@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { FRESH_GRASS, BRUSHED_STEEL } from '../../../settings'
 
 export const Wrap = styled.article`
   margin: 0 auto;
@@ -34,7 +33,7 @@ export const Subtitle = styled.strong`
   display: block;
   font-size: 1.5em;
   margin-top: 3ex;
-  color: ${BRUSHED_STEEL};
+  color: var(--brushed-steel);
 
   ::before {
     content: '!';
@@ -51,7 +50,7 @@ export const FunFactsList = styled.ul`
 export const FunFact = styled.li`
   ::before {
     content: '→';
-    color: ${BRUSHED_STEEL};
+    color: var(--brushed-steel);
     font-weight: 800;
     padding-right: 1ex;
 
@@ -64,9 +63,9 @@ export const FunFact = styled.li`
 export const TextLink = styled.a`
   position: relative;
   display: inline-block;
-  border-bottom: dotted 1px ${FRESH_GRASS};
+  border-bottom: dotted 1px var(--fresh-grass);
   text-decoration: none;
-  color: ${BRUSHED_STEEL};
+  color: var(--brushed-steel);
 
   :hover,
   :active {

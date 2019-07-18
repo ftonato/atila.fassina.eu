@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { BERLINER_SKY, COLD_FOG, DONKEY_FUR } from '../../../settings'
 
 export const BannerWrap = styled.aside`
   margin: 3.5em 0;
@@ -9,7 +8,7 @@ export const BannerWrap = styled.aside`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${DONKEY_FUR};
+  color: var(--donkey-fur);
 
   ::before {
     content: '';
@@ -17,8 +16,8 @@ export const BannerWrap = styled.aside`
     display: block;
     height: 160%;
     width: 100%;
-    background: ${COLD_FOG};
-    border: solid 5px ${BERLINER_SKY};
+    background: var(--cold-fog);
+    border: solid 5px var(--berliner-sky);
     transform: skew(10deg, -2deg);
 `
 export const BannerText = styled.span`
@@ -29,6 +28,6 @@ export const BannerText = styled.span`
 
 export const BannerLink = styled.a`
   text-decoration: none;
-  color: ${DONKEY_FUR};
+  color: var(--donkey-fur);
   font-weight: 600;
 `

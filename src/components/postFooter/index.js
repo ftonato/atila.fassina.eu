@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import SocialIcon from '../SocialIcons'
 import avatar from '../../images/internal-avatar.jpg'
-import { RADIOACTIVE_LIME } from '../../../settings'
 
 const FooterSection = styled.footer`
   background-color: #000;
@@ -36,8 +35,8 @@ const AuthorName = styled.h3`
 `
 const AuthorPicture = styled.img`
   width: 10rem;
-  border-top: solid 2px ${RADIOACTIVE_LIME};
-  border-bottom: solid 2px ${RADIOACTIVE_LIME};
+  border-top: solid 2px var(--radioactive-lime);
+  border-bottom: solid 2px var(--radioactive-lime);
 `
 const InteractionList = styled.ul`
   list-style: none;
@@ -72,7 +71,7 @@ color: #fff;
 
   :hover,
   :focus {
-    border-bottom: dotted 1px ${RADIOACTIVE_LIME};
+    border-bottom: dotted 1px var(--radioactive-lime);
   }`
 
 const InteractionLink = styled(Link)`

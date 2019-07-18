@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import TextSection from './TextSection'
 import avatar from '../../images/front-avatar.jpg'
-import { BERLINER_SKY, RADIOACTIVE_LIME } from '../../../settings'
 import styled from 'styled-components'
 
 const TextWrapper = styled.p`
@@ -18,9 +17,9 @@ const TextWrapper = styled.p`
 const AboutMeLink = styled(Link)`
   position: relative;
   display: inline-block;
-  border-bottom: dotted 1px ${RADIOACTIVE_LIME};
+  border-bottom: dotted 1px var(--radioactive-lime);
   text-decoration: none;
-  color: ${BERLINER_SKY};
+  color: var(--berliner-sky);
 
   :hover,
   .aboutMeLink:active {
@@ -34,8 +33,8 @@ const Avatar = styled.img`
 const AvatarWrap = styled.div`
   padding: 0 10px;
   max-width: 20%;
-  border-bottom: solid 2px ${RADIOACTIVE_LIME};
-  border-top: solid 2px ${RADIOACTIVE_LIME};
+  border-bottom: solid 2px var(--radioactive-lime);
+  border-top: solid 2px var(--radioactive-lime);
   display: inline-block;
 `
 const Wrap = styled.aside`

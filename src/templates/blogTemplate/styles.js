@@ -1,4 +1,3 @@
-import { BRUSHED_STEEL, FLUORESCENT_PINE } from '../../../settings'
 import styled from 'styled-components'
 
 export const TitleWrap = styled.header`
@@ -14,7 +13,7 @@ export const Pitch = styled.strong`
   display: block;
   margin-bottom: 1.5em;
   line-height: 1.2;
-  color: ${BRUSHED_STEEL};
+  color: var(--brushed-steel);
 `
 
 export const PostDate = styled.small`
@@ -51,8 +50,8 @@ p {
 const a = `
 a {
   text-decoration: none;
-  color: ${BRUSHED_STEEL};
-  border-bottom: dotted 2px ${FLUORESCENT_PINE};
+  color: var(--brushed-steel);
+  border-bottom: dotted 2px var(--fluorescent_pine);
 
   :hover,
   :focus {
@@ -84,7 +83,7 @@ li {
     position: relative;
     top: 0.2em;
     content: '－  ';
-    color: ${FLUORESCENT_PINE};
+    color: var(--fluorescent_pine);
     font-size: 1.5rem;
     line-height: 1;
   }
@@ -96,7 +95,7 @@ const quotes = `
     color: rgb(100, 100, 100);
     font-style: italic;
     padding-left: 0.8em;
-    border-left: 2px solid var(--radioactive-lime);
+    border-left: 2px solid RADIOACTIVE_LIME;
   }
 
   blockquote span {
@@ -119,7 +118,7 @@ const lines = `
     margin: 4rem auto;
     background-color: transparent;
     border:none;
-    border-bottom: solid 1px var(--radioactive-lime);
+    border-bottom: solid 1px RADIOACTIVE_LIME;
     width: 3rem;
 
     ::after {

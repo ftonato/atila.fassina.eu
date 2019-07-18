@@ -1,7 +1,6 @@
 import React from 'react'
 import TextSection from './TextSection'
 import { Link } from 'gatsby'
-import { RADIOACTIVE_LIME } from '../../../settings'
 import styled from 'styled-components'
 
 const ButtonList = styled.ul`
@@ -46,8 +45,8 @@ const ShareButton = styled(Link)`
 
   :hover,
   :active {
-    border-top-color: ${RADIOACTIVE_LIME};
-    border-bottom-color: ${RADIOACTIVE_LIME};
+    border-top-color: var(--radioactive-lime);
+    border-bottom-color: var(--radioactive-lime);
   }
 `
 const Wrap = styled.aside`
