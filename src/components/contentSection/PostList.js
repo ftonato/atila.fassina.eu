@@ -18,20 +18,54 @@ const List = styled.ul`
 `
 
 const Post = styled.li`
-  width: ${({ sprint }) => (sprint ? '40% ' : '100%')};
+  width: 100%;
   margin-bottom: 5rem;
+  position: relative;
+
   :hover a {
     color: var(--fresh-grass);
   }
+
+  @media (min-width: 800px) {
+    width: ${({ sprint }) => (sprint ? '50% ' : '100%')};
+  }
+
+  ${({ sprint }) =>
+    sprint &&
+    `::before {
+    content: '';
+    position: absolute;
+    top: -1em;
+    left: -1em;
+    display: block;
+    width: 2px;
+    height: calc(100% + 2em);
+    background-color: var(--radioactive-lime);
+  }
+  `}
 `
 
 const PostTitle = styled(Link)`
+  position: relative;
   display: block;
   margin-bottom: 0.5rem;
-  font-size: ${({ sprint }) => (sprint ? '0.8rem' : '1.5rem')};
+  font-size: 2rem;
   text-decoration: none;
   color: black;
   transition: all 300ms linear;
+
+  ${({ sprint }) =>
+    !sprint &&
+    `::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -50vw;
+      width: calc(50vw + 50%);
+      height: 2px;
+      background-color: var(--radioactive-lime);
+      opacity: 0.7;
+    }`}
 
   @media (min-width: 800px) {
     font-size: ${({ sprint }) => (sprint ? '2rem' : '3rem')};
@@ -56,15 +90,10 @@ export default ({ posts }) => (
         <PostTitle to={node.frontmatter.path} sprint={node.frontmatter.sprint}>
           {node.frontmatter.title}
         </PostTitle>
-        <Pitch>{node.frontmatter.pitch}</Pitch>
+        {!node.frontmatter.sprint && <Pitch>{node.frontmatter.pitch}</Pitch>}
         <PostData>
-          {node.frontmatter.date}{' '}
-          {!node.frontmatter.sprint && (
-            <span>
-              | {node.fields.readingTime.text} ({node.fields.readingTime.words}{' '}
-              words )
-            </span>
-          )}
+          {node.frontmatter.date} | {node.fields.readingTime.text} (
+          {node.fields.readingTime.words} words )
         </PostData>
       </Post>
     ))}

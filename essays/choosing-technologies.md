@@ -1,5 +1,6 @@
 ---
 path: /choosing-tools
+sprint: false
 date: 2019-07-16
 title: Choosing the best tools
 pitch: Be pragmatic when choosing a toolset
