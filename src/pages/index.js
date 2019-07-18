@@ -36,6 +36,7 @@ export const query = graphql`
           id
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            sprint
             path
             title
             pitch
