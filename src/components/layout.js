@@ -43,6 +43,13 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+body[data-theme="dark"] {
+  background-color: rgb(50,50,50);
+  color: white;
+  transition: all 300ms ease-in;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -52,6 +59,7 @@ h2,
 h3,
 h4,
 strong {
+  color: white;
   font-weight: 200;
 }
 /**
