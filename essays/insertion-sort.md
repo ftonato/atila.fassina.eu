@@ -1,7 +1,7 @@
 ---
 path: /insertion-sort-js
 sprint: true
-date: 2019-07-20
+date: 2019-07-19
 title: Insertion Sort in JS
 pitch: Part of the FUNdamental Series
 keywords: ['computer science', 'JavaScript', 'interview questions']
