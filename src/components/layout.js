@@ -15,7 +15,9 @@ import {
   FRESH_GRASS,
   BERLINER_SKY,
   COLD_FOG,
-  BRUSHED_STEEL
+  BRUSHED_STEEL,
+  BLACKEST_NIGHT,
+  BRIGHTEST_DAY
 } from '../../settings'
 
 const GlobalStyle = createGlobalStyle`
@@ -28,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
   --berliner-sky: ${BERLINER_SKY};
   --cold-fog: ${COLD_FOG};
   --brushed-steel: ${BRUSHED_STEEL};
+  --blackest-night: ${BLACKEST_NIGHT};
+  --brightest-day: ${BRIGHTEST_DAY}
 }
 
 html,

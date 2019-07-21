@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import Content from '../components/contentSection'
+import Subscribe from '../components/subscribe'
 import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
@@ -23,6 +24,7 @@ const IndexPage = ({ data }) => {
       />
       <Header data={data} internal={false} />
       <Content posts={posts} />
+      <Subscribe />
       <Footer />
     </Layout>
   )
