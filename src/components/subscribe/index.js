@@ -5,6 +5,8 @@ import {
   Submit,
   Inner,
   NewsTitle,
+  Label,
+  LabelText,
   Input,
   List
 } from './styles'
@@ -24,25 +26,36 @@ export default () => {
         >
           <input type="hidden" name="u" value="ffa1a5e8ef4db5b2506125bbf" />
           <input type="hidden" name="id" value="9e9a87a7b0" />
-          <Input
-            type="text"
-            value={data.name}
-            placeholder="Preferred name"
-            onChange={evt => {
-              setFormData({ email: evt.currentTarget.value })
-            }}
-          />
-          <Input
-            type="email"
-            name="b_email"
-            tabindex="-1"
-            onChange={evt => {
-              setFormData({ name: evt.currentTarget.value })
-            }}
-            value={data.email}
-            placeholder="E-mail"
-            id="b_email"
-          />
+          <Label for="name">
+            <LabelText isFormFilled={!!data.name}>Preferred Name</LabelText>
+            <Input
+              id="name"
+              type="text"
+              value={data.name}
+              onChange={evt => {
+                setFormData({
+                  ...data,
+                  name: evt.currentTarget.value
+                })
+              }}
+            />
+          </Label>
+          <Label for="b_email">
+            <LabelText isFormFilled={!!data.email}>e-Mail</LabelText>
+            <Input
+              type="email"
+              name="b_email"
+              tabindex="-1"
+              onChange={evt => {
+                setFormData({
+                  ...data,
+                  email: evt.currentTarget.value
+                })
+              }}
+              value={data.email}
+              id="b_email"
+            />
+          </Label>
           <Submit type="submit">Subscribe</Submit>
         </Form>
         <List>

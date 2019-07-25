@@ -29,7 +29,7 @@ export const Form = styled.form`
     content: '';
     position: absolute;
     top: 1em;
-    left: calc(-100vw + 75%);
+    left: calc(-100vw + 90%);
     width: 100vw;
     height: 2px;
     box-shadow: ${TRON_SHADOW};
@@ -38,16 +38,43 @@ export const Form = styled.form`
   }
 `
 
-export const Input = styled.input`
+export const Label = styled.label`
   position: relative;
+  display: inline-block;
   font-size: 1.2rem;
-  padding: 0.2em 1em;
+  z-index: 2;
   margin: 0 0.5em;
-  max-width: 15ch;
+  padding: 0.2em 0.5em;
+  width: 20ch;
   color: var(--brightest-day);
   border: ${TRON_BORDER};
   background-color: var(--blackest-night);
-  z-index: 2;
+  box-sizing: border-box;
+`
+export const LabelText = styled.span`
+  position: absolute;
+  color: white;
+
+  transition: all 250ms linear;
+  font-size: ${({ isFormFilled }) => (isFormFilled ? '0.8rem' : '1.2rem')};
+  transform: ${({ isFormFilled }) =>
+    isFormFilled ? 'translateY(-2em)' : 'none'};
+
+  label:focus-within & {
+    font-size: 0.8rem;
+    transform: translateY(-2em);
+  }
+`
+
+export const Input = styled.input`
+  font-size: 1.2rem;
+  margin: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  box-sizing: border-box;
 `
 
 export const Submit = styled.button`
