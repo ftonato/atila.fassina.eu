@@ -1,6 +1,6 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 const List = styled.ul`
   max-width: 42rem;
@@ -93,7 +93,7 @@ export default ({ posts }) => (
         {!node.frontmatter.sprint && <Pitch>{node.frontmatter.pitch}</Pitch>}
         <PostData>
           {node.frontmatter.date} | {node.fields.readingTime.text} (
-          {node.fields.readingTime.words} words )
+          {node.fields.readingTime.words} words)
         </PostData>
       </Post>
     ))}
