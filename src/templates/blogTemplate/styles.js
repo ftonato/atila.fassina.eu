@@ -95,7 +95,7 @@ const quotes = `
     color: rgb(100, 100, 100);
     font-style: italic;
     padding-left: 0.8em;
-    border-left: 2px solid RADIOACTIVE_LIME;
+    border-left: 2px solid var(--radioactive-lime);
   }
 
   blockquote span {
@@ -118,7 +118,7 @@ const lines = `
     margin: 4rem auto;
     background-color: transparent;
     border:none;
-    border-bottom: solid 1px RADIOACTIVE_LIME;
+    border-bottom: solid 1px var(--radioactive-lime);
     width: 3rem;
 
     ::after {
