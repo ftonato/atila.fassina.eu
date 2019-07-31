@@ -1,8 +1,8 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
-import SocialIcon from '../SocialIcons'
 import avatar from '../../images/internal-avatar.jpg'
+import SocialIcon from '../SocialIcons'
 
 const FooterSection = styled.footer`
   background-color: #000;
@@ -92,9 +92,9 @@ const IconText = styled.span`
 export default ({ next, frontmatter: current }) => {
   const { path } = current
   const { path: nextPath, title: nextTitle } = next.frontmatter || {}
-  const githubURL = `https://github.com/atilafassina/atila.fassina.eu/edit/master/src/pages/${path.slice(
+  const githubURL = `https://github.com/atilafassina/atila.fassina.eu/edit/master/essays/${path.slice(
     1,
-    path.length - 1
+    path.length
   )}.md`
 
   const twitterURL = `https://mobile.twitter.com/search?q=${encodeURIComponent(
