@@ -26,12 +26,15 @@ export default () => {
         >
           <input type="hidden" name="u" value="ffa1a5e8ef4db5b2506125bbf" />
           <input type="hidden" name="id" value="9e9a87a7b0" />
+
           <Label for="name">
             <LabelText isFormFilled={!!data.name}>Preferred Name</LabelText>
             <Input
               id="name"
+              name="b_name"
               type="text"
               value={data.name}
+              tabIndex="-1"
               onChange={evt => {
                 setFormData({
                   ...data,
@@ -45,7 +48,7 @@ export default () => {
             <Input
               type="email"
               name="b_email"
-              tabindex="-1"
+              tabIndex="-1"
               onChange={evt => {
                 setFormData({
                   ...data,
