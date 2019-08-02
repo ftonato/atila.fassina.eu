@@ -1,7 +1,7 @@
 ---
 path: /nan-is-tricky
 sprint: true
-date: 2019-07-20
+date: 2019-08-02
 title: Not a Number
 pitch: Checking for `NaN` is a minefield
 keywords: ['web', 'JavaScript', 'wat', 'til']
