@@ -8,6 +8,8 @@ export const BRUSHED_STEEL = 'rgb(50,50,50)'
 export const BLACKEST_NIGHT = 'black'
 export const BRIGHTEST_DAY = 'white'
 
+export const SMALL_SCREEN = '@media (min-width: 700px)'
+
 export const social = [
   {
     name: 'linkedin',
