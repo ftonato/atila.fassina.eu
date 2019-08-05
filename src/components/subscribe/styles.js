@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { SMALL_SCREEN } from '../../../settings'
 
-const TRON_SHADOW = `0 0 5px var(--radioactive-lime)`
-const TRON_BORDER = `2px solid var(--radioactive-lime)`
+const TRON_SHADOW = color => `0 0 5px ${color}`
+const TRON_BORDER = `2px solid currentColor`
 
 export const FormWrapper = styled.section`
   background-color: var(--blackest-night);
@@ -20,7 +20,7 @@ export const NewsTitle = styled.strong`
   position: relative;
   font-weight: 200;
   font-size: 2rem;
-  text-shadow: ${TRON_SHADOW};
+  text-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
   display: block;
   margin-bottom: 1em;
   background-color: var(--blackest-night);
@@ -30,29 +30,32 @@ export const NewsTitle = styled.strong`
 export const Form = styled.form`
   position: relative;
   max-width: 42rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   ${SMALL_SCREEN} {
-    display: block;
+    flex-direction: row;
   }
 
   ::before {
     content: '';
     position: absolute;
-    top: 1em;
-    width: 100vw;
+    color: var(--radioactive-lime);
+    top: 1.5em;
     height: 2px;
-    box-shadow: ${TRON_SHADOW};
+    box-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
     background-color: var(--radioactive-lime);
     z-index: 1;
+    width: 70vw;
+    left: 15vw;
     transform: rotate(90deg);
-    left: 0;
 
     ${SMALL_SCREEN} {
+      width: 100vw;
+      left: 0;
       transform: none;
       left: calc(-100vw + 90%);
     }
@@ -64,9 +67,9 @@ export const Label = styled.label`
   display: inline-block;
   font-size: 1.2rem;
   z-index: 2;
-  padding: 0.2em 0.5em;
-  width: 20ch;
-  color: var(--brightest-day);
+  padding: 0.4em 1em;
+  width: 30ch;
+  color: var(--radioactive-lime);
   border: ${TRON_BORDER};
   background-color: var(--blackest-night);
   box-sizing: border-box;
@@ -93,8 +96,8 @@ export const LabelText = styled.span`
     isFormFilled ? 'translateY(-2em)' : 'none'};
 
   label:focus-within & {
-    font-size: 0.8rem;
-    transform: translateY(-2em);
+    font-size: 1rem;
+    transform: translateY(-2em) translateX(-1em);
   }
 `
 
@@ -114,9 +117,9 @@ export const Submit = styled.button`
   font-size: 1.2rem;
   background-color: var(--blackest-night);
   border: ${TRON_BORDER};
-  box-shadow: 0 0 10px var(--radioactive-lime);
+  box-shadow: 0 0 10px currentColor;
   color: var(--radioactive-lime);
-  padding: 0.2em 1em;
+  padding: 0.4em 1em;
   cursor: pointer;
   transition: all 300ms linear;
   z-index: 2;
@@ -124,8 +127,13 @@ export const Submit = styled.button`
   :hover,
   :focus {
     background-color: var(--radioactive-lime);
-    box-shadow: ${TRON_SHADOW};
+    box-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
     color: var(--blackest-night);
+  }
+
+  &[disabled] {
+    box-shadow: none;
+    color: var(--fresh-grass);
   }
 
   ${SMALL_SCREEN} {
@@ -156,7 +164,7 @@ export const List = styled.ul`
       &::before {
         content: '◭';
         padding-right: 1em;
-        text-shadow: ${TRON_SHADOW};
+        text-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
         color: var(--radioactive-lime);
       }
     }
@@ -179,7 +187,7 @@ export const Thankyou = styled.div`
     top: 50%;
     width: 100vw;
     height: 2px;
-    box-shadow: ${TRON_SHADOW};
+    box-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
     background-color: var(--radioactive-lime);
     z-index: 1;
     transform: rotate(90deg);

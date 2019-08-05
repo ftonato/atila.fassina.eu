@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
 import {
   Form,
   FormWrapper,
@@ -9,101 +8,54 @@ import {
   Label,
   LabelText,
   Input,
-  List,
-  Thankyou
+  List
 } from './styles'
 
-const submitForm = async (email, { MMERGE1 }, setStatus) => {
-  try {
-    const response = await addToMailchimp(email, { MMERGE1 })
-    setStatus({ status: 200, ...response })
+// eslint-disable-next-line
+const REGEX_EMAIL = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
-    return
-  } catch (error) {
-    setStatus({ status: 400, ...error })
+const isValidEmail = text => REGEX_EMAIL.test(text.toLowerCase())
 
-    return
-  }
-}
-
-const SignUp = ({ data, request, setStatus, setFormData }) => (
+const SignUp = ({ email, setEmail }) => (
   <>
     <NewsTitle>Get every post in your inbox</NewsTitle>
     <Form
-      onSubmit={evt => {
-        evt.preventDefault()
-        submitForm(data.email, { MMERGE1: data.name }, setStatus)
-      }}
+      action="https://tinyletter.com/AtilaFassina"
+      method="post"
+      target="popupwindow"
+      onSubmit="window.open('https://tinyletter.com/AtilaFassina', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
     >
-      <Label for="name">
-        <LabelText isFormFilled={!!data.name}>Preferred Name</LabelText>
-        <Input
-          name="name"
-          type="text"
-          value={data.name}
-          onChange={evt => {
-            setFormData({
-              ...data,
-              name: evt.currentTarget.value
-            })
-          }}
-        />
-      </Label>
       <Label for="email">
-        <LabelText isFormFilled={!!data.email}>e-Mail</LabelText>
+        <LabelText isFormFilled={!!email}>e-mail</LabelText>
         <Input
+          type="email"
           name="email"
+          id="tlemail"
           onChange={evt => {
-            setFormData({
-              ...data,
-              email: evt.currentTarget.value
-            })
+            setEmail(evt.currentTarget.value)
           }}
-          value={data.email}
-          id="b_email"
+          value={email}
         />
       </Label>
-      <Submit type="submit">Subscribe</Submit>
+      <input type="hidden" value="1" name="embed" />
+      <Submit type="submit" disabled={!isValidEmail(email)}>
+        Subscribe
+      </Submit>
     </Form>
     <List>
-      <li>No spam.Ever.</li>
+      <li>No spam. Ever.</li>
       <li>Unsubscribe anytime. Easily.</li>
     </List>
   </>
 )
 
-const SubscriptionSent = ({ status }) => {
-  debugger
-  switch (status) {
-    case 200:
-      return (
-        <Thankyou>
-          <span>Thank you</span>
-        </Thankyou>
-      )
-  }
-}
-
 export default () => {
-  const [request, setStatus] = useState({ status: 0, response: {} })
+  const [email, setEmail] = useState('')
 
-  const [data, setFormData] = useState({
-    name: '',
-    email: ''
-  })
   return (
     <FormWrapper>
       <Inner>
-        {request.status !== 200 ? (
-          <SignUp
-            data={data}
-            request={request}
-            setStatus={setStatus}
-            setFormData={setFormData}
-          />
-        ) : (
-          SubscriptionSent(request)
-        )}
+        <SignUp email={email} setEmail={setEmail} />
       </Inner>
     </FormWrapper>
   )
