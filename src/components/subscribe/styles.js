@@ -12,6 +12,7 @@ export const FormWrapper = styled.section`
 
 export const Inner = styled.div`
   margin: 0 auto;
+  padding: 3rem 0;
   max-width: 42rem;
 `
 
@@ -21,9 +22,8 @@ export const NewsTitle = styled.strong`
   font-size: 2rem;
   text-shadow: ${TRON_SHADOW};
   display: block;
-  margin: 2em 0 1em;
+  margin-bottom: 1em;
   background-color: var(--blackest-night);
-  text-align: center;
   z-index: 2;
 `
 
@@ -160,5 +160,42 @@ export const List = styled.ul`
         color: var(--radioactive-lime);
       }
     }
+  }
+`
+
+export const Thankyou = styled.div`
+  margin: 4rem 0;
+  padding: 2rem 1rem;
+  background-color: var(--radioactive-lime);
+  box-shadow: 0 0 10px var(--radioactive-lime);
+  transform: skew(20deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    box-shadow: ${TRON_SHADOW};
+    background-color: var(--radioactive-lime);
+    z-index: 1;
+    transform: rotate(90deg);
+    left: 0;
+
+    ${SMALL_SCREEN} {
+      transform: none;
+      left: calc(-100vw + 90%);
+    }
+  }
+
+  span {
+    color: black;
+    display: block;
+    font-size: 2.5rem;
+    transform: skew(-20deg);
+    z-index: 2;
   }
 `

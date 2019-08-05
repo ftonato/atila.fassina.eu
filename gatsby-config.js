@@ -65,6 +65,12 @@ module.exports = {
         icon: `src/images/logo-whitebg.jpg`
       }
     },
-    `gatsby-plugin-offline`
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://fassina.us3.list-manage.com/subscribe/post?u=ffa1a5e8ef4db5b2506125bbf&amp;id=9e9a87a7b0'
+      }
+    }
   ]
 }
