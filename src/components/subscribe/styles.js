@@ -25,6 +25,11 @@ export const NewsTitle = styled.strong`
   margin-bottom: 1em;
   background-color: var(--blackest-night);
   z-index: 2;
+  text-align: center;
+
+  ${SMALL_SCREEN} {
+    text-align: left;
+  }
 `
 
 export const Form = styled.form`
@@ -142,6 +147,9 @@ export const Submit = styled.button`
 `
 export const List = styled.ul`
   margin-top: 4em;
+  background-color: var(--blackest-night);
+  position: relative;
+  z-index: 2;
 
   ${SMALL_SCREEN} {
     margin-top: 2em;
