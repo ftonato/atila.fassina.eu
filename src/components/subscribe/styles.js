@@ -5,7 +5,8 @@ const TRON_SHADOW = color => `0 0 5px ${color}`
 const TRON_BORDER = `2px solid currentColor`
 
 export const FormWrapper = styled.section`
-  background-color: var(--blackest-night);
+  background-color: ${({ internal }) =>
+    internal ? 'var(--brigthest-day)' : 'var(--blackest-night)'};
   color: var(--brightest-day);
   overflow: hidden;
 `
@@ -20,10 +21,14 @@ export const NewsTitle = styled.strong`
   position: relative;
   font-weight: 200;
   font-size: 2rem;
-  text-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
+  text-shadow: ${({ internal }) =>
+    internal ? 'none' : TRON_SHADOW`var(--radioactive-lime)`};
   display: block;
   margin-bottom: 1em;
-  background-color: var(--blackest-night);
+  color: ${({ internal }) =>
+    internal ? 'var(--blackest-night)' : 'var(--brightest-day)'};
+  background-color: ${({ internal }) =>
+    internal ? 'var(--brightest-day)' : 'var(--blackest-night)'};
   z-index: 2;
   text-align: center;
 
@@ -76,12 +81,17 @@ export const Label = styled.label`
   width: 30ch;
   color: var(--radioactive-lime);
   border: ${TRON_BORDER};
-  background-color: var(--blackest-night);
+  background-color: ${({ internal }) =>
+    internal ? 'var(--brightest-day)' : 'var(--blackest-night)'};
   box-sizing: border-box;
   margin: 1em 0.5em;
 
   &:last-of-type {
     margin-bottom: 3em;
+  }
+
+  :focus-within {
+    border-width: 3px;
   }
 
   ${SMALL_SCREEN} {
@@ -93,7 +103,8 @@ export const Label = styled.label`
 `
 export const LabelText = styled.span`
   position: absolute;
-  color: var(--brightest-day);
+  color: ${({ internal }) =>
+    internal ? 'var(--blackest-night)' : 'var(--brightest-day)'};
 
   transition: all 250ms linear;
   font-size: ${({ isFormFilled }) => (isFormFilled ? '0.8rem' : '1.2rem')};
@@ -113,15 +124,22 @@ export const Input = styled.input`
   border: 0;
   outline: 0;
   background: transparent;
-  color: white;
+  color: ${({ internal }) =>
+    internal ? 'var(--brigthest-day)' : 'var(--blackest-night)'};
   box-sizing: border-box;
+
+  :focus {
+    outline: none;
+  }
 `
 
 export const Submit = styled.button`
   position: relative;
   font-size: 1.2rem;
-  background-color: var(--blackest-night);
-  border: ${TRON_BORDER};
+  background-color: ${({ internal }) =>
+    internal ? 'var(--brightest-day)' : 'var(--blackest-night)'};
+  border: ${({ internal }) =>
+    internal ? '2px solid var(--fresh-grass)' : TRON_BORDER};
   box-shadow: 0 0 10px currentColor;
   color: var(--radioactive-lime);
   padding: 0.4em 1em;
@@ -147,7 +165,8 @@ export const Submit = styled.button`
 `
 export const List = styled.ul`
   margin-top: 4em;
-  background-color: var(--blackest-night);
+  background-color: ${({ internal }) =>
+    internal ? 'var(--brigthest-day)' : 'var(--blackest-night)'};
   position: relative;
   z-index: 2;
 
@@ -159,6 +178,8 @@ export const List = styled.ul`
     list-style: none;
     margin-top: 0.5em;
     text-align: center;
+    color: ${({ internal }) =>
+      internal ? 'var(--blackest-night)' : 'var(--brigthest-day)'};
 
     ${SMALL_SCREEN} {
       text-align: left;
@@ -176,42 +197,5 @@ export const List = styled.ul`
         color: var(--radioactive-lime);
       }
     }
-  }
-`
-
-export const Thankyou = styled.div`
-  margin: 4rem 0;
-  padding: 2rem 1rem;
-  background-color: var(--radioactive-lime);
-  box-shadow: 0 0 10px var(--radioactive-lime);
-  transform: skew(20deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  ::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 100vw;
-    height: 2px;
-    box-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
-    background-color: var(--radioactive-lime);
-    z-index: 1;
-    transform: rotate(90deg);
-    left: 0;
-
-    ${SMALL_SCREEN} {
-      transform: none;
-      left: calc(-100vw + 90%);
-    }
-  }
-
-  span {
-    color: black;
-    display: block;
-    font-size: 2.5rem;
-    transform: skew(-20deg);
-    z-index: 2;
   }
 `

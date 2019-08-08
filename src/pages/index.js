@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
       />
       <Header data={data} internal={false} />
       <Content posts={posts} />
-      <Subscribe />
+      <Subscribe internal={false} />
       <Footer />
     </Layout>
   )

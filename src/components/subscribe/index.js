@@ -16,17 +16,20 @@ const REGEX_EMAIL = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+
 
 const isValidEmail = text => REGEX_EMAIL.test(text.toLowerCase())
 
-const SignUp = ({ email, setEmail }) => (
+const SignUp = ({ email, setEmail, internal }) => (
   <>
-    <NewsTitle>Get every post in your inbox</NewsTitle>
+    <NewsTitle internal={internal}>Get every post in your inbox</NewsTitle>
     <Form
+      internal={internal}
       action="https://tinyletter.com/AtilaFassina"
       method="post"
       target="popupwindow"
       onSubmit="window.open('https://tinyletter.com/AtilaFassina', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
     >
-      <Label for="email">
-        <LabelText isFormFilled={!!email}>e-mail</LabelText>
+      <Label internal={internal} for="email">
+        <LabelText internal={internal} isFormFilled={!!email}>
+          e-mail
+        </LabelText>
         <Input
           type="email"
           name="email"
@@ -38,24 +41,24 @@ const SignUp = ({ email, setEmail }) => (
         />
       </Label>
       <input type="hidden" value="1" name="embed" />
-      <Submit type="submit" disabled={!isValidEmail(email)}>
+      <Submit internal={internal} type="submit" disabled={!isValidEmail(email)}>
         Subscribe
       </Submit>
     </Form>
-    <List>
+    <List internal={internal}>
       <li>No spam. Ever.</li>
       <li>Unsubscribe anytime. Easily.</li>
     </List>
   </>
 )
 
-export default () => {
+export default ({ internal }) => {
   const [email, setEmail] = useState('')
 
   return (
-    <FormWrapper>
-      <Inner>
-        <SignUp email={email} setEmail={setEmail} />
+    <FormWrapper internal={internal}>
+      <Inner internal={internal}>
+        <SignUp internal={internal} email={email} setEmail={setEmail} />
       </Inner>
     </FormWrapper>
   )

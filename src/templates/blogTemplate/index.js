@@ -5,6 +5,7 @@ import SEO from '../../components/seo'
 import Header from '../../components/header'
 import Banner from '../../components/mediumBanner'
 import Author from '../../components/postFooter'
+import Subscribe from '../../components/subscribe'
 import { MainTitle, PostDate, PostWrap, Post, TitleWrap, Pitch } from './styles'
 
 const dayName = rawDate => {
@@ -63,6 +64,7 @@ export default function Template({ data, pageContext }) {
         <Post dangerouslySetInnerHTML={{ __html: html }} />
         {!!frontmatter.mediumURL && <Banner link={frontmatter.mediumURL} />}
       </PostWrap>
+      <Subscribe internal />
       <Author frontmatter={frontmatter} next={pageContext.next} />
     </Layout>
   )
