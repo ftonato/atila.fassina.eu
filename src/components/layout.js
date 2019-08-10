@@ -58,6 +58,10 @@ h4,
 strong {
   font-weight: 200;
 }
+
+abbr {
+  cursor: help;
+}
 /**
  * Based on Overreacted.io by Dan Abramov, which is based on copypasta from Remy Bach and Sarah Drasner
  * 😉

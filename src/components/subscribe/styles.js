@@ -125,7 +125,7 @@ export const Input = styled.input`
   outline: 0;
   background: transparent;
   color: ${({ internal }) =>
-    internal ? 'var(--brigthest-day)' : 'var(--blackest-night)'};
+    internal ? 'var(--blackest-night)' : 'var(--brigthest-day)'};
   box-sizing: border-box;
 
   :focus {
@@ -147,8 +147,8 @@ export const Submit = styled.button`
   transition: all 300ms linear;
   z-index: 2;
 
-  :hover,
-  :focus {
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
     background-color: var(--radioactive-lime);
     box-shadow: ${TRON_SHADOW`var(--radioactive-lime)`};
     color: var(--blackest-night);
@@ -157,6 +157,7 @@ export const Submit = styled.button`
   &[disabled] {
     box-shadow: none;
     color: var(--fresh-grass);
+    cursor: not-allowed;
   }
 
   ${SMALL_SCREEN} {
