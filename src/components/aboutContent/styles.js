@@ -53,10 +53,9 @@ export const FunFact = styled.li`
     color: var(--brushed-steel);
     font-weight: 800;
     padding-right: 1ex;
-
-    :not(:last-of-type) {
-      margin-bottom: 2ex;
-    }
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 2ex;
   }
 `
 

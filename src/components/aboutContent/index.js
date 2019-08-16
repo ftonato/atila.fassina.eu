@@ -6,7 +6,7 @@ import {
   FunFact,
   Greetings,
   Avatar,
-  // TextLink,
+  TextLink,
   ParagraphWrap,
   Subtitle,
   SalutationHeader
@@ -24,8 +24,8 @@ export default () => (
     </SalutationHeader>
 
     <ParagraphWrap>
-      A Brazilian/Italian Web developer living in beautiful Auckland, New
-      Zealand.
+      A Brazilian/Italian Web developer with around{' '}
+      {new Date().getFullYear() - 2010} years of experience.
     </ParagraphWrap>
     <ParagraphWrap>
       I'm very passionate about delivering good overall UX through fast and
@@ -44,10 +44,38 @@ export default () => (
     <Subtitle>I'm also:</Subtitle>
     <ParagraphWrap>
       {new Date().getFullYear() - 1987} years old. Husband. Father of 2. Nerd.
-      Brazilian born and raised. Italian from heritage. Kiwi by choice.
+      Brazilian born and raised. Italian from heritage. Fast food sommelier.
+      Sports fan.
     </ParagraphWrap>
 
-    <Subtitle>fun facts</Subtitle>
+    <Subtitle>Past experience</Subtitle>
+    <ParagraphWrap>
+      I have lived and worked in quite a few places and with quite a few teams.
+      From small teams and local business to international and distributed teams
+      like{' '}
+      <TextLink href="https://terra.com.br" rel="noreferrer" target="_blank">
+        Terra Networks{' '}
+        <span aria-label="Brazilian flag" title="Brazil">
+          in 🇧🇷
+        </span>
+        ,
+      </TextLink>{' '}
+      <TextLink href="https://n26.com" rel="noreferrer" target="_blank">
+        N26{' '}
+        <span aria-label="German flag" title="Germany">
+          in 🇩🇪
+        </span>
+        ,
+      </TextLink>{' '}
+      <TextLink href="https://pushpay.com" rel="noreferrer" target="_blank">
+        Pushpay{' '}
+        <span aria-label="New Zealander flag" title="New Zealand">
+          in 🇳🇿
+        </span>
+      </TextLink>
+    </ParagraphWrap>
+
+    <Subtitle>Fun facts</Subtitle>
 
     <FunFactsList>
       <FunFact>
