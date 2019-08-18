@@ -51,7 +51,7 @@ const a = `
 a {
   text-decoration: none;
   color: var(--brushed-steel);
-  border-bottom: dotted 2px var(--fluorescent_pine);
+  border-bottom: dotted 2px var(--fluorescent-pine);
 
   :hover,
   :focus {

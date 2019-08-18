@@ -17,13 +17,15 @@ import {
   COLD_FOG,
   BRUSHED_STEEL,
   BLACKEST_NIGHT,
-  BRIGHTEST_DAY
+  BRIGHTEST_DAY,
+  FLUORESCENT_PINE
 } from '../../settings'
 
 const GlobalStyle = createGlobalStyle`
 :root {
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
+  --fluorescent-pine: ${FLUORESCENT_PINE};
   --fresh-grass: ${FRESH_GRASS};
   --radioactive-lime: ${RADIOACTIVE_LIME};
   --donkey-fur: ${DONKEY_FUR};
